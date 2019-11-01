@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.yctc.genesis.dao.KnowledgeLessonDAO">
+	<resultMap type="edu.yctc.genesis.entity.KnowledgeLessonDO" id="KnowledgeLessonDO">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="lesson_id" property="lessonId"/>
+		<result column="knowledge_id" property="knowledgeId"/>
+		<result column="create_time" property="createTime"/>
+		<result column="modify_time" property="modifyTime"/>
+	</resultMap>
+<!--	插入-->
+	<insert id="insert" parameterType="edu.yctc.genesis.entity.KnowledgeLessonDO">
+		<selectKey keyProperty="id" order="AFTER" resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_knowledge_lesson(
+			lesson_id,
+			knowledge_id,
+			create_time,
+			modify_time
+		) VALUES(
+			#{lessonId},
+			#{knowledgeId},
+			NOW(),
+			NOW()
+		);
+	</insert>
+<!--	更新-->
+	<select id="getKnowledgeLessonDOById" parameterType="long" resultMap="KnowledgeLessonDO">
+		SELECT *
+		FROM tb_knowledge_lesson
+		WHERE id=#{id}
+	</select>
+<!--	通过id拿到knowledgeLessonDO-->
+	<update id="update" parameterType="edu.yctc.genesis.entity.KnowledgeLessonDO">
+		UPDATE tb_knowledge_lesson
+		SET lesson_id=#{lessonId},
+			knowledge_id=#{knowledgeId},
+			modify_time=NOW()
+		WHERE id=#{id}
+	</update>
+<!--	通过id删除-->
+	<delete id="deleteById" parameterType="long">
+		DELETE FROM tb_knowledge_lesson
+		WHERE id=#{id}
+	</delete>
+<!--	通过lessonId得到knowledgeLessonDO集-->
+	<select id="getKnowledgeLessonDOsByLessonId" parameterType="long" resultMap="KnowledgeLessonDO">
+		SELECT *
+		FROM tb_knowledge_lesson
+		WHERE lesson_id=#{lessonId}
+	</select>
+<!--	通过knowledgeId删除-->
+	<delete id="deleteKnowledgeLessonDOByKnowledgeId" parameterType="long">
+		DELETE FROM tb_knowledge_lesson
+		WHERE knowledge_id=#{knowledgeId}
+	</delete>
+<!--	通过lessonId和knowledge返回knowledgeLessonDO-->
+	<select id="getKnowledgeLessonDOByLessonIdAndKnowledge" resultMap="KnowledgeLessonDO">
+		select * from tb_knowledge_lesson
+		WHERE lesson_id = #{lessonId} AND knowledge_id in (
+		SELECT id FROM tb_knowledge
+		WHERE content = #{knowledge}
+		)
+	</select>
+	
+</mapper>

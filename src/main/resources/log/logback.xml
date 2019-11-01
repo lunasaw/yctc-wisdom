@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd">
+<configuration>
+	<property name="LOG_HOME" value="log" />
+
+	<!-- %m输出的信息,%p日志级别,%t线程名,%d日期,%c类的全名,%i索引【从数字0开始递增】 -->
+
+	<!-- ConsoleAppender：把日志输出到控制台 -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %p (%file:%line\)- %m%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<appender name="serviceLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/service.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/service.%d{yyyy-MM-dd}.log</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>
+				%d{yyyy-MM-dd HH:mm:ss.SSS} %p (%file:%line\)- %m%n
+			</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<appender name="controllerLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_HOME}/controller.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_HOME}/controller.%d{yyyy-MM-dd}.log</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>
+				%d{yyyy-MM-dd HH:mm:ss.SSS} %p (%file:%line\)- %m%n
+			</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+
+	<!-- 开发阶段日志全部输出到控制台方便观察 -->
+	<!-- service层日志 <logger name="serviceLogger" additivity="false"> <level value="INFO" /> <appender-ref ref="serviceLog" /> </logger> -->
+
+	<!-- controller层日志 <logger name="controllerLogger" additivity="false"> <level value="INFO" /> <appender-ref ref="controllerLog" /> </logger> -->
+
+	<!-- 控制台输出日志 -->
+	<root level="info">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

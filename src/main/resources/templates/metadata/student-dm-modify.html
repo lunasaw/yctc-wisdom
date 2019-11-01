@@ -1,0 +1,333 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="component/head :: head"></head>
+
+<body onload="getAcademies();fillHref()">
+	<header th:replace="component/header :: header"></header>
+
+	<!-- Begin page content -->
+	<div class="container">
+		<div class="row">
+			<div th:replace="component/sidebar"></div>
+
+			<div class="col-md-9">
+				<div th:replace="component/page-title::pageTitle('学生详情修改')"></div>
+
+				<div class="row">
+					<div class="col-md-8 offset-md-2">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">学院</span>
+							</div>
+							<select class="form-control" id="academySelection" onchange="selectAcademy();">
+								<option selected="selected">请选择...</option><!-- 动态追加学院 -->
+							</select>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">班级</span>
+							</div>
+							<select class="form-control" id="classesSelection">
+								<option selected="selected">请选择...</option><!-- 动态追加班级 -->
+							</select>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">姓名</span>
+							</div>
+							<input type="text" class="form-control" id="studentName" aria-describedby="basic-addon3">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">学号</span>
+							</div>
+							<input type="text" class="form-control" id="studentNumber" aria-describedby="basic-addon3">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">邮箱</span>
+							</div>
+							<input type="text" class="form-control" id="studentMail" aria-describedby="basic-addon3">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">性别</span>
+							</div>
+							<select class="form-control" id="sexSelection">
+								<option >男</option>
+								<option >女</option>
+							</select>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">手机号</span>
+							</div>
+							<input type="text" class="form-control" id="studentPhone" aria-describedby="basic-addon3">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">身份证</span>
+							</div>
+							<input type="text" class="form-control" id="studentIdCardNumber" aria-describedby="basic-addon3">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">Face-token</span>
+							</div>
+							<input type="text" class="form-control" id="studentFaceToken" aria-describedby="basic-addon3">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-8 offset-md-2">
+						<button onclick="modify()" type="button" class="btn btn-primary">保存</button>
+						<a href="#" class="btn btn-secondary" role="button" id="student-dm-detail-url">返回</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="component/footer :: footer"></footer>
+
+	<script>
+    
+	    function getAcademies() {
+	     	detailAcademy = "";
+			detailClasses = "";
+	    	getDetail();	    	
+	    	//获取数据库中的学院
+	        $.ajax({
+				url: "/genesis/restmetadata/get-academies",
+				type: "POST",
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: true,
+				success: function (result) {
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						}else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						//得到学院list
+						var list = result.module;
+						//清空academy(除第一个)
+						$('#academySelection option').not(":first").remove();
+						for(var i = 0; i < list.length; i++){
+							if(list[i] == detailAcademy){
+								$("#academySelection").append("<option selected='selected' value="+i+">"+list[i]+"</option>");
+							}
+							else
+								$("#academySelection").append("<option value="+i+">"+list[i]+"</option>");
+						}
+						selectAcademy();
+					}
+				},
+				error: function (e) {
+					alert("getAcademies异常");
+				}
+			});
+		}
+
+	    function selectAcademy(){
+	        //获取select选中的text
+	        var academy=$("#academySelection option:selected").text();
+	        $.ajax({
+				url: "/genesis/restmetadata/get-classes-by-academy",
+				type: "POST",
+				data: academy,
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: true,
+				success: function (result) {
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						}else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						//得到班级list
+						var list = result.module;
+						//清空classes(除第一个)
+						$('#classesSelection option').not(":first").remove();
+						for(var i = 0; i < list.length; i++){
+							if(list[i] == detailClasses)
+								$("#classesSelection").append("<option selected='selected' value="+i+">"+list[i]+"</option>");
+							else
+								$("#classesSelection").append("<option value="+i+">"+list[i]+"</option>");
+						}
+					}
+				},
+				error: function (e) {
+					alert("selectAcademy异常");
+				}
+			});
+	    }
+	    
+		function selectSex() {
+			detailSex = "";
+			var select = document.getElementById("sexSelection");
+			for (var i = 0; i < select.length; i++) {
+				if (select[i].text == detailSex)
+					select.options[i].selected = true;
+			}
+		}
+
+		function getUrl() {
+			var url = location.search; //获取url中"?"符后的字串  
+			var theRequest = new Object();
+			if (url.indexOf("?") != -1) {
+				var str = url.substr(1);
+				strs = str.split("&");
+				for (var i = 0; i < strs.length; i++) {
+					theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+				}
+			}
+			return theRequest;
+		}
+
+		function modify() {
+			var academy = $("#academySelection option:selected").text();
+			var classes = $("#classesSelection option:selected").text();
+			var number = $('#studentNumber').val();
+			var name = $('#studentName').val();
+			var sex = $("#sexSelection option:selected").text();
+			var idCardNumber = $('#studentIdCardNumber').val();
+			var phone = $('#studentPhone').val();
+			var mail = $('#studentMail').val();
+			//var picture = $('#studentPicture').val();
+			var faceToken = $('#studentFaceToken').val();
+			var theRequest = new Object();
+			theRequest = getUrl();
+			var id = theRequest["id"];
+
+			if (academy == '请选择...' || classes == '请选择...')
+				return;
+			$.ajax({
+				url: "/genesis/restmetadata/modify-student",
+				type: "POST",
+				data: JSON.stringify({
+					"id": id,
+					"academy": academy,
+					"classes": classes,
+					"number": number,
+					"name": name,
+					"sex": sex,
+					"idCardNumber": idCardNumber,
+					"phone": phone,
+					"mail": mail,
+					//"picture": picture,
+					"faceToken": faceToken
+				}),
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: true,
+				success: function (result) {
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						} else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						alert("修改成功！");
+						var href = getHref(id);
+						window.location.href = href;
+					}
+				},
+				error: function (e) {
+					alert("modify异常");
+				}
+			});
+		}
+
+		var url;
+
+		function getHref(id) {
+			$.ajax({
+				url: "/genesis/restmetadata/get-student-dm-detail-url",
+				type: "POST",
+				data: id,
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: false,
+				success: function (result) {
+					console.log(result);
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						} else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						url = result.module;
+					}
+				},
+				error: function (e) {
+					alert("getHref异常");
+				}
+			});
+			return url;
+		}
+
+		var detailAcademy;
+		var detailClasses;
+		function getDetail() {
+			var theRequest = new Object();
+			theRequest = getUrl();
+			//获取id
+			var id = theRequest["id"];
+			$.ajax({
+				url: "/genesis/restmetadata/get-studentdo-and-academy-and-classes-vo-by-id",
+				type: "POST",
+				data: id,
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: false, // 同步
+				success: function (result) {
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						} else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						document.getElementById('studentNumber').value = result.module.studentDO.number;
+						document.getElementById('studentName').value = result.module.studentDO.name;
+						document.getElementById('studentIdCardNumber').value = result.module.studentDO.idCardNumber;
+						document.getElementById('studentPhone').value = result.module.studentDO.phone;
+						document.getElementById('studentMail').value = result.module.studentDO.mail;
+						document.getElementById('studentFaceToken').value = result.module.studentDO.faceToken;
+						detailAcademy = result.module.academy;
+						detailClasses = result.module.classes;
+						var sex = result.module.studentDO.sex;
+						if (sex == '男')
+							detailSex = "男";
+						else if (sex == '女')
+							detailSex = "女";
+					}
+				},
+				error: function (e) {
+					alert("getDetail异常");					
+				}
+			});
+		}
+
+		function fillHref() {
+			var theRequest = new Object();
+			theRequest = getUrl();
+			var id = theRequest["id"];
+			document.getElementById("student-dm-detail-url").href = getHref(id);
+		}
+	</script>
+
+	<div th:replace="component/footer-lib"></div>
+
+</body>
+
+</html>

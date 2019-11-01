@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.yctc.genesis.dao.StudentCourseDAO">
+	<resultMap type="edu.yctc.genesis.entity.StudentCourseDO" id="StudentCourseDO">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="user_id" property="userId"/>
+		<result column="course_id" property="courseId"/>
+		<result column="create_time" property="createTime"/>
+		<result column="modify_time" property="modifyTime"/>
+	</resultMap>
+<!--	插入学生选课记录-->
+	<insert id="insert" parameterType="edu.yctc.genesis.entity.StudentCourseDO">
+		<selectKey keyProperty="id" order="AFTER" resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_student_course(
+			user_id,
+			course_id,
+			create_time,
+			modify_time
+		)VALUES(
+			#{userId},
+			#{courseId},
+			NOW(),
+			NOW()
+		);
+	</insert>
+<!--用户id查询该用户所有选课	-->
+	<select id="getCourseDOById" parameterType="long" resultMap="StudentCourseDO">
+		SELECT
+			id,
+			user_id,
+			course_id,
+			create_time,
+			modify_time
+		FROM tb_student_course WHERE
+			id = #{id}
+	</select>
+<!--	更新学生课程-->
+	<update id="update" parameterType="edu.yctc.genesis.entity.StudentCourseDO">
+		UPDATE tb_student_course
+		SET user_id=#{userId},
+			course_id=#{courseId},
+			modify_time=NOW()
+		WHERE id=#{id}
+	</update>
+<!--id删除学生课程	-->
+	<delete id="deleteById" parameterType="long">
+		DELETE FROM
+		tb_student_course
+		WHERE id=#{id}
+	</delete>
+<!--	通过userId查询,获得courseId集-->
+	<select id="getCourseIdsByUserId" parameterType="long" resultType="long">
+		SELECT
+			course_id
+		FROM tb_student_course WHERE
+			user_id = #{userId}
+	</select>
+<!--通过课程号返回StudentCourseDO集-->
+	<select id="getStudentCourseDOByCourseId" parameterType="long" resultMap="StudentCourseDO">
+		SELECT *
+		FROM tb_student_course
+		WHERE course_id=#{courseId}
+	</select>
+<!--	通过课程号返回userId集-->
+	<select id="getUserIdsByCourseId" parameterType="long" resultType="long">
+		SELECT user_id
+		FROM tb_student_course
+		WHERE course_id=#{courseId}
+	</select>
+<!--	验证是否存在课程id-->
+	<select id="checkByCourseId" parameterType="long" resultType="Long">
+		SELECT DISTINCT course_id
+		FROM tb_student_course
+		WHERE course_id=#{courseId}
+	</select>
+<!--验证是否存在学生id-->
+	<select id="checkByStudentId" parameterType="long" resultType="Long">
+		SELECT DISTINCT user_id
+		FROM tb_student_course
+		WHERE user_id=#{userId}
+	</select>
+
+</mapper>

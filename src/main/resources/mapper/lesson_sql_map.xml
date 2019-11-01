@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.yctc.genesis.dao.LessonDAO">
+	<resultMap type="edu.yctc.genesis.entity.LessonDO" id="LessonDO">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="course_id" property="courseId"/>
+		<result column="number" property="number"/>
+		<result column="classroom_id" property="classroomId"/>
+		<result column="begin" property="begin"/>
+		<result column="end" property="end"/>
+		<result column="create_time" property="createTime"/>
+		<result column="modify_time" property="modifyTime"/>
+	</resultMap>
+<!--	插入一节课-->
+	<insert id="insert" parameterType="edu.yctc.genesis.entity.LessonDO">
+		<selectKey keyProperty="id" order="AFTER" resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_lesson(
+			course_id,
+			number,
+			classroom_id,
+			begin,
+			end,
+			create_time,
+			modify_time
+		)VALUES(
+			#{courseId},
+			#{number},
+			#{classroomId},
+			#{begin},
+			#{end},
+			NOW(),
+			NOW()
+		);
+	</insert>
+<!--	id查询课时-->
+	<select id="getLessonDOById" parameterType="long" resultMap="LessonDO">
+		SELECT
+			id,
+			course_id,
+			number,
+			classroom_id,
+			begin,
+			end,
+			create_time,
+			modify_time
+		FROM tb_lesson WHERE
+			id = #{id}
+	</select>
+<!--	更新课时-->
+	<update id="update" parameterType="edu.yctc.genesis.entity.LessonDO">
+		UPDATE tb_lesson
+		SET course_id=#{courseId},
+			number=#{number},
+			classroom_id=#{classroomId},
+			begin=#{begin},
+			end=#{end},
+			modify_time=NOW()
+		WHERE id=#{id}
+	</update>
+<!--	通过id删除-->
+	<delete id="deleteById" parameterType="long">
+		DELETE FROM
+		tb_lesson
+		WHERE id=#{id}
+	</delete>
+<!--	返回库中课程集-->
+	<select id="getLessonDOs" resultMap="LessonDO">
+		SELECT *
+		FROM tb_lesson
+	</select>
+<!--	通过courseId返回id集-->
+	<select id="getIdsByCourseId" parameterType="long" resultType="long">
+		SELECT id
+		FROM tb_lesson
+		WHERE course_id = #{courseId}
+	</select>
+<!--	通过id返回CourseId-->
+	<select id="getCourseIdById" parameterType="long" resultType="Long">
+		SELECT course_id
+		FROM tb_lesson
+		WHERE id = #{id}
+	</select>
+<!--	通过id返回ClassroomId-->
+	<select id="getClassroomIdById" parameterType="long" resultType="long">
+		SELECT classroom_id
+		FROM tb_lesson
+		WHERE id = #{id}
+	</select>
+<!--	通过courseId获取该用户课堂集-->
+	<select id="getLessonDOByCourseId" parameterType="long" resultMap="LessonDO">
+		SELECT
+			id,
+			course_id,
+			number,
+			classroom_id,
+			begin,
+			end,
+			create_time,
+			modify_time
+		FROM tb_lesson WHERE
+			course_id = #{courseId}
+	</select>
+<!--	判断是否存在教室id-->
+	<select id="checkByclassroomId" parameterType="long" resultType="Long">
+		SELECT DISTINCT classroom_id
+		FROM tb_lesson
+		WHERE classroom_id = #{classroomId}
+	</select>
+<!--	验证是否存在课程id-->
+	<select id="checkByCourseId" parameterType="long" resultType="Long">
+		SELECT DISTINCT course_id
+		FROM tb_lesson
+		WHERE course_id=#{courseId}
+	</select>
+<!--	获取正在上的课-->
+	<select id="getCurrentLessonDOByLessonId" parameterType="long" resultMap="LessonDO">
+		SELECT *
+		FROM tb_lesson WHERE
+		NOW() > begin AND end > NOW() AND id=#{lessonId}
+	</select>
+	
+</mapper>

@@ -1,0 +1,110 @@
+<!-- begin sidebar -->
+<style>
+	.card-body{
+        padding: 0.5rem;
+    }
+</style>
+<div class="col-md-3">
+	<div class="accordiondiv" id="accordionExample">
+		<div class="card">
+			<div class="card-header" id="headingOne">
+				<h5 class="mb-0">
+					<i class="fas fa-home fa-lg fa-fw"></i>
+					<a href="/genesis/user/home"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
+					 aria-expanded="true" aria-controls="collapseOne">主页</button></a>
+				</h5>
+			</div>
+		</div>
+		<div shiro:hasPermission="tea:classroomApplication or tea:courseDetails or tea:courseDetails or tea:studentDetails or tea:teachingSchedule"
+		 class="card">
+			<div class="card-header" id="headingTwo">
+				<h5 class="mb-0">
+					<i class="fas fa-chalkboard-teacher fa-lg fa-fw"></i>
+					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+					 aria-expanded="false" aria-controls="collapseTwo">教学</button>
+				</h5>
+			</div>
+			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+				<div class="card-body">
+					<a shiro:hasPermission="tea:classroomApplication" class="dropdown-item" href="/genesis/teaching/classroom-application">教室申请</a>
+					<a shiro:hasPermission="tea:lessonDetails" class="dropdown-item" href="/genesis/teaching/lesson-details-list">课堂详情</a>
+					<a shiro:hasPermission="tea:courseDetails" class="dropdown-item" href="/genesis/teaching/course-details-list">课程详情</a>
+					<a shiro:hasPermission="tea:studentDetails" class="dropdown-item" href="/genesis/teaching/student-details-list">学生详情</a>
+					<a shiro:hasPermission="tea:teachingSchedule" class="dropdown-item" href="/genesis/teaching/teaching-schedule">教学课表</a>
+					<a shiro:hasPermission="tea:checkAttendance" class="dropdown-item" href="/genesis/teaching/check-attendance">考勤</a>
+					<a shiro:hasPermission="tea:checkState" class="dropdown-item" href="/genesis/teaching/check-state">学生上课状态检测</a>
+					<a shiro:hasPermission="tea:fillKnowledge" class="dropdown-item" href="/genesis/teaching/fill-knowledge-step-a">设置知识点</a>
+					<a shiro:hasPermission="tea:knowledgeStudyStatement" class="dropdown-item" href="/genesis/teaching/lesson-knowledge-point-list">知识点学情反馈</a>
+				</div>
+			</div>
+		</div>
+		<div shiro:hasPermission="stu:mySchedule or stu:myClassQuality" class="card">
+			<div class="card-header" id="headingThree">
+				<h5 class="mb-0">
+					<i class="fas fa-book fa-lg fa-fw"></i>
+					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+					 aria-expanded="false" aria-controls="collapseThree">学习</button>
+				</h5>
+			</div>
+			<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+				<div class="card-body">
+					<a shiro:hasPermission="stu:mySchedule" class="dropdown-item" href="/genesis/learning/my-schedule">我的课表</a>
+					<a shiro:hasPermission="stu:myClassQuality" class="dropdown-item" href="/genesis/learning/my-class-quality">我的听课质量</a>
+				</div>
+			</div>
+		</div>
+		<div shiro:hasPermission="admin:authorityManagement or admin:studentsManagement or admin:classesManagement or admin:classroomsManagement or admin:coursesManagement or admin:teachersManagement or admin:classroomLive or admin:importData or admin:cameraControl"
+		 class="card">
+			<div class="card-header" id="headingFour">
+				<h5 class="mb-0">
+					<i class="fas fa-graduation-cap fa-lg fa-fw"></i>
+					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+					 aria-expanded="false" aria-controls="collapseFour">教务</button>
+				</h5>
+			</div>
+			<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+				<div class="card-body">
+					<a shiro:hasPermission="admin:classroomsManagement" class="dropdown-item" href="/genesis/metadata/building-floor-dm-list">楼宇管理</a>
+					<a shiro:hasPermission="admin:classroomsManagement" class="dropdown-item" href="/genesis/metadata/classroom-dm-list">教室管理</a>
+					<a shiro:hasPermission="admin:classesManagement" class="dropdown-item" href="/genesis/metadata/academy-classes-dm-list">班级管理</a>
+					<a shiro:hasPermission="admin:studentsManagement" class="dropdown-item" href="/genesis/metadata/student-dm-list">学生管理</a>
+					<a shiro:hasPermission="admin:coursesManagement" class="dropdown-item" href="/genesis/metadata/course-dm-list">课程管理</a>
+					<a shiro:hasPermission="admin:teachersManagement" class="dropdown-item" href="/genesis/metadata/teacher-dm-list">教师管理</a>
+					<a shiro:hasPermission="admin:classroomLive" class="dropdown-item" href="/genesis/education/classroom-live">视频监测</a> <!-- 待移出 -->
+					<a shiro:hasPermission="admin:authorityManagement" class="dropdown-item" href="/genesis/education/authority-management">权限管理</a> <!-- 待移出 -->
+					<a shiro:hasPermission="admin:roleManagement"class="dropdown-item" href="/genesis/education/authority-role-management">角色管理</a> <!-- 待移出 -->
+					<a shiro:hasPermission="admin:cameraControl" class="dropdown-item" href="/genesis/education/camera-control">球机管理</a>
+					<a shiro:hasPermission="admin:importData" class="dropdown-item" href="/genesis/education/import-students">导入学生数据</a>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="headingFive">
+				<h5 class="mb-0">
+					<i class="fas fa-comment fa-lg fa-fw"></i>
+					<a href="/genesis/news/news"><button class="btn btn-link collapsed " type="button" data-toggle="collapse"
+						 data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">通知</button></a>
+				</h5>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="headingSix">
+				<h5 class="mb-0">
+					<i class="fas fa-user fa-lg fa-fw"></i>
+					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
+					 aria-expanded="false" aria-controls="collapseSix">我的</button>
+				</h5>
+			</div>
+			<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+				<div class="card-body">
+					<a class="dropdown-item" href="/genesis/user/my-information">基本信息</a>
+					<a class="dropdown-item" href="/genesis/user/update-password">修改密码</a>
+					<a class="dropdown-item" href="/genesis/user/mobile-authentication">修改手机</a>
+					<a class="dropdown-item" href="/genesis/user/mail-authentication">修改邮箱</a>
+					<a class="dropdown-item" href="/genesis/user/sign-out">注销登录</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end sidebar -->

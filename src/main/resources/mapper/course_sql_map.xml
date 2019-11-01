@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.yctc.genesis.dao.CourseDAO">
+	<resultMap type="edu.yctc.genesis.entity.CourseDO" id="CourseDO">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="number" property="number"/>
+		<result column="name" property="name"/>
+		<result column="lesson_sum" property="lessonSum"/>
+		<result column="year" property="year"/>
+		<result column="term" property="term"/>
+		<result column="profession_id" property="professionId"/>
+		<result column="class_id" property="classId"/>
+		<result column="create_time" property="createTime"/>
+		<result column="modify_time" property="modifyTime"/>
+	</resultMap>
+<!--	插入课程-->
+	<insert id="insert" parameterType="edu.yctc.genesis.entity.CourseDO">
+		<selectKey keyProperty="id" order="AFTER" resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_course(
+			number,
+			name,
+			lesson_sum,
+			year,
+			term,
+			profession_id,
+			class_id,
+			create_time,
+			modify_time
+		) VALUES(
+			#{number},
+			#{name},
+			#{lessonSum},
+			#{year},
+			#{term},
+			#{professionId},
+			#{classId},
+			NOW(),
+			NOW()
+		);
+	</insert>
+<!--	通过id查询课程-->
+	<select id="getCourseDOById" parameterType="long" resultMap="CourseDO">
+		SELECT
+			id,
+			number,
+			name,
+			lesson_sum,
+			year,
+			term,
+			profession_id,
+			class_id,
+			create_time,
+			modify_time
+		FROM tb_course WHERE
+			id = #{id}
+	</select>
+<!--	更新课程-->
+	<update id="update" parameterType="edu.yctc.genesis.entity.CourseDO">
+		UPDATE tb_course
+		SET number=#{number},
+			name=#{name},
+			lesson_sum=#{lessonSum},
+			year=#{year},
+			term=#{term},
+			profession_id=#{professionId},
+			class_id=#{classId},
+			modify_time=NOW()
+		WHERE id=#{id}
+	</update>
+<!--通过id删除	-->
+	<delete id="deleteById" parameterType="long">
+		DELETE FROM
+		tb_course
+		WHERE id=#{id}
+	</delete>
+<!--通过学年和学期返回课程集	-->
+	<select id="getYears" resultType="String">
+		SELECT DISTINCT year
+		FROM tb_course
+	</select>
+<!--	通过id和学年和学期查询课程-->
+	<select id="getCourseDOByYearAndTerm" resultMap="CourseDO">
+		SELECT *
+		FROM tb_course
+		WHERE `year` = #{year} AND term = #{term}
+	</select>
+<!--通过id和学年和学期查询课程	-->
+	<select id="getCourseDOByIdAndYearAndTerm" resultMap="CourseDO">
+		SELECT *
+		FROM tb_course
+		WHERE id=#{id} AND `year` = #{year} AND term = #{term}
+	</select>
+<!-- 通过学年返回学期集	-->
+	<select id="getTermByYear" resultType="String">
+		SELECT DISTINCT term
+		FROM tb_course WHERE
+		year=#{year}
+	</select>
+<!--通过学年和学期返回课程-->
+	<select id="getCourseByYearAndTerm" resultType="String">
+		SELECT name
+		FROM tb_course
+		WHERE `year` = #{year} AND term = #{term}
+	</select>
+<!--	通过学年、学期和课程名返回课程集-->
+	<select id="getCourseDOByYearAndTermAndCourse" resultMap="CourseDO">
+		SELECT *
+		FROM tb_course
+		WHERE `year` = #{year} AND term = #{term} AND name = #{courseName}
+	</select>
+<!--	通过课程名查询课程Id-->
+	<select id="getCourseIdByName" parameterType="String" resultType="Long">
+		SELECT id
+		FROM tb_course
+		WHERE name = #{courseName}
+	</select>
+<!--通过id获得课程名-->
+	<select id="getCourseNameById" parameterType="long" resultType="String">
+		SELECT
+			name
+		FROM tb_course WHERE
+			id = #{id}
+	</select>
+<!--通过name获得课程id	-->
+	<select id="getIdByName" parameterType="String" resultType="long">
+		SELECT
+			id
+		FROM tb_course WHERE
+			name = #{name}
+	</select>
+<!--	判断是否存在classId-->
+	<select id="checkByClassId" parameterType="long" resultType="String">
+		<bind name="courseId" value="'%'+_parameter+'%'"/>
+		SELECT DISTINCT class_id
+		FROM tb_course
+		WHERE class_id LIKE #{courseId}
+	</select>
+	
+</mapper>

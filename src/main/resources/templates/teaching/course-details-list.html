@@ -1,0 +1,170 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="component/head :: head"></head>
+
+<style>
+	.course{
+		background-color:rgba(0, 0, 0, 0.03);
+		text-align:center;
+		border:1px solid rgba(0,0,0,.125);
+		width:25%;
+		height:120px;
+		margin-left:3%;
+		margin-top:10px;
+		padding-top:10px;
+		float:left;	
+	}
+</style>
+
+<body onload="getYears()">
+	<header th:replace="component/header :: header"></header>
+
+	<!-- Begin page content -->
+	<div class="container">
+
+		<div class="row">
+			<div th:replace="component/sidebar"></div>
+
+			<div class="col-md-9">
+				<div th:replace="component/page-title::pageTitle('课程详情')"></div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="dropdown">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<label class="input-group-text" for="inputGroupSelect01">学年：</label>
+								</div>
+								<select class="custom-select" id="inputGroupSelect01-year">
+									<option disabled="disabled" selected="selected">请选择</option><!-- 动态追加学年 -->
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="dropdown">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<label class="input-group-text" for="inputGroupSelect01">学期：</label>
+								</div>
+								<select class="custom-select" id="inputGroupSelect01-term" onchange="selectTerm();" autocomplete="off">
+									<option disabled="disabled" selected="selected">请选择</option>
+									<option>上学期</option>
+									<option>下学期</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 tm-block-col">
+                         <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
+                             <table id="listTable" class="table table-striped" style="margin-top: 40px">
+                                 <thead>                  
+                                 </thead>
+                                 <tbody>
+                                    <!-- 动态追加tr -->
+                                 </tbody>
+                             </table>
+                         </div>
+                     </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="component/footer :: footer"></footer>
+	<script th:inline="javascript">
+		function getYears() {
+			//获取数据库中的学年
+			$.ajax({
+				url: "/genesis/restmetadata/get-years",
+				type: "POST",
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: true,
+				success: function (result) {
+					console.log(result);
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						} else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						//得到学年list
+						var list = result.module;
+						//清空学年(除第一个)
+						$('#inputGroupSelect01-year option').not(":first").remove();
+						for (var i = 0; i < list.length; i++) {
+							document.getElementById("inputGroupSelect01-year").options.add(new Option(list[i], i));
+						}
+					}
+				},
+				error: function (e) {
+					alert("异常");
+				}
+			});
+		}
+
+		function selectTerm() {
+			var userId = [[${userId}]];
+			var year = $("#inputGroupSelect01-year option:selected").text();
+			var term = $("#inputGroupSelect01-term option:selected").text();
+			var termNumber;
+			if (year == '请选择...' || term == '请选择...')
+				return;
+			else {
+				if (term == '上学期')
+					termNumber = 0;
+				else if (term == '下学期')
+					termNumber = 1;
+				$.ajax({
+					url: "/genesis/restdetails/get-coursedo-by-year-and-term-and-userid",
+					type: "POST",
+					data: JSON.stringify({
+						"userId": userId,
+						"year": year,
+						"term": termNumber
+					}),
+					contentType: "application/json; charset=utf-8",
+					dataType: 'json',
+					async: true,
+					success: function (result) {
+						console.log(result);
+						if (result.success == false) {
+							if (result.code == 9002) {
+								alert("参数错误");
+							} else if (result.code == 9999) {
+								alert("系统错误");
+							} else if (result.code == 1025) {
+								alert("本学期无课程");
+							}
+						} else {
+							var list = result.module;
+							$("#listTable tbody").empty();
+							for (var i = 0; i < list.length; i++) {
+								var number = list[i].courseDO.number;
+								var name = list[i].courseDO.name;
+								var detailUrl = list[i].url;
+								var term;
+								if (termNumber == 0)
+									term = '上学期';
+								else if (termNumber == 1)
+									term = '下学期';
+								$("#listTable tbody").append("<div class='course'>" + name + "</br>" + number + "</br> <a href=" +
+									detailUrl +
+									">More</a></div>");
+							}
+						}
+					},
+					error: function (e) {
+						alert("异常");
+					}
+				});
+			}
+		}
+	</script>
+
+	<div th:replace="component/footer-lib"></div>
+</body>
+
+</html>

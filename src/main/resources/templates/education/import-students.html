@@ -1,0 +1,54 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="component/head :: head"></head>
+
+<body onload="initFileUpload()">
+	<header th:replace="component/header :: header"></header>
+
+	<!-- Begin page content -->
+	<div class="container">
+		<div class="row">
+
+			<div th:replace="component/sidebar"></div>
+
+			<div class="col-md-9">
+				<h2>导入用户数据</h2>
+				<hr />
+				<input type="file" id ="fileInpute" name="multipartFile">
+			</div>
+		</div>
+	</div>
+	<footer th:replace="component/footer :: footer"></footer>
+
+
+	<script>
+	function initFileUpload(){
+		$("#fileInpute").fileinput({
+		    language: 'zh', //设置语言
+		    uploadUrl: '/genesis/resteducation/import-students', //上传的地址
+		    showUpload: true,
+		    allowedFileExtensions : ['xls', 'xlsx'],
+		    uploadAsync : false,
+//		    maxFileCount: 1,
+		    browseOnZoneClick: true,
+		    dropZoneEnabled : true,
+		    showPreview : true,
+		    enctype: 'multipart/form-data',
+		    showCaption: true,//是否显示标题
+		    browseClass: "btn btn-info", //按钮样式      
+		    dropZoneEnabled: false,
+		    showPreview: true,
+		    previewFileIcon: "<i class='glyphicon glyphicon-king'></i>", 
+		});
+	}
+
+	</script>
+	
+
+
+	<div th:replace="component/footer-lib"></div>
+</body>
+
+</html>

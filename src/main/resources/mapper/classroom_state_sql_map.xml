@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.yctc.genesis.dao.ClassroomStateDAO">
+	<resultMap type="edu.yctc.genesis.entity.ClassroomStateDO" id="ClassroomStateDO">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="classroom_id" property="classroomId"/>
+		<result column="lesson_id" property="lessonId"/>
+		<result column="using" property="using"/>
+		<result column="create_time" property="createTime"/>
+		<result column="modify_time" property="modifyTime"/>
+	</resultMap>
+<!--	插入一条教室使用记录-->
+	<insert id="insert" parameterType="edu.yctc.genesis.entity.ClassroomStateDO">
+		<selectKey keyProperty="id" order="AFTER" resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_classroom_state(
+			classroom_id,
+			lesson_id,
+			state,
+			create_time,
+			modify_time
+		) VALUES(
+			#{classroomId},
+			#{lessonId},
+			#{state},
+			now(),
+			now()
+		);
+	</insert>
+<!--	教室id查询教室使用情况-->
+	<select id="getClassroomStateDOById" parameterType="long" resultMap="ClassroomStateDO">
+		SELECT
+			id,
+			classroom_id,
+			lesson_id,
+			state,
+			create_time,
+			modify_time
+		FROM tb_classroom_state WHERE
+			id = #{id}
+	</select>
+<!--	更新教室使用状态-->
+	<update id="update" parameterType="edu.yctc.genesis.entity.ClassroomStateDO">
+		UPDATE tb_classroom_state
+		SET classroom_id=#{classroomId},
+			lesson_id=#{lessonId},
+			state=#{state},
+			modify_time=NOW()
+		WHERE id=#{id}
+	</update>
+<!--	id删除教室使用记录-->
+	<delete id="deleteById" parameterType="long">
+		DELETE FROM
+		tb_classroom_state
+		WHERE id=#{id}
+	</delete>
+<!--	判断是否存在教室id-->
+	<select id="checkByclassroomId" parameterType="long" resultType="Long">
+		SELECT DISTINCT classroom_id
+		FROM tb_classroom_state
+		WHERE classroom_id = #{classroomId}
+	</select>
+	
+</mapper>

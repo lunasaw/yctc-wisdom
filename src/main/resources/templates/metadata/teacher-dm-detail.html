@@ -1,0 +1,215 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="component/head :: head"></head>
+
+<body onload="GetRequest();fillHref()">
+	<header th:replace="component/header :: header"></header>
+
+	<!-- Begin page content -->
+	<div class="container">
+		<div class="row">
+			<div th:replace="component/sidebar"></div>
+
+			<div class="col-md-9">
+				<div th:replace="component/page-title::pageTitle('教师详情')"></div>
+
+				<div class="row">
+					<div class="col-md-8 offset-md-2">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">学院</span>
+							</div>
+							<input type="text" class="form-control" id="basic-url-academy" aria-describedby="basic-addon3" readonly>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">姓名</span>
+							</div>
+							<input type="text" class="form-control" id="basic-url-name" aria-describedby="basic-addon3" readonly>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">工号</span>
+							</div>
+							<input type="text" class="form-control" id="basic-url-number" aria-describedby="basic-addon3" readonly>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">邮箱</span>
+							</div>
+							<input type="text" class="form-control" id="basic-url-mail" aria-describedby="basic-addon3" readonly>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">性别</span>
+							</div>
+							<input type="text" class="form-control" id="basic-url-sex" aria-describedby="basic-addon3" readonly>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">手机号</span>
+							</div>
+							<input type="text" class="form-control" id="basic-url-phone" aria-describedby="basic-addon3" readonly>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">身份证</span>
+							</div>
+							<input type="text" class="form-control" id="basic-url-idCardNumber" aria-describedby="basic-addon3" readonly>
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">Face-token</span>
+							</div>
+							<input type="text" class="form-control" id="basic-url-faceToken" aria-describedby="basic-addon3" readonly>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-8 offset-md-2">
+						<a href="#" class="btn btn-primary" role="button" id="teacher-dm-modify-url">修改信息</a>
+						<button onclick="deleteTeacher()" type="button" class="btn btn-danger">删除教师</button>
+						<a href="#" class="btn btn-secondary" role="button" id="teacher-dm-list-url">返回列表页</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="component/footer :: footer"></footer>
+
+	<script>
+		function getUrl() {
+			var url = location.search; //获取url中"?"符后的字串
+			var theRequest = new Object();
+			if (url.indexOf("?") != -1) {
+				var str = url.substr(1);
+				strs = str.split("&");
+				for (var i = 0; i < strs.length; i++) {
+					theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+				}
+			}
+			return theRequest;
+		}
+
+		function GetRequest() {
+			var theRequest = new Object();
+			theRequest = getUrl();
+			//获取id
+			var id = theRequest["id"];
+			$.ajax({
+				url: "/genesis/restmetadata/get-teacherdo-and-academy-vo-by-id",
+				type: "POST",
+				data: id,
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: true,
+				success: function (result) {
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						} else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						document.getElementById('basic-url-academy').value = result.module.academy;
+						document.getElementById('basic-url-number').value = result.module.teacherDO.number;
+						document.getElementById('basic-url-name').value = result.module.teacherDO.name;
+						document.getElementById('basic-url-sex').value = result.module.teacherDO.sex;
+						document.getElementById('basic-url-idCardNumber').value = result.module.teacherDO.idCardNumber;
+						document.getElementById('basic-url-phone').value = result.module.teacherDO.phone;
+						document.getElementById('basic-url-mail').value = result.module.teacherDO.mail;
+						document.getElementById('basic-url-faceToken').value = result.module.teacherDO.faceToken;
+					}
+				},
+				error: function (e) {
+					alert("GetRequest异常");
+				}
+			});
+		}
+
+		function deleteTeacher() {
+			var msg = "确定要删除吗？";
+			if (confirm(msg) == true) {
+				var theRequest = new Object();
+				theRequest = getUrl();
+				var id = theRequest["id"];
+				$.ajax({
+					url: "/genesis/restmetadata/delete-teacher",
+					type: "POST",
+					data: id,
+					contentType: "application/json; charset=utf-8",
+					dataType: 'json',
+					async: true,
+					success: function (result) {
+						console.log(result);
+						if (result.success == false) {
+							if (result.code == 9002) {
+								alert("参数错误");
+							} else if (result.code == 9999) {
+								alert("系统错误");
+							}else if (result.code == 9004) {
+								alert("外键约束，禁止删除");
+							}
+						} else {
+							alert("删除成功！");
+							window.location.href = "/genesis/metadata/teacher-dm-list";
+						}
+					},
+					error: function (e) {
+						alert("deleteTeacher异常");
+					}
+				});
+			} else {
+				return;
+			}
+		}
+
+		var url;
+
+		function getHref(id) {
+			$.ajax({
+				url: "/genesis/restmetadata/get-teacher-dm-modify-url",
+				type: "POST",
+				data: id,
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: false,
+				success: function (result) {
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						} else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						url = result.module;
+					}
+				},
+				error: function (e) {
+					alert("getHref异常");
+				}
+			});
+			return url;
+		}
+
+		function redirectUrl() {
+			var theRequest = new Object();
+			theRequest = getUrl();
+			var id = theRequest["id"];
+			var href = getHref(id);
+			return href;
+		}
+
+		function fillHref() {
+			document.getElementById("teacher-dm-modify-url").href = redirectUrl();
+			document.getElementById("teacher-dm-list-url").href = "/genesis/metadata/teacher-dm-list";
+		}
+	</script>
+
+	<div th:replace="component/footer-lib"></div>
+</body>
+
+</html>

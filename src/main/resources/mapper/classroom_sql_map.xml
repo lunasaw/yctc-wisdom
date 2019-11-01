@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.yctc.genesis.dao.ClassroomDAO">
+	<resultMap type="edu.yctc.genesis.entity.ClassroomDO" id="ClassroomDO">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="building_floor_id" property="buildingFloorId" />
+		<result column="number" property="number"/>
+		<result column="equipment_id" property="equipmentId"/>
+		<result column="create_time" property="createTime"/>
+		<result column="modify_time" property="modifyTime"/>
+	</resultMap>
+<!--插入教室-->
+	<insert id="insert" parameterType="edu.yctc.genesis.entity.ClassroomDO">
+		<selectKey keyProperty="id" order="AFTER" resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_classroom(
+			building_floor_id,
+			number,
+			equipment_id,
+			create_time,
+			modify_time
+		) VALUES(
+			#{building_floor_id},
+			#{number},
+			#{equipmentId},
+			NOW(),
+			NOW()
+		);
+	</insert>
+<!--id查询教室-->
+	<select id="getClassroomDOById" parameterType="long" resultMap="ClassroomDO">
+		SELECT
+			id,
+			building_floor_id,
+			number,
+			equipment_id,
+			create_time,
+			modify_time
+		FROM tb_classroom WHERE
+			id = #{id}
+	</select>
+<!--更新教室信息-->
+	<update id="update" parameterType="edu.yctc.genesis.entity.ClassroomDO">
+		UPDATE tb_classroom
+		SET building_floor_id=#{buildingFloorId},
+			number=#{number},
+			equipment_id=#{equipmentId},
+			modify_time=NOW()
+		WHERE id=#{id}
+	</update>
+<!--id删除教室-->
+	<delete id="deleteById" parameterType="long">
+		DELETE FROM tb_classroom
+		WHERE id=#{id}
+	</delete>
+<!--	返回库中教室Id集-->
+	<select id="getClassroomId" resultType="Long">
+		SELECT DISTINCT id
+		FROM tb_classroom
+	</select>
+<!--通过buildingFloorId返回教室集-->
+	<select id="getClassroomDOByBuildingFloorId" parameterType="long" resultMap="ClassroomDO">
+		SELECT *
+		FROM tb_classroom
+		WHERE building_floor_id=#{buildingFloorId}
+	</select>
+<!--判断是否存在buildingFloorId-->
+	<select id="checkByBuildingFloorId" parameterType="long" resultType="Long">
+		SELECT DISTINCT building_floor_id
+		FROM tb_classroom
+		WHERE building_floor_id=#{buildingFloorId}
+	</select>
+<!--返回教室数-->
+	<select id="SummaryClassroom" resultType="int">
+		SELECT COUNT(*)
+		FROM tb_classroom
+	</select>
+<!--	通过教室number返回设备id-->
+	<select id="getEquipmentIdsByClassroomNumber" parameterType="String" resultType="String">
+		SELECT equipment_id FROM tb_classroom
+		WHERE number=#{number}
+	</select>
+	
+</mapper>

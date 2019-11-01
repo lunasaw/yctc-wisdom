@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.yctc.genesis.dao.ProfessionDAO">
+	<resultMap type="edu.yctc.genesis.entity.ProfessionDO" id="ProfessionDO">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="profession" property="profession"/>
+		<result column="create_time" property="createTime"/>
+		<result column="modify_time" property="modifyTime"/>
+	</resultMap>
+<!--	插入-->
+	<insert id="insert" parameterType="edu.yctc.genesis.entity.ProfessionDO">
+		<selectKey keyProperty="id" order="AFTER" resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_profession(
+			profession,
+			create_time,
+			modify_time
+		) VALUES(
+			#{profession},
+			NOW(),
+			NOW()
+		);
+	</insert>
+<!--	通过id返回ProfessionDO-->
+	<select id="getProfessionDOById" parameterType="long" resultMap="ProfessionDO">
+		SELECT *
+		FROM tb_profession
+		WHERE id=#{id}
+	</select>
+<!--	更新-->
+	<update id="update" parameterType="edu.yctc.genesis.entity.ProfessionDO">
+		UPDATE tb_profession
+		SET profession=#{profession},
+			modify_time=NOW()
+		WHERE id=#{id}
+	</update>
+<!--	通过id删除-->
+	<delete id="deleteById" parameterType="long">
+		DELETE FROM tb_profession
+		WHERE id=#{id}
+	</delete>
+<!--	通过id返回专业名称-->
+	<select id="getProfessionById" resultType="String" parameterType="long">
+		SELECT profession
+		FROM tb_profession
+		WHERE id=#{id}
+	</select>
+<!--	获取库中所有专业-->
+	<select id="getProfessionDOs" resultMap="ProfessionDO">
+		SELECT *
+		FROM tb_profession
+	</select>
+<!--	通过专业名返回ProfessionDO-->
+	<select id="getProfessionDOByProfession" parameterType="String" resultMap="ProfessionDO">
+		SELECT *
+		FROM tb_profession
+		WHERE profession=#{profession}
+	</select>
+</mapper>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="component/head :: head"></head>
+
+<body onload="getRequest();fillHref();">
+    <header th:replace="component/header :: header"></header>
+
+    <!-- Begin page content -->
+    <div class="container">
+        <div class="row">
+
+            <div th:replace="component/sidebar"></div> 
+
+            <div class="col-md-9">
+					<div th:replace="component/page-title::pageTitle('学生课堂表现')"></div>
+				<div class="row mt-3">
+					<div class="col-md-12">
+						<table id="listTable" class="table table-striped">
+							<thead>
+								<tr>
+									<th scope="col">编号</th>
+									<th scope="col">课程号</th>
+									<th scope="col">课程名</th>
+									<th scope="col">学年</th>
+									<th scope="col">学期</th>
+									<th scope="col">出勤率</th>
+									<th scope="col">听课质量评分</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- 动态追加tr -->
+							</tbody>
+						</table>
+						<a href="#" class="btn btn-primary" role="button" id="student-details-list">返回</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <footer th:replace="component/footer :: footer"></footer>
+    
+    <script>
+    function getUrl() {
+		var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for ( var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+	}
+    
+   	function getRequest() {
+   		var theRequest = new Object();
+       	theRequest = getUrl();
+       	var studentId = theRequest["id"];
+		$.ajax({
+			url: "/genesis/restdetails/get-course-and-attendancerate-and-scorevo-by-studentid",
+			type: "POST",
+			data: studentId,
+			contentType: "application/json; charset=utf-8",
+			dataType: 'json',
+			async: false,
+			success: function (result) {
+				if (result.success == false) {
+					if (result.code == 9002) {
+						alert("参数错误");
+					} else if (result.code == 9999) {
+						alert("系统错误");
+					} else if (result.code == 1025) {
+   						alert("数据库中缺少相关数据");
+   					}
+				} else {
+					var list = result.module;
+					$("#listTable tbody").empty();
+					for (var i = 0; i < list.length; i++) {
+  						var listId = i + 1;
+   						var number = list[i].courseDTO.number;
+   						var name = list[i].courseDTO.name;
+   						var year = list[i].courseDTO.year;
+   						var term = list[i].courseDTO.term;
+   						var termText;
+   						if(term == 0)
+   							termText = "上学期";
+   						else if(term == 1)
+   							termText = "下学期";
+   						var attendanceRate = list[i].attendanceRate;
+   						var score = list[i].score; 
+						$("#listTable tbody").append("<tr><th scope=\"row\">" + listId + "</th><td>"+ number +"</td><td>" 
+								+ name + "</td><td>" 
+								+ year + "</td><td>" 
+								+ termText + "</td><td>" 
+								+ attendanceRate + "</td><td>" 
+								+ score + "</td></tr>");
+					}
+				}
+			},
+			error: function (e) {
+				alert("异常");
+			}
+		});
+	}
+    	
+        function fillHref(){
+			document.getElementById("student-details-list").href = "/genesis/teaching/student-details-list";
+		}
+    </script> 
+    
+    <div th:replace="component/footer-lib"></div>
+</body>
+
+</html>

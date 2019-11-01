@@ -1,0 +1,197 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="component/head :: head"></head>
+
+<body onload="getLessonDetails();fillHref();getKnowledgeDetails()">
+    <header th:replace="component/header :: header"></header>
+
+    <!-- Begin page content -->
+    <div class="container">
+        <div class="row">
+
+          	<div th:replace="component/sidebar"></div> 
+
+            <div class="col-md-9">
+				<div th:replace="component/page-title::pageTitle('知识点学情反馈详情')"></div>
+                <div class="input-group mb-3">
+                	<div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">课程名</span>
+                    </div>
+                    <input type="text" disabled="disabled" class="form-control" id="basic-url-name" aria-describedby="basic-addon3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">课时</span>
+                    </div>
+                    <input type="text" disabled="disabled" class="form-control" id="basic-url-lesson-number" aria-describedby="basic-addon3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">学年</span>
+                    </div>
+                    <input type="text" disabled="disabled" class="form-control" id="basic-url-year" aria-describedby="basic-addon3">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">学期</span>
+                    </div>
+                    <input type="text" disabled="disabled" class="form-control" id="basic-url-term" aria-describedby="basic-addon3">     
+                </div>
+                
+   
+                
+                
+               <div class="col-md-12" id="divAdd">        
+	              
+               </div> 
+
+                
+                
+                
+                <a href="#" class="btn btn-primary" role="button" id="lesson-knowledge-point-list">返回</a>
+            </div>
+        </div>
+    </div>
+    <footer th:replace="component/footer :: footer"></footer>
+    
+    <script>
+    function getUrl() {
+		var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for ( var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+	}
+    
+    	function getLessonDetails() {
+    		var theRequest = new Object();
+        	theRequest = getUrl();
+        	var id = theRequest["id"];
+
+			$.ajax({
+				url: "/genesis/restdetails/get-lessondetailsvo-by-lessonid-list",
+				type: "POST",
+				data: id,
+				contentType: "application/json;charset=utf-8",
+				dataType: 'json',
+				// async: true,
+				success: function (result) {
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						} else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						var vo = result.module;
+						document.getElementById('basic-url-name').value = vo.courseDTO.name;
+						document.getElementById('basic-url-year').value = vo.courseDTO.year;
+						var term = vo.courseDTO.term;
+						var termText;
+						if(term == 0)
+							termText = "上学期";
+						else if(term == 1)
+							termText = "下学期";
+						document.getElementById('basic-url-term').value = termText;
+						var classNameList = vo.classNameList;
+						var className = "";
+						for(var i = 0; i < classNameList.length; i++){
+							className = className+" "+classNameList[i];
+						}	
+						document.getElementById('basic-url-lesson-number').value = vo.lessonDO.number;											
+						
+					}
+				},
+				error: function (e) {
+					alert("getLessonDetails异常");
+				}
+			});
+		}
+    	
+    	function getKnowledgeDetails() {
+    		var theRequest = new Object();
+        	theRequest = getUrl();
+        	var lessonId = theRequest["id"];
+			$.ajax({
+				url: "/genesis/restknowledge/get-knowledgesdetailsvo-by-lessonid-listone",
+				type: "POST",
+				data: lessonId,
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: true,
+				success: function (result) {
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						} else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						
+						var voList = result.module;
+						for(var i=0; i<voList.length; i++){
+							var vo = voList[i];
+							var knowledgeId = vo.knowledgeId;
+							var listId = i+1;
+							$("#divAdd").append(
+									"<div><h5> 知识点"+ listId +"</h5></div>"+
+					                "<div class='input-group mb-3'>"+
+						             	"<div class='input-group-prepend'>"+
+						                  "<span class='input-group-text' id='basic-addon3'>描述</span>"+
+						                "</div>"+
+					                    "<input type='text' disabled='disabled' class='form-control' id='basic-url-content-"+ knowledgeId +"' aria-describedby='basic-addon3'>"+
+					                "</div>"+
+					                "<div class='input-group mb-3'>"+
+					                    "<div class='input-group-prepend'>"+
+					                        "<span class='input-group-text' id='basic-addon3'>开始时间</span>"+
+					                    "</div>"+
+					                    "<input type='text' disabled='disabled' class='form-control' id='basic-url-start-time-"+ knowledgeId +"' aria-describedby='basic-addon3'>"+
+					                      "<div class='input-group-prepend'>"+
+					                        "<span class='input-group-text' id='basic-addon3'>结束时间</span>"+
+					                    "</div>"+
+					                    "<input type='text' disabled='disabled' class='form-control' id='basic-url-end-time-"+ knowledgeId +"' aria-describedby='basic-addon3'> "+    
+					                "</div>"+
+					                "<div class='input-group mb-3'>"+
+					                	"<div class='input-group-prepend'>"+
+					                        "<span class='input-group-text' id='basic-addon3'>学情反馈</span>"+
+					                        "<input type='text' disabled='disabled' class='form-control' id='basic-url-statement-"+ knowledgeId +"' aria-describedby='basic-addon3' >"+
+					                    "</div>"+
+					                    "<div class='input-group-prepend'>"+
+					                       "<span class='input-group-text' id='basic-addon3'>预计时长/min</span>"+
+					                    "</div>"+
+					                    "<input type='text' disabled='disabled' class='form-control' id='basic-url-length-"+ knowledgeId +"' aria-describedby='basic-addon3'>"+
+					                "</div>"
+
+							);	
+							document.getElementById('basic-url-content-'+knowledgeId).value = vo.content;
+							var begin = new Date(vo.scanStartTime).toJSON();
+							var beginTime = new Date(+new Date(begin) + 28800000).toISOString().replace(/T/g,' ').replace(/.[\d]{3}Z/,' ');//格式、时间差改正
+							var end = new Date(vo.scanEndTime).toJSON();
+							var endTime = new Date(+new Date(end) + 28800000).toISOString().replace(/T/g,' ').replace(/.[\d]{3}Z/,' ');//格式、时间差改正
+							document.getElementById('basic-url-start-time-'+knowledgeId).value = beginTime;
+							document.getElementById('basic-url-end-time-'+knowledgeId).value = endTime;
+							document.getElementById('basic-url-statement-'+knowledgeId).value = "认真听课人数"+(vo.sumForCareful/vo.sum*100).toFixed(2)+"%";
+							document.getElementById('basic-url-length-'+knowledgeId).value = vo.length;
+							
+						}
+						
+					}
+				},
+				error: function (e) {
+					alert("getKnowledgeDetails异常");
+				}
+			});
+		}
+    	
+    	
+    	
+    	
+    	 function fillHref(){
+ 			document.getElementById("lesson-knowledge-point-list").href = "/genesis/teaching/lesson-knowledge-point-list";
+ 		}
+    </script>
+    
+    <div th:replace="component/footer-lib"></div>
+</body>
+
+</html>

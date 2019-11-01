@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:shiro="http://www.pollix.at/thymeleaf/shiro"
+	xmlns:th="http://www.thymeleaf.org">
+<style>
+.td {
+	width: 20%;
+}
+.loading {
+    width: 160px;
+    height: 56px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 56px;
+    color: #fff;
+    padding-left: 60px;
+    font-size: 15px;
+    background: #000 url(http://123.206.53.234/yctc/loading.gif) no-repeat 10px 50%;
+    opacity: 0.7;
+    z-index: 9999;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+</style>
+<head th:replace="component/head :: head"></head>
+
+<body>
+	<header th:replace="component/header :: header"></header>
+
+	<!-- Begin page content -->
+	<div class="container">
+		<div class="row">
+			<div th:replace="component/sidebar"></div>
+			<div class="col-md-9">
+				<div th:replace="component/page-title::pageTitle('考勤点名')"></div>
+				<div class="form-group row">
+					<div class="col-md-4 offset-md-4">
+						<button type="button" class="btn btn-primary" onclick="checkAttendance()">开始考勤</button>
+					</div>
+				</div>
+				<div id="myModal" class="modal fade" data-keyboard="false"
+            data-backdrop="static" data-role="dialog"
+            aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog"></div>
+            <div class="modal-body"></div>
+            <div id="loading" class="loading">正在考勤</div>
+        </div>
+				<div class="col-md-12">
+					<table class="table table-striped" id="listTable">
+						<thead>
+							<tr>
+								<th scope="col" id="classes"><!-- 动态追加 --></th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- 动态追加 -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer th:replace="component/footer :: footer"></footer>
+	<div th:replace="component/footer-lib"></div>
+	<script type="text/javascript">
+	
+	var map = {};
+		function checkAttendance() {
+			$.ajax({
+				url: "/genesis/restfacefunction/check-attendance",
+				type: "POST",
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: true,
+				success: function (result) {
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+							$('#myModal').modal('hide');
+							$(".modal-backdrop.fade.show").remove();
+						} else if (result.code == 9999) {
+							alert("系统错误");
+							$('#myModal').modal('hide');
+							$(".modal-backdrop.fade.show").remove();
+							$("#loading").hide();
+						}else if (result.code == 1031) {
+							alert("无授课");
+							$('#myModal').modal('hide');
+							$(".modal-backdrop.fade.show").remove();
+						}else if (result.code == 1030) {
+							alert("您现在不在上课，不能考勤哦");
+							$('#myModal').modal('hide');
+							$(".modal-backdrop.fade.show").remove();
+						}else if (result.code == 9001) {
+							alert("数据库错误");
+							$('#myModal').modal('hide');
+							$(".modal-backdrop.fade.show").remove();
+						}
+					} else {
+						$("#listTable tbody").empty();
+						$("#classes").empty();
+						//得到考勤list
+						var list = result.module;
+						console.log(list);
+						var listId = 0;
+						for (var i in list) {
+							//获取班级
+							setKey(list[i].studentClass);
+							//新起一行
+							if(i%5 == 0){
+								listId++;
+								if(list[i].attendance == 2) //缺席
+								{
+									$("#listTable tbody").append("<tr id='row"+listId+"'></tr>");
+									$("#listTable tbody #row"+listId+"").append("<td>"+ listId +"</td><td class=\"text-danger\">"+ list[i].name +"</td>");
+								}else if(list[i].attendance == 1) //正常出席
+								{
+									$("#listTable tbody").append("<tr id='row"+listId+"'></tr>");
+									$("#listTable tbody #row"+listId+"").append("<td>"+ listId +"</td><td>"+ list[i].name +"</td>");
+								}								
+							}
+							//直接追加
+							else if((i+1)%5 != 0){
+								if(list[i].attendance == 2) //缺席
+								{
+									$("#listTable tbody #row"+listId+"").append("<td class=\"text-danger\">"+ list[i].name +"</td>");
+								}else if(list[i].attendance == 1) //正常出席
+								{
+									$("#listTable tbody #row"+listId+"").append("<td>"+ list[i].name +"</td>");
+								}
+							}
+							//最后一列或者最后一个
+							else if((i+1)%5 == 0 || (i+1) == list.length){
+								if(list[i].attendance == 2) //缺席
+								{
+									$("#listTable tbody #row"+listId+"").append("<td class=\"text-danger\">"+ list[i].name +"</td></tr>");
+								}else if(list[i].attendance == 1) //正常出席
+								{
+									$("#listTable tbody #row"+listId+"").append("<td>"+ list[i].name +"</td></tr>");
+								}
+							}
+							
+						}
+						//显示班级
+						showClasses();
+					}
+				},
+				error: function (e) {
+					alert("异常");
+				}
+			});
+			//等待数据
+			waitForDate();
+		}
+			function setKey(classNumber) {
+				map[classNumber] = classNumber + "";
+			}
+			
+			function showClasses() {
+				$('#myModal').modal('hide');
+				$(".modal-backdrop.fade").hide();
+				for(var i in map){
+					$("#classes").append(map[i] + " ");
+				}
+			}
+			
+			function waitForDate() {		
+				alert("开始考勤,请耐心等待");
+				HtmlLoad();				
+			}
+		
+			function  HtmlLoad(){
+	            $('#myModal').modal('show');
+			}
+		
+			
+	</script>
+</body>
+</html>

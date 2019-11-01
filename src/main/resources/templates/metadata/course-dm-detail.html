@@ -1,0 +1,221 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="component/head :: head"></head>
+
+<body onload="getRequest();fillHref()">
+	<header th:replace="component/header :: header"></header>
+
+	<!-- Begin page content -->
+	<div class="container">
+		<div class="row">
+			<div th:replace="component/sidebar"></div>
+
+			<div class="col-md-9">
+				<div th:replace="component/page-title::pageTitle('课程详情')"></div>
+
+				<div class="row">
+					<div class="col-md-8 offset-md-2">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">课程号</span>
+							</div>
+							<input type="text" disabled="disabled" class="form-control" id="basic-url-number" aria-describedby="basic-addon3">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">课程名称</span>
+							</div>
+							<input type="text" disabled="disabled" class="form-control" id="basic-url-name" aria-describedby="basic-addon3">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">开课学年</span>
+							</div>
+							<input type="text" disabled="disabled" class="form-control" id="basic-url-year" aria-describedby="basic-addon3">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">开课学期</span>
+							</div>
+							<input type="text" disabled="disabled" class="form-control" id="basic-url-term" aria-describedby="basic-addon3">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">开课专业</span>
+							</div>
+							<input type="text" disabled="disabled" class="form-control" id="basic-url-profession" aria-describedby="basic-addon3">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">开课班级</span>
+							</div>
+							<input type="text" disabled="disabled" class="form-control" id="basic-url-classes" aria-describedby="basic-addon3">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon3">课时数</span>
+							</div>
+							<input type="text" disabled="disabled" class="form-control" id="basic-url-lessonSum" aria-describedby="basic-addon3">
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-8 offset-md-2">
+						<a href="#" class="btn btn-primary" role="button" id="course-dm-modify-url">修改信息</a>
+						<button onclick="deleteCourse()" type="button" class="btn btn-danger">删除课程</button>
+						<a href="#" class="btn btn-secondary" role="button" id="course-dm-list-url">返回列表页</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="component/footer :: footer"></footer>
+
+	<script>
+		function getUrl() {
+			var url = location.search; //获取url中"?"符后的字串
+			var theRequest = new Object();
+			if (url.indexOf("?") != -1) {
+				var str = url.substr(1);
+				strs = str.split("&");
+				for (var i = 0; i < strs.length; i++) {
+					theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+				}
+			}
+			return theRequest;
+		}
+
+		function getRequest() {
+			var theRequest = new Object();
+			theRequest = getUrl();
+			var id = theRequest["id"];
+			$.ajax({
+				url: "/genesis/restmetadata/get-coursedto-and-classes-vo-by-id",
+				type: "POST",
+				data: id,
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: true,
+				success: function (result) {
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						} else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						document.getElementById('basic-url-number').value = result.module.courseDTO.number;
+						document.getElementById('basic-url-name').value = result.module.courseDTO.name;
+						document.getElementById('basic-url-year').value = result.module.courseDTO.year;
+						var term = result.module.courseDTO.term;
+						var termText;
+						if (term == 0)
+							termText = "上学期";
+						else if (term == 1)
+							termText = "下学期";
+						document.getElementById('basic-url-term').value = termText;
+						document.getElementById('basic-url-profession').value = result.module.profession;
+						var classDOList = result.module.classDOList;
+						var classes="";
+						for(var j in classDOList){
+							classes += classDOList[j].number;
+							if(j < classDOList.length - 1)
+								classes += ",";
+						}
+						document.getElementById('basic-url-classes').value = classes;
+						document.getElementById('basic-url-lessonSum').value = result.module.courseDTO.lessonSum;
+					}
+				},
+				error: function (e) {
+					alert("异常");
+				}
+			});
+		}
+
+		var url;
+
+		function getHref(id) {
+			$.ajax({
+				url: "/genesis/restmetadata/get-course-dm-modify-url",
+				type: "POST",
+				data: id,
+				contentType: "application/json; charset=utf-8",
+				dataType: 'json',
+				async: false,
+				success: function (result) {
+					console.log(result);
+					if (result.success == false) {
+						if (result.code == 9002) {
+							alert("参数错误");
+						} else if (result.code == 9999) {
+							alert("系统错误");
+						}
+					} else {
+						url = result.module;
+					}
+				},
+				error: function (e) {
+					alert("异常");
+				}
+			});
+			return url;
+		}
+
+		function redirectUrl() {
+			var theRequest = new Object();
+			theRequest = getUrl();
+			var id = theRequest["id"];
+			var href = getHref(id);
+			return href;
+		}
+
+		function deleteCourse() {
+			var msg = "确定要删除吗？";
+			if (confirm(msg) == true) {
+				var theRequest = new Object();
+				theRequest = getUrl();
+				var id = theRequest["id"];
+				$.ajax({
+					url: "/genesis/restmetadata/delete-course",
+					type: "POST",
+					data: id,
+					contentType: "application/json; charset=utf-8",
+					dataType: 'json',
+					async: true,
+					success: function (result) {
+						console.log(result);
+						if (result.success == false) {
+							if (result.code == 9002) {
+								alert("参数错误");
+							} else if (result.code == 9999) {
+								alert("系统错误");
+							}else if (result.code == 9004) {
+								alert("外键约束，禁止删除");
+							}
+						} else {
+							alert("删除成功！");
+							window.location.href = "/genesis/metadata/course-dm-list";
+						}
+					},
+					error: function (e) {
+						alert("异常");
+					}
+				});
+			} else {
+				return;
+			}
+		}
+
+		function fillHref() {
+			document.getElementById("course-dm-modify-url").href = redirectUrl();
+			document.getElementById("course-dm-list-url").href = "/genesis/metadata/course-dm-list";
+		}
+	</script>
+
+	<div th:replace="component/footer-lib"></div>
+</body>
+
+</html>

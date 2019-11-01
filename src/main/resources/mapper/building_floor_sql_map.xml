@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.yctc.genesis.dao.BuildingFloorDAO">
+	<resultMap type="edu.yctc.genesis.entity.BuildingFloorDO" id="BuildingFloorDO">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="building" property="building"/>
+		<result column="floor" property="floor"/>
+		<result column="create_time" property="createTime"/>
+		<result column="modify_time" property="modifyTime"/>
+	</resultMap>
+<!--	插入一条楼号楼层记录-->
+	<insert id="insert" parameterType="edu.yctc.genesis.entity.BuildingFloorDO">
+		<selectKey keyProperty="id" order="AFTER" resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_building_floor(
+			building,
+			floor,
+			create_time,
+			modify_time
+		) VALUES(
+			#{building},
+			#{floor},
+			NOW(),
+			NOW()
+		);
+	</insert>
+<!--	根据id返回BuildingFloorDO-->
+	<select id="getBuildingFloorDOById" parameterType="long" resultMap="BuildingFloorDO">
+		SELECT *
+		FROM tb_building_floor
+		WHERE id=#{id}
+	</select>
+<!--	更新-->
+	<update id="update" parameterType="edu.yctc.genesis.entity.BuildingFloorDO">
+		UPDATE tb_building_floor
+		SET building=#{building},
+			floor=#{floor},
+			modify_time=NOW()
+		WHERE id=#{id}
+	</update>
+<!--	 删除-->
+	<delete id="deleteById" parameterType="long">
+		DELETE FROM tb_building_floor
+		WHERE id=#{id}
+	</delete>
+<!--	根据楼号和楼层返回BuildingFloorDO-->
+	<select id="getBuildingFloorDOByBuildingAndFloor" resultMap="BuildingFloorDO">
+		SELECT *
+		FROM tb_building_floor
+		WHERE building=#{building} AND floor=#{floor}
+	</select>
+<!--	返回库中楼号集-->
+	<select id="getBuildings" resultType="String">
+		SELECT DISTINCT building
+		FROM tb_building_floor
+	</select>
+<!--	返回某楼的所有楼层-->
+	<select id="getFloorsByBuilding" parameterType="String" resultType="String">
+		SELECT floor
+		FROM tb_building_floor
+		WHERE building = #{building}
+	</select>
+<!--	通过楼号返回BuildingFloorDO-->
+	<select id="getBuildingFloorDOsByBuilding" parameterType="String" resultMap="BuildingFloorDO">
+		SELECT *
+		FROM tb_building_floor
+		WHERE building=#{building}
+	</select>
+	
+</mapper>

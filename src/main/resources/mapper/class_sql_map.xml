@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.yctc.genesis.dao.ClassDAO">
+	<resultMap type="edu.yctc.genesis.entity.ClassDO" id="ClassDO">
+		<id column="id" property="id" jdbcType="BIGINT"/>
+		<result column="academy_id" property="academyId"/>
+		<result column="profession_id" property="professionId"/>
+		<result column="number" property="number"/>
+		<result column="create_time" property="createTime"/>
+		<result column="modify_time" property="modifyTime"/>
+	</resultMap>
+<!--	插入ClassDO-->
+	<insert id="insert" parameterType="edu.yctc.genesis.entity.ClassDO">
+		<selectKey keyProperty="id" order="AFTER" resultType="long">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		INSERT INTO tb_class(
+			academy_id,
+			profession_id,
+			number,
+			create_time,
+			modify_time
+		) VALUES(
+			#{academyId},
+			#{professionId},
+			#{number},
+			NOW(),
+			NOW()
+		);
+	</insert>
+<!--	通过id返回ClassDO-->
+	<select id="getClassDOById" parameterType="long" resultMap="ClassDO">
+		SELECT *
+		FROM tb_class
+		WHERE id=#{id}
+	</select>
+<!--	更新ClassDO-->
+	<update id="update" parameterType="edu.yctc.genesis.entity.ClassDO">
+		UPDATE tb_class
+		SET academy_id=#{academyId},
+			profession_id=#{professionId},
+			number=#{number},
+			modify_time=NOW()
+		WHERE id=#{id}
+	</update>
+<!--	通过id删除ClassDO-->
+	<delete id="deleteById" parameterType="long">
+		DELETE FROM tb_class
+		WHERE id=#{id}
+	</delete>
+<!--	通过学院id返回ClassDO集-->
+	<select id="getClassDOsByAcademyId" parameterType="long" resultMap="ClassDO">
+		SELECT *
+		FROM tb_class
+		WHERE academy_id=#{academyId}
+	</select>
+<!--	通过学院id和班级号返回ClassDO-->
+	<select id="getClassDOByAcademyIdAndNumber" resultMap="ClassDO">
+		SELECT *
+		FROM tb_class
+		WHERE academy_id=#{academyId} AND number=#{number}
+	</select>
+<!--	通过number返回classDO-->
+	<select id="getClassDOByNumber" parameterType="String" resultMap="ClassDO">
+		SELECT *
+		FROM tb_class
+		WHERE number=#{number}
+	</select>
+<!--	通过id返回ClassDO的number-->
+	<select id="getNumberById" resultType="String">
+		SELECT number
+		FROM tb_class
+		WHERE id=#{id}
+	</select>
+	
+</mapper>
