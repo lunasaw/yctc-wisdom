@@ -2,7 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="component/head :: head"></head>
+<head th:replace="component/head :: head">
+	<style type="text/css">
+		input{
+			border-radius: 3px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
 <body onload="getknowledgeDOs();">
 	<header th:replace="component/header :: header"></header>
@@ -63,21 +72,49 @@
 
 				<div class="row">
 					<div class="col-md-12">
-						<h2>添加知识点</h2>
-						<div class="col-lg-6">
-							<div class="input-group">
-								<label for="knowledgeText2Insert">知识点描述</label> <input
-									id="knowledgeText2Insert" type="text" class="form-control">
-								<label for="knowledgeTime2Insert">预计时长</label> <input
-									id="knowledgeTime2Insert" type="text" class="form-control">
-								<span class="input-group-btn">
-									<button class="btn btn-primary" type="button"
-										onclick="insertKnowledge()">添加</button>
-								</span>
-							</div>
-							<!-- /input-group -->
-						</div>
+						<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
+							添加
+						</button>
+<!--						<div class="col-lg-6">-->
+<!--							<div class="input-group">-->
+<!--								<label for="knowledgeText2Insert">知识点描述</label> <input-->
+<!--									id="knowledgeText2Insert" type="text" class="form-control">-->
+<!--								<label for="knowledgeTime2Insert">预计时长</label> <input-->
+<!--									id="knowledgeTime2Insert" type="text" class="form-control">-->
+<!--								<span class="input-group-btn">-->
+<!--									<button class="btn btn-primary" type="button"-->
+<!--										onclick="insertKnowledge()">添加</button>-->
+<!--								</span>-->
+<!--							</div>-->
+<!--							&lt;!&ndash; /input-group &ndash;&gt;-->
+<!--						</div>-->
+						<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" onclick="refush()" data-dismiss="modal" aria-hidden="true">
+											&times;
+										</button>
+										<h4 class="modal-title" id="myModalLabel1">
+											知识点
+										</h4>
+									</div>
+									<div class="modal-body">
+										<table border="0.8" width="100%" id="table">
+											<tr>
+												<th >知识点</th>
+												<th id="knowledgeTime2Insert">预计时长</th>
+												<th>操作</th>
+											</tr>
+										</table>
+										<input type="button" value="添加一行" onclick="addOne()" />
+									</div>
+									<div class="modal-footer">
+									</div>
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal -->
 						<!-- /.col-lg-6 -->
+					</div>
 					</div>
 				</div>
 			</div>
@@ -85,6 +122,10 @@
 	</div>
 	<!-- End page content -->
 	<script type="text/javascript">
+		function refush(){
+			window.location.reload()
+		}
+		
 		function getUrl() {
 			var url = location.search; //获取url中"?"符后的字串
 			var theRequest = new Object();
@@ -233,7 +274,10 @@
 			theRequest = getUrl();
 			var lessonId = theRequest["id"];
 			var content = document.getElementById('knowledgeText2Insert').value;
-			var length = document.getElementById('knowledgeTime2Insert').value;
+			// var length = document.getElementById('knowledgeTime2Insert').value;
+			length =  $("input[id='knowledgeTime2Insert']").val();
+			alert(content);
+			alert(length);
 			$.ajax({
 				url : "/genesis/restknowledge/insert-knowledge",
 				type : "POST",
@@ -253,6 +297,7 @@
 							alert("系统错误");
 						}
 					} else {
+						addOne();
 						alert("添加成功！");
 						window.location.reload();
 					}
@@ -261,6 +306,28 @@
 					alert("异常");
 				}
 			});
+		}
+
+		function addOne(obj){
+			var tbody = document.getElementById('table').lastChild;
+			var tr = document.createElement('tr');
+
+
+			td = document.createElement("td");
+			td.innerHTML = "<input id='knowledgeText2Insert' type='text'  class='form-control'/>";
+			tr.appendChild(td);
+
+			td = document.createElement("td");
+			td.innerHTML = "<input id='knowledgeTime2Insert' type='number' value='5' class='form-control'/>";
+			tr.appendChild(td);
+
+			td = document.createElement("td");
+
+			td.innerHTML = "<button class='btn btn-primary' type='button' onclick='insertKnowledge()'>添加</button>";
+			tr.appendChild(td);
+
+			tbody.appendChild(tr);
+			Highlight();
 		}
 	</script>
 
