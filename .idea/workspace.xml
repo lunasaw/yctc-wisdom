@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ce93256-7767-4fc7-bc4f-823aaa289049" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-b.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-b.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-b.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="115" column="43" selection-start-line="115" selection-start-column="43" selection-end-line="115" selection-end-column="43" />
+            <state relative-caret-position="518">
+              <caret line="310" column="29" lean-forward="true" selection-start-line="310" selection-start-column="29" selection-end-line="310" selection-end-column="29" />
               <folding>
                 <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -470,7 +470,7 @@
       <workItem from="1572691631325" duration="4325000" />
       <workItem from="1572760333243" duration="11085000" />
       <workItem from="1572771472952" duration="665000" />
-      <workItem from="1572772249414" duration="529000" />
+      <workItem from="1572772249414" duration="798000" />
     </task>
     <task id="LOCAL-00001" summary="优化了提交样式和关闭刷新,更换了登陆主界面,改变了全局样式">
       <created>1572771729150</created>
@@ -507,15 +507,28 @@
       <option name="project" value="LOCAL" />
       <updated>1572772550523</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="优化了提交样式和关闭刷新,更换了登陆主界面,改变了全局样式">
+      <created>1572772797141</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1572772797141</updated>
+    </task>
+    <task id="LOCAL-00007" summary="优化了提交样式和关闭刷新,更换了登陆主界面,改变了全局样式">
+      <created>1572773019717</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572773019717</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158489000" />
+    <option name="totallyTimeSpent" value="158758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18096514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -543,7 +556,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.15214477" />
+      <window_info active="true" anchor="right" id="Maven" order="3" visible="true" weight="0.15214477" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="SciView" order="6" />
@@ -1000,8 +1013,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-b.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="115" column="43" selection-start-line="115" selection-start-column="43" selection-end-line="115" selection-end-column="43" />
+        <state relative-caret-position="518">
+          <caret line="310" column="29" lean-forward="true" selection-start-line="310" selection-start-column="29" selection-end-line="310" selection-end-column="29" />
           <folding>
             <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
