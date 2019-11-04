@@ -25,7 +25,7 @@ public class OcrRecognizer {
 
     private final String EOL = System.getProperty("line.separator");
 
-    private String tessPath = "C:\\src\\Tesseract-OCR";
+    private String tessPath = "D:\\Tesseract-OCR";
 
     // private String tessPath = new File("tesseract").getAbsolutePath();
 
@@ -50,7 +50,7 @@ public class OcrRecognizer {
         ProcessBuilder pb = new ProcessBuilder();
         // 需要单独配置下配置代码如下：
         Map<String, String> env = pb.environment(); // 获得进程的环境
-        env.put("TESSDATA_PREFIX", "C:\\src\\Tesseract-OCR\\tessdata");
+        env.put("TESSDATA_PREFIX", "D:\\Tesseract-OCR");
         pb.directory(imageFile.getParentFile());
 
         cmd.set(1, tempImage.getName());

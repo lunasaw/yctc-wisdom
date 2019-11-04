@@ -1,29 +1,24 @@
 package edu.yctc.genesis;
 
+import edu.yctc.genesis.face.function.FaceFunction;
 import edu.yctc.genesis.face.function.impl.FaceFunctionImpl;
+import edu.yctc.genesis.face.util.Face;
 import edu.yctc.genesis.face.util.OCRUtil;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.context.annotation.Bean;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class ApplicationTests {
+/**
+ * @version 创建时间：2018年4月25日 下午5:09:19
+ * 类说明:测试类
+ */
+public class Test {
 
-    @Test
-    public void contextLoads() {
-        FaceFunctionImpl faceFunction=new FaceFunctionImpl();
-        String s = faceFunction.ocrControl("D:\\1.jpg");
-        System.out.println(s);
-    }
 
-    @Test
-    public void ocrfunction(){
-
+    public static void main(String[] args) {
         try {
             //图片文件：此图片是需要被识别的图片路径
             File file = new File("D://1.jpg");
@@ -36,7 +31,6 @@ public class ApplicationTests {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
-
-
 }

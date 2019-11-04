@@ -24,7 +24,7 @@ public class OcrContorl {
     public static String ocrRecognise(String imgPath) {
         String valCode = null;
         try {
-//            valCode = new OcrRecognizer().recognizeText(new File(imgPath), "jpg");
+            valCode = new OcrRecognizer().recognizeText(new File(imgPath), "jpg");
         } catch (Exception e) {
             LOG.error("ocr error,e={}", e);
         }

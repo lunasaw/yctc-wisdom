@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ce93256-7767-4fc7-bc4f-823aaa289049" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/ImageIOHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OCRUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OcrContorl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OcrContorl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OcrRecognizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OcrRecognizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/component/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/component/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/component/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/component/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-b.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-b.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/ApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,85 +27,120 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/header.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/Skeleton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/dao/AcademyDOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+            <state relative-caret-position="119">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/dao/ClassScoreDAOTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/ApplicationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="37" column="9" selection-start-line="26" selection-start-column="7" selection-end-line="37" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#2;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-details-list.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/impl/FaceFunctionImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="657" column="38" lean-forward="true" selection-start-line="657" selection-start-column="38" selection-end-line="657" selection-end-column="38" />
+              <folding>
+                <element signature="method#alterFaceToken#0;class#FaceFunctionImpl#0" />
+                <element signature="method#dealMedia#0;class#FaceFunctionImpl#0" />
+                <element signature="e#5688#5689#0" expanded="true" />
+                <element signature="e#5743#5744#0" expanded="true" />
+                <element signature="method#checkByLessonId#0;class#FaceFunctionImpl#0" />
+                <element signature="method#checkStatusByLessonId#0;class#FaceFunctionImpl#0" />
+                <element signature="method#checkStatusByLessonId#1;class#FaceFunctionImpl#0" />
+                <element signature="method#removeRepetitiveAttendanceDO#0;class#FaceFunctionImpl#0" />
+                <element signature="method#removeRepetitiveStudentStateDO#0;class#FaceFunctionImpl#0" />
+                <element signature="method#removeRepetitiveKnowledgeStudentStateDO#0;class#FaceFunctionImpl#0" />
+                <element signature="method#removeTheBackground#0;class#FaceFunctionImpl#0" />
+                <element signature="method#formatConversion#0;class#FaceFunctionImpl#0" />
+                <element signature="method#cutPicture#0;class#FaceFunctionImpl#0" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-a.html">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/KnowledgeIService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-b.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/KnowledgeServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="310" column="29" lean-forward="true" selection-start-line="310" selection-start-column="29" selection-end-line="310" selection-end-column="29" />
+            <state relative-caret-position="111">
+              <caret line="72" column="60" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="60" />
               <folding>
-                <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="method#getLessonDOListByUserId4Teacher#0;class#KnowledgeServiceImpl#0" />
+                <element signature="method#getCourseDOById#0;class#KnowledgeServiceImpl#0" />
+                <element signature="method#getClassroomDOById#0;class#KnowledgeServiceImpl#0" />
+                <element signature="method#getKnowledgeDOsByLessonId#0;class#KnowledgeServiceImpl#0" />
+                <element signature="method#getKnowledgesDetailsVOByLessonId#0;class#KnowledgeServiceImpl#0" />
+                <element signature="method#modifyKnowledge#0;class#KnowledgeServiceImpl#0" />
+                <element signature="method#deleteKnowledgeById#0;class#KnowledgeServiceImpl#0" />
+                <element signature="method#insertKnowledge#0;class#KnowledgeServiceImpl#0" />
+                <element signature="method#insertKnowledgeAndStudentStateDO#0;class#KnowledgeServiceImpl#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/head.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/FaceFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+            <state relative-caret-position="483">
+              <caret line="103" column="25" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/footer-lib.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/Threshold.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/sign-in.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="33" />
-              <folding>
-                <element signature="n#style#0;n#h6#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -124,14 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/equipment_sql_map.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/course_sql_map.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/classroom_state_sql_map.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/classroom_sql_map.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/class_sql_map.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/class_score_sql_map.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/building_floor_sql_map.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/attendance_sql_map.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/academy_sql_map.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/UploadServiceImpl.java" />
@@ -153,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/impl/UserControllerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/config/shiro/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OcrRecognizer.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/ImageUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user/signin.html" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
@@ -175,6 +210,15 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/component/head.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/component/footer-lib.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-b.html" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/ImageIOHelper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OCRUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/component/sidebar.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/component/footer.html" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OcrContorl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/impl/FaceFunctionImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OcrRecognizer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/ApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/Test.java" />
       </list>
     </option>
   </component>
@@ -229,8 +273,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="235" />
-    <option name="y" value="15" />
+    <option name="x" value="405" />
+    <option name="y" value="40" />
     <option name="width" value="1395" />
     <option name="height" value="995" />
   </component>
@@ -240,8 +284,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="CatdeaLogs" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,30 +331,117 @@
               <item name="Genesis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="yctc" type="462c0819:PsiDirectoryNode" />
+              <item name="genesis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
               <item name="Genesis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="yctc" type="462c0819:PsiDirectoryNode" />
+              <item name="genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="face" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
               <item name="Genesis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="teaching" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="yctc" type="462c0819:PsiDirectoryNode" />
+              <item name="genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="face" type="462c0819:PsiDirectoryNode" />
+              <item name="function" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="yctc" type="462c0819:PsiDirectoryNode" />
+              <item name="genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="face" type="462c0819:PsiDirectoryNode" />
+              <item name="function" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="yctc" type="462c0819:PsiDirectoryNode" />
+              <item name="genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="yctc" type="462c0819:PsiDirectoryNode" />
+              <item name="genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="yctc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="yctc" type="462c0819:PsiDirectoryNode" />
+              <item name="genesis" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="CatdeaLogs" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,7 +452,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/edu/yctc/genesis" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -342,14 +471,14 @@
     <property name="settings.editor.selected.configurable" value="settings.gitee" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\myproject\Genesis\src\main\resources\templates\user" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myproject\Genesis\src\test\java\edu\yctc\genesis" />
+      <recent name="D:\myproject\Genesis\src\main\java\edu\yctc\genesis\face\util" />
       <recent name="D:\myproject\Genesis\src\main\resources\static" />
       <recent name="D:\myproject\Genesis\src\main\resources\templates\teaching" />
-      <recent name="D:\myproject\Genesis\src\main\resources\templates\user" />
-      <recent name="D:\myproject\Genesis\src\main\resources\templates" />
-      <recent name="D:\myproject\Genesis\src\main\resources\templates\component" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\myproject\Genesis\src\main\resources\templates\user" />
     </key>
   </component>
@@ -371,6 +500,19 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.yctc.genesis.Test" />
+      <module name="genesis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.yctc.genesis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="genesis" />
       <extension name="coverage">
@@ -386,6 +528,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="genesis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.yctc.genesis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.yctc.genesis" />
+      <option name="MAIN_CLASS_NAME" value="edu.yctc.genesis.ApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTests.ocrfunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="genesis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.yctc.genesis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.yctc.genesis" />
+      <option name="MAIN_CLASS_NAME" value="edu.yctc.genesis.ApplicationTests" />
+      <option name="METHOD_NAME" value="ocrfunction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="genesis" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="edu.yctc.genesis.Application" />
@@ -395,6 +569,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="JUnit.ApplicationTests.ocrfunction" />
+        <item itemvalue="JUnit.ApplicationTests.contextLoads" />
         <item itemvalue="JUnit.ApplicationTests" />
       </list>
     </recent_temporary>
@@ -470,7 +647,11 @@
       <workItem from="1572691631325" duration="4325000" />
       <workItem from="1572760333243" duration="11085000" />
       <workItem from="1572771472952" duration="665000" />
-      <workItem from="1572772249414" duration="798000" />
+      <workItem from="1572772249414" duration="1378000" />
+      <workItem from="1572778810341" duration="7333000" />
+      <workItem from="1572790046101" duration="250000" />
+      <workItem from="1572794109593" duration="2388000" />
+      <workItem from="1572840750021" duration="762000" />
     </task>
     <task id="LOCAL-00001" summary="优化了提交样式和关闭刷新,更换了登陆主界面,改变了全局样式">
       <created>1572771729150</created>
@@ -521,16 +702,86 @@
       <option name="project" value="LOCAL" />
       <updated>1572773019717</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="优化了提交样式和关闭刷新,更换了登陆主界面,改变了全局样式">
+      <created>1572773058234</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572773058234</updated>
+    </task>
+    <task id="LOCAL-00009" summary="优化了提交样式和关闭刷新,更换了登陆主界面,改变了全局样式">
+      <created>1572773124031</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572773124031</updated>
+    </task>
+    <task id="LOCAL-00010" summary="优化了提交样式和关闭刷新,更换了登陆主界面,改变了全局样式">
+      <created>1572773137932</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1572773137932</updated>
+    </task>
+    <task id="LOCAL-00011" summary="优化了提交样式和关闭刷新,更换了登陆主界面,改变了全局样式">
+      <created>1572773173109</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1572773173109</updated>
+    </task>
+    <task id="LOCAL-00012" summary="优化了提交样式和关闭刷新,更换了登陆主界面,改变了全局样式">
+      <created>1572773196001</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1572773196001</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="ApplicationTests_contextLoads - 2019.11.03 at 23h 31m 04s.xml">
+      <configuration name="ApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTests_contextLoads - 2019.11.03 at 23h 32m 02s.xml">
+      <configuration name="ApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTests_contextLoads - 2019.11.03 at 23h 39m 27s.xml">
+      <configuration name="ApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTests - 2019.11.03 at 23h 40m 16s.xml">
+      <configuration name="ApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTests_contextLoads - 2019.11.03 at 23h 41m 11s.xml">
+      <configuration name="ApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTests_contextLoads - 2019.11.03 at 23h 43m 14s.xml">
+      <configuration name="ApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTests_ocrfunction - 2019.11.03 at 23h 44m 53s.xml">
+      <configuration name="ApplicationTests.ocrfunction" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ApplicationTests_ocrfunction - 2019.11.03 at 23h 46m 58s.xml">
+      <configuration name="ApplicationTests.ocrfunction" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158758000" />
+    <option name="totallyTimeSpent" value="170071000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18096514" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19772118" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -540,13 +791,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3874269" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.76742625" weight="0.04385965" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.76742625" weight="0.4269006" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.65497077" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.41812867" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32894737" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.22953217" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23257373" side_tool="true" weight="0.39035088" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.4239766" />
@@ -556,7 +807,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Maven" order="3" visible="true" weight="0.15214477" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.17292225" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="SciView" order="6" />
@@ -622,267 +873,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/session/SessionContentHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1688">
-          <caret line="122" column="23" selection-start-line="122" selection-start-column="23" selection-end-line="122" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/impl/TeachingControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-          <folding>
-            <element signature="e#3203#3204#0" expanded="true" />
-            <element signature="e#3265#3266#0" expanded="true" />
-            <element signature="e#4386#4387#0" expanded="true" />
-            <element signature="e#4452#4453#0" expanded="true" />
-            <element signature="e#4553#4554#0" expanded="true" />
-            <element signature="e#4619#4620#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/constant/TemplatePath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="114" column="31" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/classroom-application.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="137" column="37" lean-forward="true" selection-start-line="137" selection-start-column="37" selection-end-line="137" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/impl/EducationRestControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/impl/TimetableRestControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1465">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/impl/WarpperRestControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/DetailsRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-369">
-          <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="141" column="87" selection-start-line="141" selection-start-column="87" selection-end-line="141" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/DetailsIService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="93" column="7" lean-forward="true" selection-start-line="93" selection-start-column="7" selection-end-line="93" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/impl/DetailsRestControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="211" column="70" lean-forward="true" selection-start-line="211" selection-start-column="70" selection-end-line="211" selection-end-column="70" />
-          <folding>
-            <element signature="method#getCourseDOByYearAndTermAndUserId#0;class#DetailsRestControllerImpl#0" />
-            <element signature="method#getEveryStudentAttendanceDetailByLessonId#0;class#DetailsRestControllerImpl#0" />
-            <element signature="method#modifyAttendanceState#0;class#DetailsRestControllerImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/constant/ResultCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/KnowledgeIService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="87" column="59" selection-start-line="87" selection-start-column="59" selection-end-line="87" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/DetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3910">
-          <caret line="672" selection-start-line="672" selection-end-line="672" />
-          <folding>
-            <element signature="method#getCourseDOByUserIdAndYearAndTerm#0;class#DetailsServiceImpl#0" />
-            <element signature="method#getClassroomDOByLessonId#0;class#DetailsServiceImpl#0" />
-            <element signature="method#getStudentDOByAcademyAndClasses#0;class#DetailsServiceImpl#0" />
-            <element signature="method#getCourseAndAttendanceRateAndScoreVOByStudentId#0;class#DetailsServiceImpl#0" />
-            <element signature="method#getCourseAndAttendanceRateAndScoreVOByCourseId#0;class#DetailsServiceImpl#0" />
-            <element signature="method#getStudentAndAttendanceRateAndScoreVOByCourseId#0;class#DetailsServiceImpl#0" />
-            <element signature="method#getEveryStudentAttendanceDetailByLessonId#0;class#DetailsServiceImpl#0" />
-            <element signature="method#modifyAttendanceState#0;class#DetailsServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/dao/KnowledgeStudentStateDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/knowledge_student_state_sql_map.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="85" column="72" selection-start-line="85" selection-start-column="72" selection-end-line="85" selection-end-column="72" />
-          <folding>
-            <element signature="n#insert#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#0;n#mapper#0;n#!!top" />
-            <element signature="n#update#0;n#mapper#0;n#!!top" />
-            <element signature="n#delete#0;n#mapper#0;n#!!top" />
-            <element signature="n#select#1;n#mapper#0;n#!!top" />
-            <element signature="n#update#1;n#mapper#0;n#!!top" />
-            <element signature="n#select#2;n#mapper#0;n#!!top" />
-            <element signature="n#select#3;n#mapper#0;n#!!top" />
-            <element signature="n#select#5;n#mapper#0;n#!!top" />
-            <element signature="n#select#6;n#mapper#0;n#!!top" />
-            <element signature="n#update#2;n#mapper#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/KnowledgeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="212" column="75" selection-start-line="212" selection-start-column="75" selection-end-line="212" selection-end-column="75" />
-          <folding>
-            <element signature="method#checkKnowledge#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#getLessonDOListByUserId4Teacher#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#getCourseDOById#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#getClassroomDOById#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#getKnowledgeDOsByLessonId#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#modifyKnowledge#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#deleteKnowledgeById#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#insertKnowledge#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#insertKnowledgeAndStudentStateDO#0;class#KnowledgeServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="527">
-            <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/KnowledgeRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-316">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/impl/KnowledgeRestControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="119" column="45" lean-forward="true" selection-start-line="119" selection-start-column="45" selection-end-line="119" selection-end-column="45" />
-          <folding>
-            <element signature="method#getLessonAndKnowledgeByTeacherId#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#getKnowledgeDOsByLessonId#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#modifyKnowledge#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#deleteKnowledgeById#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#insertKnowledge#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#getknowledgesDetailsVOByLessonId#0;class#KnowledgeRestControllerImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/metadata/academy-classes-dm-list.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/metadata/student-dm-detail.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/metadata/classroom-dm-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-867" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/package.json" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/metadata/class-dm-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/metadata/class-dm-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3043">
-          <caret line="185" column="58" selection-start-line="185" selection-start-column="58" selection-end-line="185" selection-end-column="58" />
-          <folding>
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/user/signinsuccess.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-163">
-          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/student-details-details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -957,7 +947,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state>
           <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
         </state>
       </provider>
@@ -974,23 +964,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-details-list.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-a.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/head.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/footer-lib.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1013,10 +990,284 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-b.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="310" column="29" lean-forward="true" selection-start-line="310" selection-start-column="29" selection-end-line="310" selection-end-column="29" />
+        <state relative-caret-position="1020">
+          <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
           <folding>
             <element signature="n#div#2;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#4167#4200#0" />
+            <element signature="e#4224#4558#0" />
+            <element signature="e#4589#6209#0" />
+            <element signature="e#6250#6557#0" />
+            <element signature="e#6583#7377#0" />
+            <element signature="e#7405#8065#0" />
+            <element signature="e#9102#9737#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-a.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-details-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/ImageIOHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="59" column="39" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JAVA/jdk-11.0.2/lib/src.zip!/java.base/java/lang/ProcessBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="1071" column="5" lean-forward="true" selection-start-line="1071" selection-start-column="5" selection-end-line="1071" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JAVA/jdk-11.0.2/lib/src.zip!/java.desktop/com/sun/imageio/plugins/jpeg/JPEGImageReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="1876" column="38" lean-forward="true" selection-start-line="1876" selection-start-column="38" selection-end-line="1876" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/twelvemonkeys/imageio/imageio-jpeg/3.4.2/imageio-jpeg-3.4.2-sources.jar!/com/twelvemonkeys/imageio/plugins/jpeg/JPEGSegmentImageInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="344" lean-forward="true" selection-start-line="344" selection-end-line="344" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="88" column="133" selection-start-line="88" selection-start-column="133" selection-end-line="88" selection-end-column="133" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#a#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#h5#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#h5#0;n#div#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#h5#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#a#0;n#h5#0;n#div#0;n#div#4;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#h5#0;n#div#0;n#div#5;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/footer-lib.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#footer#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/CheckKnowledgeThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="141" column="32" lean-forward="true" selection-start-line="141" selection-start-column="32" selection-end-line="141" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvnw.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvnw">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/ServletInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OcrContorl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OcrRecognizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OCRUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/PicCut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-550">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/WaitForDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/ValueBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/TransCallBack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/SpringContextUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#1346#1347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/Skinstatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/SkeletonResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/Skeleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/dao/AcademyDOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/dao/ClassScoreDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/ApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="37" column="9" selection-start-line="26" selection-start-column="7" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/Threshold.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/FaceFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="103" column="25" selection-start-line="103" selection-start-column="25" selection-end-line="103" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/impl/FaceFunctionImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="657" column="38" lean-forward="true" selection-start-line="657" selection-start-column="38" selection-end-line="657" selection-end-column="38" />
+          <folding>
+            <element signature="method#alterFaceToken#0;class#FaceFunctionImpl#0" />
+            <element signature="method#dealMedia#0;class#FaceFunctionImpl#0" />
+            <element signature="e#5688#5689#0" expanded="true" />
+            <element signature="e#5743#5744#0" expanded="true" />
+            <element signature="method#checkByLessonId#0;class#FaceFunctionImpl#0" />
+            <element signature="method#checkStatusByLessonId#0;class#FaceFunctionImpl#0" />
+            <element signature="method#checkStatusByLessonId#1;class#FaceFunctionImpl#0" />
+            <element signature="method#removeRepetitiveAttendanceDO#0;class#FaceFunctionImpl#0" />
+            <element signature="method#removeRepetitiveStudentStateDO#0;class#FaceFunctionImpl#0" />
+            <element signature="method#removeRepetitiveKnowledgeStudentStateDO#0;class#FaceFunctionImpl#0" />
+            <element signature="method#removeTheBackground#0;class#FaceFunctionImpl#0" />
+            <element signature="method#formatConversion#0;class#FaceFunctionImpl#0" />
+            <element signature="method#cutPicture#0;class#FaceFunctionImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/KnowledgeIService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/KnowledgeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="72" column="60" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="60" />
+          <folding>
+            <element signature="method#getLessonDOListByUserId4Teacher#0;class#KnowledgeServiceImpl#0" />
+            <element signature="method#getCourseDOById#0;class#KnowledgeServiceImpl#0" />
+            <element signature="method#getClassroomDOById#0;class#KnowledgeServiceImpl#0" />
+            <element signature="method#getKnowledgeDOsByLessonId#0;class#KnowledgeServiceImpl#0" />
+            <element signature="method#getKnowledgesDetailsVOByLessonId#0;class#KnowledgeServiceImpl#0" />
+            <element signature="method#modifyKnowledge#0;class#KnowledgeServiceImpl#0" />
+            <element signature="method#deleteKnowledgeById#0;class#KnowledgeServiceImpl#0" />
+            <element signature="method#insertKnowledge#0;class#KnowledgeServiceImpl#0" />
+            <element signature="method#insertKnowledgeAndStudentStateDO#0;class#KnowledgeServiceImpl#0" />
           </folding>
         </state>
       </provider>

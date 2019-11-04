@@ -72,8 +72,7 @@
 
 				<div class="row">
 					<div class="col-md-12">
-						<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">
-							添加
+						<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1">添加
 						</button>
 <!--						<div class="col-lg-6">-->
 <!--							<div class="input-group">-->
@@ -98,7 +97,7 @@
 										<h4 class="modal-title" id="myModalLabel1">
 											知识点
 										</h4>
-									</div> 
+									</div>
 									<div class="modal-body">
 										<table border="0.8" width="100%" id="table">
 											<tr>
@@ -114,7 +113,8 @@
 								</div><!-- /.modal-content -->
 							</div><!-- /.modal -->
 						<!-- /.col-lg-6 -->
-					</div>
+					</div>\
+
 					</div>
 				</div>
 			</div>
@@ -276,8 +276,8 @@
 			var content = document.getElementById('knowledgeText2Insert').value;
 			// var length = document.getElementById('knowledgeTime2Insert').value;
 			length =  $("input[id='knowledgeTime2Insert']").val();
-			alert(content);
-			alert(length);
+			// alert(content);
+			// alert(length);
 			$.ajax({
 				url : "/genesis/restknowledge/insert-knowledge",
 				type : "POST",

@@ -3,15 +3,18 @@
 	.card-body{
         padding: 0.5rem;
     }
+	#ad{
+		text-decoration: none;
+	}
 </style>
-<div class="col-md-3">
-	<div class="accordiondiv" id="accordionExample">
+<div class="col-md-3" id="ad">
+	<div class="accordiondiv" id="accordionExample" >
 		<div class="card">
 			<div class="card-header" id="headingOne">
 				<h5 class="mb-0">
 					<i class="fas fa-home fa-lg fa-fw"></i>
-					<a href="/genesis/user/home"><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
-					 aria-expanded="true" aria-controls="collapseOne">主页</button></a>
+					<a href="/genesis/user/home" ><button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
+					 aria-expanded="true" aria-controls="collapseOne" style="text-decoration:none;">主页</button></a>
 				</h5>
 			</div>
 		</div>
@@ -21,12 +24,12 @@
 				<h5 class="mb-0">
 					<i class="fas fa-chalkboard-teacher fa-lg fa-fw"></i>
 					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
-					 aria-expanded="false" aria-controls="collapseTwo">教学</button>
+					 aria-expanded="false" aria-controls="collapseTwo" style="text-decoration:none;">教学</button>
 				</h5>
 			</div>
 			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-				<div class="card-body">
-					<a shiro:hasPermission="tea:classroomApplication" class="dropdown-item" href="/genesis/teaching/classroom-application">教室申请</a>
+				<div  class="card-body">
+					<a shiro:hasPermission="tea:classroomApplication" class="dropdown-item" href="/genesis/teaching/classroom-application" >教室申请</a>
 					<a shiro:hasPermission="tea:lessonDetails" class="dropdown-item" href="/genesis/teaching/lesson-details-list">课堂详情</a>
 					<a shiro:hasPermission="tea:courseDetails" class="dropdown-item" href="/genesis/teaching/course-details-list">课程详情</a>
 					<a shiro:hasPermission="tea:studentDetails" class="dropdown-item" href="/genesis/teaching/student-details-list">学生详情</a>
@@ -43,7 +46,7 @@
 				<h5 class="mb-0">
 					<i class="fas fa-book fa-lg fa-fw"></i>
 					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
-					 aria-expanded="false" aria-controls="collapseThree">学习</button>
+					 aria-expanded="false" aria-controls="collapseThree" style="text-decoration:none;">学习</button>
 				</h5>
 			</div>
 			<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
@@ -59,12 +62,12 @@
 				<h5 class="mb-0">
 					<i class="fas fa-graduation-cap fa-lg fa-fw"></i>
 					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
-					 aria-expanded="false" aria-controls="collapseFour">教务</button>
+					 aria-expanded="false" aria-controls="collapseFour" style="text-decoration:none;">教务</button>
 				</h5>
 			</div>
 			<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
 				<div class="card-body">
-					<a shiro:hasPermission="admin:classroomsManagement" class="dropdown-item" href="/genesis/metadata/building-floor-dm-list">楼宇管理</a>
+					<a shiro:hasPermission="admin:classroomsManagement" class="dropdown-item"  href="/genesis/metadata/building-floor-dm-list">楼宇管理</a>
 					<a shiro:hasPermission="admin:classroomsManagement" class="dropdown-item" href="/genesis/metadata/classroom-dm-list">教室管理</a>
 					<a shiro:hasPermission="admin:classesManagement" class="dropdown-item" href="/genesis/metadata/academy-classes-dm-list">班级管理</a>
 					<a shiro:hasPermission="admin:studentsManagement" class="dropdown-item" href="/genesis/metadata/student-dm-list">学生管理</a>
@@ -83,7 +86,7 @@
 				<h5 class="mb-0">
 					<i class="fas fa-comment fa-lg fa-fw"></i>
 					<a href="/genesis/news/news"><button class="btn btn-link collapsed " type="button" data-toggle="collapse"
-						 data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">通知</button></a>
+						 data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="text-decoration:none;">通知</button></a>
 				</h5>
 			</div>
 		</div>
@@ -92,7 +95,7 @@
 				<h5 class="mb-0">
 					<i class="fas fa-user fa-lg fa-fw"></i>
 					<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
-					 aria-expanded="false" aria-controls="collapseSix">我的</button>
+					 aria-expanded="false" aria-controls="collapseSix" style="text-decoration:none;">我的</button>
 				</h5>
 			</div>
 			<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
