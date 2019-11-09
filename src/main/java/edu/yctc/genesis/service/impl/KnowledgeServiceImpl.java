@@ -8,6 +8,10 @@ import java.util.regex.Pattern;
 
 import javax.annotation.Resource;
 
+import edu.yctc.genesis.dao.*;
+import edu.yctc.genesis.entity.*;
+import edu.yctc.genesis.vo.GetPictureVO;
+import edu.yctc.genesis.vo.StudentsLessonStateVO;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,21 +19,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
 import edu.yctc.genesis.constant.ResultCode;
-import edu.yctc.genesis.dao.ClassroomDAO;
-import edu.yctc.genesis.dao.CourseDAO;
-import edu.yctc.genesis.dao.KnowledgeDAO;
-import edu.yctc.genesis.dao.KnowledgeLessonDAO;
-import edu.yctc.genesis.dao.KnowledgeStudentStateDAO;
-import edu.yctc.genesis.dao.LessonDAO;
-import edu.yctc.genesis.dao.TeacherLessonDAO;
-import edu.yctc.genesis.entity.ClassroomDO;
-import edu.yctc.genesis.entity.CourseDO;
-import edu.yctc.genesis.entity.KnowledgeDO;
-import edu.yctc.genesis.entity.KnowledgeLessonDO;
-import edu.yctc.genesis.entity.KnowledgeStudentStateDO;
-import edu.yctc.genesis.entity.LessonDO;
-import edu.yctc.genesis.entity.ResultDO;
-import edu.yctc.genesis.entity.TeacherLessonDO;
 import edu.yctc.genesis.service.KnowledgeIService;
 import edu.yctc.genesis.vo.OneKnowledgeDetailsVO;
 
@@ -67,6 +56,9 @@ public class KnowledgeServiceImpl implements KnowledgeIService {
 
     @Resource
     private KnowledgeStudentStateDAO knowledgeStudentStateDAO;
+
+    @Resource
+    private PictureKnowledgeDAO pictureKnowledgeDAO;
 
     //判断待匹配字符串中是否存在知识点
     @Override
@@ -239,6 +231,53 @@ public class KnowledgeServiceImpl implements KnowledgeIService {
         }
     }
 
+    //通过知识点id 返回图片集合
+    @Override
+    public ResultDO<List<KnowledgePictureDO>> getKnowledgePictureDOsByKnowledgeId(long knowledgeId){
+        System.out.println("正在通过知识点查找图片");
+        if (knowledgeId <= 0) {
+            LOG.error("get GetPictureVO By knowledgeId fail, parameter invalid, lessonId={}", knowledgeId);
+            return new ResultDO<List<KnowledgePictureDO>>(false, ResultCode.PARAMETER_INVALID,
+                    ResultCode.MSG_PARAMETER_INVALID, null);
+        }
+        List<KnowledgePictureDO> knowledgePictureDOS = new LinkedList<KnowledgePictureDO>();
+        try {
+            System.out.println("根据knowledgeId获得图片的list");
+            // 1.根据knowledgeId获得图片的list
+            knowledgePictureDOS=pictureKnowledgeDAO.PictureByKnowledgeId(knowledgeId);
+            LOG.info("get knowledgePictureDOS by knowledgeId success, knowledgeId={}",
+                     knowledgeId);
+            System.out.println(knowledgePictureDOS.toString());
+            // 2.遍历,传参
+            GetPictureVO getPictureVO=new GetPictureVO();
+            for (int i = 0; i < knowledgePictureDOS.size(); i++){
+                getPictureVO.setPicture(knowledgePictureDOS);
+            }
+            LOG.info("get knowledgePictureDOS By knowledgeId success, getPictureVOS={} getContent={}", knowledgePictureDOS,knowledgeDAO.getKnowledgeDOById(knowledgeId).getContent());
+            return new ResultDO<List<KnowledgePictureDO>>(true, ResultCode.SUCCESS, ResultCode.MSG_SUCCESS,
+                    knowledgePictureDOS);
+        } catch (Exception e) {
+            LOG.error("get knowledgePictureDOS By knowledgeId error, knowledgeId={}", knowledgeId, e);
+            return new ResultDO<List<KnowledgePictureDO>>(false, ResultCode.ERROR_SYSTEM_EXCEPTION,
+                    ResultCode.MSG_ERROR_SYSTEM_EXCEPTION, null);
+        }
+    }
+
+    //插入知识点对应的图片
+    public  ResultDO<Void> insertPictureByKnowledgeId (String picture,long knowledgeId) {
+        KnowledgePictureDO knowledgePictureDO =new KnowledgePictureDO();
+        knowledgePictureDO.setKnowledgeid(knowledgeId);
+        knowledgePictureDO.setPicture(picture);
+        try {
+            pictureKnowledgeDAO.insert(knowledgePictureDO);
+            LOG.info("insert knowledge success, knowledgePictureDO={}", knowledgePictureDO);
+            return new ResultDO<>(true, ResultCode.SUCCESS, ResultCode.MSG_SUCCESS);
+        } catch (Exception e) {
+            LOG.error("insert knowledge error, knowledgePictureDO={}", knowledgePictureDO, e);
+            return new ResultDO<>(false, ResultCode.ERROR_SYSTEM_EXCEPTION, ResultCode.MSG_ERROR_SYSTEM_EXCEPTION);
+        }
+    }
+
     //修改知识点
     @Override
     public ResultDO<Void> modifyKnowledge(KnowledgeDO knowledgeDO) {
@@ -317,6 +356,48 @@ public class KnowledgeServiceImpl implements KnowledgeIService {
             LOG.error("insert knowledge and studentStateDO error, knowledgeStudentStateD={}", knowledgeStudentStateDO);
             return new ResultDO<>(false, ResultCode.ERROR_SYSTEM_EXCEPTION, ResultCode.MSG_ERROR_SYSTEM_EXCEPTION);
         }
+    }
+
+
+    //获取学生状态集合
+    @Override
+    public ResultDO<StudentsLessonStateVO> getStudentsLessonStateVO(long lessonId,long knowledgeId){
+        System.out.println("正在通过课程id查询状态集合");
+        if (knowledgeId <= 0&&lessonId<0) {
+            LOG.error("get GetPictureVO By knowledgeId fail, parameter invalid, lessonId={},knowledgeId={}",lessonId, knowledgeId);
+            return new ResultDO<StudentsLessonStateVO>(false, ResultCode.PARAMETER_INVALID,
+                    ResultCode.MSG_PARAMETER_INVALID, null);
+        }
+        StudentsLessonStateVO  studentsLessonStateVO=new StudentsLessonStateVO();
+        try {
+            List<StateLessonDO> lessonStateVO = knowledgeStudentStateDAO.getKnowledgeStudentStateLessonStateVO(lessonId, knowledgeId);
+            System.out.println("正在通过课程id查询状态集合"+lessonStateVO);
+            int LISTENING=0;  /** 认真听课 1*/
+            int PLAY_MOBILE_PHONE=0;/** 玩手机 2*/
+            int DAZE=0;/** 发呆 3*/
+            int SLEEP=0;/** 睡觉 4*/
+
+            for (int i=0;i<lessonStateVO.size();i++){
+                if (lessonStateVO.get(i).getState()==1){
+                    LISTENING++;
+                }if (lessonStateVO.get(i).getState()==2){
+                    PLAY_MOBILE_PHONE++;
+                }if (lessonStateVO.get(i).getState()==3){
+                    DAZE++;
+                }if (lessonStateVO.get(i).getState()==4){
+                    SLEEP++;
+                }
+            }
+            studentsLessonStateVO.setLISTENING(LISTENING);
+            studentsLessonStateVO.setPLAY_MOBILE_PHONE(PLAY_MOBILE_PHONE);
+            studentsLessonStateVO.setDAZE(DAZE);
+            studentsLessonStateVO.setSLEEP(SLEEP);
+
+        } catch (Exception e) {
+            LOG.error("get studentsLessonStateVO By knowledgeId fail, parameter invalid, lessonId={},knowledgeId={}",lessonId, knowledgeId,e);
+        }
+        return new ResultDO<StudentsLessonStateVO>(false, ResultCode.PARAMETER_INVALID,
+                ResultCode.MSG_PARAMETER_INVALID, studentsLessonStateVO);
     }
 
 }

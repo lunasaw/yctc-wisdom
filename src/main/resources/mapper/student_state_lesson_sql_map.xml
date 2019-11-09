@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.yctc.genesis.dao.KnowledgeStudentStateDAO">
+    <resultMap type="edu.yctc.genesis.entity.StateLessonDO" id="StateLessonDO">
+        <result column="lesson_id" property="lessonId"/>
+        <result column="state" property="state"/>
+    </resultMap>
+
+    <select id="getKnowledgeStudentStateLessonStateVO" parameterType="long" resultMap="StateLessonDO">
+				SELECT lesson_id ,state FROM tb_knowledge_student_state WHERE lesson_id =#{lessonId} and knowledge_id=#{knowledgeId}
+	</select>
+</mapper>

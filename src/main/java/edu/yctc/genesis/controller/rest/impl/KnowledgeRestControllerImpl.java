@@ -5,28 +5,22 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import edu.yctc.genesis.entity.*;
+import edu.yctc.genesis.vo.*;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import edu.yctc.genesis.constant.ResultCode;
 import edu.yctc.genesis.controller.rest.KnowledgeRestController;
 import edu.yctc.genesis.controller.session.SessionContentHolder;
-import edu.yctc.genesis.entity.ClassroomDO;
-import edu.yctc.genesis.entity.CourseDO;
-import edu.yctc.genesis.entity.KnowledgeDO;
-import edu.yctc.genesis.entity.LessonDO;
-import edu.yctc.genesis.entity.ResultDO;
 import edu.yctc.genesis.service.KnowledgeIService;
-import edu.yctc.genesis.vo.KnowledgeAndLesson4InsertVO;
-import edu.yctc.genesis.vo.LessonAndKnowledgeVO;
-import edu.yctc.genesis.vo.OneKnowledgeDetailsVO;
+
+import static edu.yctc.genesis.constant.ResultCode.MSG_SUCCESS;
+import static edu.yctc.genesis.constant.ResultCode.SUCCESS;
 
 @RestController
 @ComponentScan({"edu.yctc.genesis.service"})
@@ -91,7 +85,7 @@ public class KnowledgeRestControllerImpl implements KnowledgeRestController {
             lessonAndKnowledgeVO.setUrl(FILL_KNOWLEDGE_STEP_B + lessonDO.getId());
             lessonAndKnowledgeVOs.add(lessonAndKnowledgeVO);
         }
-        return new ResultDO<List<LessonAndKnowledgeVO>>(true, ResultCode.SUCCESS, ResultCode.MSG_SUCCESS,
+        return new ResultDO<List<LessonAndKnowledgeVO>>(true, SUCCESS, ResultCode.MSG_SUCCESS,
             lessonAndKnowledgeVOs);
     }
 
@@ -103,6 +97,62 @@ public class KnowledgeRestControllerImpl implements KnowledgeRestController {
                 ResultCode.MSG_PARAMETER_INVALID, null);
         }
         return knowledgeService.getKnowledgeDOsByLessonId(lessonId);
+    }
+
+    //restknowledge/get-picture-knowlegde
+    @Override
+    @GetMapping("get-picture-knowlegde")
+    public ResultDO<List<KnowledgePictureDO>> getKnowledgePictureDOsByLessonId(long knowledgeid){
+//        int knowledgeid=2;
+        System.out.println("开始查找图片");
+        if (knowledgeid <= 0) {
+            return new ResultDO<List<KnowledgePictureDO>>(false, ResultCode.PARAMETER_INVALID,
+                    ResultCode.MSG_PARAMETER_INVALID, null);
+        }
+        ResultDO<List<KnowledgePictureDO>> knowledgePictureDOsByKnowledgeIdId=new ResultDO<>();
+        /*
+        获取知识点图片集合
+         */
+        knowledgePictureDOsByKnowledgeIdId = knowledgeService.getKnowledgePictureDOsByKnowledgeId(knowledgeid);
+        if (knowledgePictureDOsByKnowledgeIdId.isSuccess() == false) {
+            return new ResultDO<List<KnowledgePictureDO>>(false, knowledgePictureDOsByKnowledgeIdId.getCode(), knowledgePictureDOsByKnowledgeIdId.getMsg(), null);
+        }
+        List<KnowledgePictureDO> pictureDOsByKnowledgeIdIdModule = knowledgePictureDOsByKnowledgeIdId.getModule();
+        LOG.info("knowledgePictureDOsByKnowledgeIdId success, module={}", knowledgePictureDOsByKnowledgeIdId.getModule());
+        return new ResultDO<List<KnowledgePictureDO>>(true, SUCCESS, ResultCode.MSG_SUCCESS,
+                pictureDOsByKnowledgeIdIdModule);
+    }
+
+    //restknowledge/get-picture-lessonId-knowlegde
+    @Override
+    @RequestMapping("get-picture-lessonId-knowlegde")
+    public ResultDO<List<GetPictureVO>> getAllPictureByLessonId(@RequestParam  long lessonId){
+        System.out.println("开始查找某课程知识点对应的所有图片");
+        if (lessonId <= 0) {
+            return new ResultDO<List<GetPictureVO>>(false, ResultCode.PARAMETER_INVALID,
+                    ResultCode.MSG_PARAMETER_INVALID, null);
+        }
+        ResultDO<List<KnowledgePictureDO>> knowledgePictureDOsByKnowledgeIdId=new ResultDO<>();
+        /*
+        获取知识点图片集合
+         */
+        ResultDO<List<KnowledgeDO>> knowledgeDOsByLessonId = knowledgeService.getKnowledgeDOsByLessonId(lessonId);
+        List<KnowledgeDO> knowledgeDOS = knowledgeDOsByLessonId.getModule();
+        LOG.info("knowledgeDOS pictureDOS success, knowledgeDOS={}", knowledgeDOS);
+        //遍历所有知识点
+        List<GetPictureVO> getPictureVOS=new ArrayList<>();
+        System.out.println("遍历所有知识点数量"+knowledgeDOS.size());
+        for (int i = 0;i<knowledgeDOS.size()-1;i++){
+            long l = knowledgeDOS.get(i).getId();
+            System.out.println(knowledgeDOS.get(i).getContent());
+            List<KnowledgePictureDO> pictureDOS = knowledgeService.getKnowledgePictureDOsByKnowledgeId(l).getModule();
+            GetPictureVO getPictureVO=new GetPictureVO();
+            getPictureVO.setPicture(pictureDOS);
+            getPictureVOS.add(getPictureVO);
+        }
+        LOG.info("knowledgePictureDOsByKnowledgeId pictureDOS success, knowledgePictureDOsByKnowledgeId={}", getPictureVOS);
+        return new ResultDO<List<GetPictureVO>>(true, SUCCESS, ResultCode.MSG_SUCCESS,
+                getPictureVOS);
     }
 
     @Override
@@ -150,7 +200,33 @@ public class KnowledgeRestControllerImpl implements KnowledgeRestController {
         }
         List<OneKnowledgeDetailsVO> lessonDetailsVOList = resultDO.getModule();
         LOG.info("getknowledgesDetailsVOByLessonId success, lessonDetailsVOList={}", lessonDetailsVOList);
-        return new ResultDO<List<OneKnowledgeDetailsVO>>(true, ResultCode.SUCCESS, ResultCode.MSG_SUCCESS,
+        return new ResultDO<List<OneKnowledgeDetailsVO>>(true, SUCCESS, ResultCode.MSG_SUCCESS,
             lessonDetailsVOList);
+    }
+
+    //restknowledge/get-students-Lesson-State
+    //@RequestBody long lessonId,@RequestBody long knowledgeId
+    @Override
+    @RequestMapping("get-students-Lesson-State")
+    public ResultDO<StudentsLessonStateVO> studentsLessonStateVO(@RequestParam long lessonId,@RequestParam long knowledgeId){
+//        long lessonId=33;
+//        long knowledgeId=360;
+        if (lessonId <= 0) {
+            return new ResultDO<StudentsLessonStateVO>(false, ResultCode.PARAMETER_INVALID,
+                    ResultCode.MSG_PARAMETER_INVALID,
+                    null);
+        }
+        ResultDO<StudentsLessonStateVO> lessonStateVO = null;
+        StudentsLessonStateVO stateVOModule = null;
+        try {
+            lessonStateVO = knowledgeService.getStudentsLessonStateVO(lessonId, knowledgeId);
+            stateVOModule = lessonStateVO.getModule();
+            LOG.info("lessonStateVO success, lessonId={},knowledgeId={}",lessonId, knowledgeId);
+        } catch (Exception e) {
+            LOG.info("StudentsLessonStateVO error, lessonId={},knowledgeId={}",lessonId, knowledgeId);
+        }
+        LOG.info("StudentsLessonStateVO success, studentsLessonStateVO={}", lessonStateVO);
+        return new ResultDO<StudentsLessonStateVO>(true, SUCCESS, ResultCode.MSG_SUCCESS,
+                stateVOModule);
     }
 }

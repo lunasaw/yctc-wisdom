@@ -3,6 +3,8 @@ package edu.yctc.genesis.dao;
 import java.util.Date;
 import java.util.List;
 
+import edu.yctc.genesis.entity.StateLessonDO;
+import edu.yctc.genesis.vo.StudentsLessonStateVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.yctc.genesis.entity.KnowledgeStudentStateDO;
@@ -102,4 +104,9 @@ public interface KnowledgeStudentStateDAO {
      * @param knowledgeId
      */
     public void updateScanEndTimeByLessonIdAndKnowledgeId(long lessonId, long knowledgeId);
+
+    /*
+    通过lessonid获得该堂课的所有知识点的学生状态人数
+     */
+    public List<StateLessonDO> getKnowledgeStudentStateLessonStateVO(long lessonId, long knowledgeId);
 }

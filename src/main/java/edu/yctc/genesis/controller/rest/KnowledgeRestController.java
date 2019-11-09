@@ -5,10 +5,10 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import edu.yctc.genesis.entity.KnowledgeDO;
+import edu.yctc.genesis.entity.KnowledgePictureDO;
 import edu.yctc.genesis.entity.ResultDO;
-import edu.yctc.genesis.vo.KnowledgeAndLesson4InsertVO;
-import edu.yctc.genesis.vo.LessonAndKnowledgeVO;
-import edu.yctc.genesis.vo.OneKnowledgeDetailsVO;
+import edu.yctc.genesis.vo.*;
+import org.springframework.web.bind.annotation.RequestBody;
 
 public interface KnowledgeRestController {
 
@@ -20,6 +20,15 @@ public interface KnowledgeRestController {
      */
     public ResultDO<List<LessonAndKnowledgeVO>> getLessonAndKnowledgeByTeacherId(HttpSession httpSession);
 
+    /*
+    获取知识点识别到的知识点图片
+     */
+    ResultDO<List<KnowledgePictureDO>> getKnowledgePictureDOsByLessonId(long knowledgeid);
+
+    /*
+    获取课程的知识点对应的所有图片集合
+     */
+    ResultDO<List<GetPictureVO>> getAllPictureByLessonId(long lessonId);
     /**
      * 通过lessonId返回knowledgeDO集
      * 
@@ -59,4 +68,11 @@ public interface KnowledgeRestController {
      * @return
      */
     public ResultDO<List<OneKnowledgeDetailsVO>> getknowledgesDetailsVOByLessonId(long lessonId);
+
+    /*
+    通过lessonid获得该堂课的所有知识点的学生状态集合百分比
+     */
+    public ResultDO<StudentsLessonStateVO> studentsLessonStateVO(long lessonId,long knowledgeId);
+//    public ResultDO<StudentsLessonStateVO> studentsLessonStateVO();
+
 }

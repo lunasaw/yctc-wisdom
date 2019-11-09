@@ -2,13 +2,10 @@ package edu.yctc.genesis.service;
 
 import java.util.List;
 
-import edu.yctc.genesis.entity.ClassroomDO;
-import edu.yctc.genesis.entity.CourseDO;
-import edu.yctc.genesis.entity.KnowledgeDO;
-import edu.yctc.genesis.entity.KnowledgeStudentStateDO;
-import edu.yctc.genesis.entity.LessonDO;
-import edu.yctc.genesis.entity.ResultDO;
+import edu.yctc.genesis.entity.*;
+import edu.yctc.genesis.vo.GetPictureVO;
 import edu.yctc.genesis.vo.OneKnowledgeDetailsVO;
+import edu.yctc.genesis.vo.StudentsLessonStateVO;
 
 public interface KnowledgeIService {
 
@@ -44,6 +41,17 @@ public interface KnowledgeIService {
      * @return
      */
     public ResultDO<ClassroomDO> getClassroomDOById(long id);
+
+    /*
+    @knowledgeId 知识点id
+    通过KnowledgeID返回picture
+     */
+    public ResultDO<List<KnowledgePictureDO>> getKnowledgePictureDOsByKnowledgeId(long knowledgeId);
+
+    /*
+    插入知识点对应的图片
+     */
+    public  ResultDO<Void> insertPictureByKnowledgeId (String picture,long knowledgeId);
 
     /**
      * 通过lessonId返回KnowledgeDO集
@@ -94,5 +102,10 @@ public interface KnowledgeIService {
      * @return
      */
     public ResultDO<Void> insertKnowledgeAndStudentStateDO(KnowledgeStudentStateDO knowledgeStudentStateDO);
+
+    /*
+    通过lessonid获得该堂课的所有知识点的学生状态人数
+     */
+    public ResultDO<StudentsLessonStateVO> getStudentsLessonStateVO(long lessonId,long knowledgeId);
 
 }

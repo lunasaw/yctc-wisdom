@@ -1,6 +1,8 @@
 package edu.yctc.genesis;
 
+import edu.yctc.genesis.controller.rest.impl.KnowledgeRestControllerImpl;
 import edu.yctc.genesis.face.function.impl.FaceFunctionImpl;
+import edu.yctc.genesis.face.util.DealMedia;
 import edu.yctc.genesis.face.util.OCRUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,18 +17,18 @@ import java.io.IOException;
 public class ApplicationTests {
 
     @Test
-    public void contextLoads() {
+    public void  contextLoads() {
         FaceFunctionImpl faceFunction=new FaceFunctionImpl();
-        String s = faceFunction.ocrControl("D:\\1.jpg");
-        System.out.println(s);
+        DealMedia.decode("D:\\ffmpeg\\2.MP4", "D:\\ffmpeg\\img", "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
     }
+
 
     @Test
     public void ocrfunction(){
 
         try {
             //图片文件：此图片是需要被识别的图片路径
-            File file = new File("D://1.jpg");
+            File file = new File("D://2.jpg");
             //String recognizeText = new OCRHelper().recognizeText(file);
             String recognizeText = new OCRUtil().recognizeText(file, "jpg");
             System.out.print(recognizeText + "\t");
@@ -39,4 +41,8 @@ public class ApplicationTests {
     }
 
 
+    @Test
+    public void test(){
+
+    }
 }

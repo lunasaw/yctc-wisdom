@@ -69,6 +69,15 @@ public interface TeachingController {
      */
     String showStudentDetailsDetails(Model model, HttpSession httpSession);
 
+    /*
+     知识点检测_选择课程
+     */
+    String showLessonKnowledgePointList_a(Model model, HttpSession httpSession);
+
+    /*
+    知识点检测页面
+     */
+    String showLessonKnowledgePointDetails_a(Model model, HttpSession httpSession);
     /**
      * 展示教师-教学课表功能页面
      *

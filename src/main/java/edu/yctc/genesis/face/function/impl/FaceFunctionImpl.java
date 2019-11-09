@@ -117,24 +117,23 @@ public class FaceFunctionImpl implements FaceFunction {
         DealMedia.setResolutionRatio(resolutionRatio);
         DealMedia.setStartTime(startTime);
         DealMedia.setEndTime(endTime);
-
         /** 视频解析成图片 */
-        DealMedia.decode(videoPath, "C:\\src\\img", "C:\\src\\ffmpeg\\ffmpeg.exe");
+        DealMedia.decode(videoPath, "D:\\ffmpeg\\img", "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
 
         /** 处理图片 */
         try {
             List<String> fileNames = new ArrayList<>();
-            GetFoldFileNames.getFileName(fileNames, "C:\\src\\img");
+            GetFoldFileNames.getFileName(fileNames, "D:\\ffmpeg\\img");
             for (String temp : fileNames) {
-                System.out.println("C:\\src\\img\\" + temp);
-                DealImage.paint("C:\\src\\img\\" + temp);
+                System.out.println("D:\\ffmpeg\\img\\" + temp);
+                DealImage.paint("D:\\ffmpeg\\img\\" + temp);
             }
         } catch (Exception e) {
             LOG.error("img is not exist!, exception={}", e);
         }
 
         /** 图片合成视频 */
-        DealMedia.coding("C:\\src\\img", savePath, "C:\\src\\ffmpeg\\ffmpeg.exe");
+        DealMedia.coding("C:\\src\\img", savePath, "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
     }
 
     @Override

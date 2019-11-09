@@ -112,12 +112,30 @@ public class TeachingControllerImpl implements TeachingController {
     }
 
     @Override
+    @GetMapping("lesson-knowledge-point-list-a")
+    public String showLessonKnowledgePointList_a(Model model, HttpSession httpSession) {
+        long userId = SessionContentHolder.getSignInUserIdBySessionId(httpSession.getId());
+        System.out.println(userId);
+        model.addAttribute("userId", userId);
+        return TemplatePath.TEACHING_LESSON_KNOWLEDGE_POINT_LIST_A;
+    }
+
+    @Override
     @GetMapping("lesson-knowledge-point-details")
     public String showLessonKnowledgePointDetails(Model model, HttpSession httpSession) {
         long userId = SessionContentHolder.getSignInUserIdBySessionId(httpSession.getId());
         System.out.println(userId);
         model.addAttribute("userId", userId);
         return TemplatePath.TEACHING_LESSON_KNOWLEDGE_POINT_DETAILS;
+    }
+
+    @Override
+    @GetMapping("lesson-knowledge-point-details-a")
+    public String showLessonKnowledgePointDetails_a(Model model, HttpSession httpSession) {
+        long userId = SessionContentHolder.getSignInUserIdBySessionId(httpSession.getId());
+        System.out.println(userId);
+        model.addAttribute("userId", userId);
+        return TemplatePath.TEACHING_LESSON_KNOWLEDGE_POINT_DETAILS_A;
     }
 
     @Override

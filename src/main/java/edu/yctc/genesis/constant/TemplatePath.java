@@ -126,6 +126,7 @@ public class TemplatePath {
 
     /** 学生详情 列表页 */
     public static final String TEACHING_STUDENT_DETAILS_LIST = "teaching/student-details-list";
+
     /** 学生详情 详情页 */
     public static final String TEACHING_STUDENT_DETAILS_DETAILS = "teaching/student-details-details";
 
@@ -146,6 +147,13 @@ public class TemplatePath {
 
     /** 知识点学情列表页 */
     public static final String TEACHING_LESSON_KNOWLEDGE_POINT_LIST = "teaching/lesson-knowledge-point-list";
+
+    /** 知识点检测页面-选择课程 */
+    public static final String TEACHING_LESSON_KNOWLEDGE_POINT_LIST_A = "teaching/lesson-knowledge-point-list-a";
+
+    /*开始检测*/
+    public static final String TEACHING_LESSON_KNOWLEDGE_POINT_DETAILS_A = "teaching/lesson-knowledge-point-details-a";
+
     /** 知识点学情详情页 */
     public static final String TEACHING_LESSON_KNOWLEDGE_POINT_DETAILS = "teaching/lesson-knowledge-point-details";
     // teaching end
@@ -153,6 +161,7 @@ public class TemplatePath {
     // learning start
     /** 学生-我的课表功能界面 */
     public static final String LEARNING_MY_SCHEDULE = "learning/my-schedule";
+
     /** 学生-我的听课质量功能界面 */
     public static final String LEARNING_MY_CLASS_QUALITY = "learning/my-class-quality";
     // learning end

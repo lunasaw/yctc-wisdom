@@ -1,5 +1,5 @@
 <!-- begin sidebar -->
-<style>
+<style >
 	.card-body{
         padding: 0.5rem;
     }
@@ -29,19 +29,20 @@
 			</div>
 			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 				<div  class="card-body">
-					<a shiro:hasPermission="tea:classroomApplication" class="dropdown-item" href="/genesis/teaching/classroom-application" >教室申请</a>
-					<a shiro:hasPermission="tea:lessonDetails" class="dropdown-item" href="/genesis/teaching/lesson-details-list">课堂详情</a>
-					<a shiro:hasPermission="tea:courseDetails" class="dropdown-item" href="/genesis/teaching/course-details-list">课程详情</a>
-					<a shiro:hasPermission="tea:studentDetails" class="dropdown-item" href="/genesis/teaching/student-details-list">学生详情</a>
-					<a shiro:hasPermission="tea:teachingSchedule" class="dropdown-item" href="/genesis/teaching/teaching-schedule">教学课表</a>
-					<a shiro:hasPermission="tea:checkAttendance" class="dropdown-item" href="/genesis/teaching/check-attendance">考勤</a>
-					<a shiro:hasPermission="tea:checkState" class="dropdown-item" href="/genesis/teaching/check-state">学生上课状态检测</a>
-					<a shiro:hasPermission="tea:fillKnowledge" class="dropdown-item" href="/genesis/teaching/fill-knowledge-step-a">设置知识点</a>
-					<a shiro:hasPermission="tea:knowledgeStudyStatement" class="dropdown-item" href="/genesis/teaching/lesson-knowledge-point-list">知识点学情反馈</a>
+					<a shiro:hasPermission="tea:classroomApplication" xmlns:shiro="http://www.w3.org/1999/xhtml" class="dropdown-item" href="/genesis/teaching/classroom-application" >教室申请</a>
+					<a shiro:hasPermission="tea:lessonDetails" xmlns:shiro="http://www.w3.org/1999/xhtml" class="dropdown-item" href="/genesis/teaching/lesson-details-list">课堂详情</a>
+					<a shiro:hasPermission="tea:courseDetails" xmlns:shiro="http://www.w3.org/1999/xhtml" class="dropdown-item" href="/genesis/teaching/course-details-list">课程详情</a>
+					<a shiro:hasPermission="tea:studentDetails" xmlns:shiro="http://www.w3.org/1999/xhtml" class="dropdown-item" href="/genesis/teaching/student-details-list">学生详情</a>
+					<a shiro:hasPermission="tea:teachingSchedule" xmlns:shiro="http://www.w3.org/1999/xhtml" class="dropdown-item" href="/genesis/teaching/teaching-schedule">教学课表</a>
+					<a shiro:hasPermission="tea:checkAttendance" xmlns:shiro="http://www.w3.org/1999/xhtml" class="dropdown-item" href="/genesis/teaching/check-attendance">考勤</a>
+					<a shiro:hasPermission="tea:checkState" xmlns:shiro="http://www.w3.org/1999/xhtml" class="dropdown-item" href="/genesis/teaching/check-state">学生上课状态检测</a>
+					<a shiro:hasPermission="tea:fillKnowledge" xmlns:shiro="http://www.w3.org/1999/xhtml" class="dropdown-item" href="/genesis/teaching/fill-knowledge-step-a">设置知识点</a>
+					<a shiro:hasPermission="tea:knowledgeStudyStatement" xmlns:shiro="http://www.w3.org/1999/xhtml" class="dropdown-item" href="/genesis/teaching/lesson-knowledge-point-list">知识点学情反馈</a>
+					<a shiro:hasPermission="tea:fillKnowledge" xmlns:shiro="http://www.w3.org/1999/xhtml" class="dropdown-item" href="/genesis/teaching/lesson-knowledge-point-list-a">知识点检测</a>
 				</div>
 			</div>
 		</div>
-		<div shiro:hasPermission="stu:mySchedule or stu:myClassQuality" class="card">
+		<div shiro:hasPermission="stu:mySchedule or stu:myClassQuality" xmlns:shiro="http://www.w3.org/1999/xhtml" class="card">
 			<div class="card-header" id="headingThree">
 				<h5 class="mb-0">
 					<i class="fas fa-book fa-lg fa-fw"></i>

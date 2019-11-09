@@ -1,0 +1,214 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="component/head :: head"></head>
+
+<body onload="getLessonDetails();fillHref();getKnowledgeDetails()">
+<header th:replace="component/header :: header"></header>
+
+<!-- Begin page content -->
+<div class="container">
+    <div class="row">
+
+        <div th:replace="component/sidebar"></div>
+
+        <div class="col-md-9">
+            <div th:replace="component/page-title::pageTitle('知识点检测中')"></div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">课程名</span>
+                </div>
+                <input type="text" disabled="disabled" class="form-control" id="basic-url-name" aria-describedby="basic-addon3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">课时</span>
+                </div>
+                <input type="text" disabled="disabled" class="form-control" id="basic-url-lesson-number" aria-describedby="basic-addon3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">学年</span>
+                </div>
+                <input type="text" disabled="disabled" class="form-control" id="basic-url-year" aria-describedby="basic-addon3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">学期</span>
+                </div>
+                <input type="text" disabled="disabled" class="form-control" id="basic-url-term" aria-describedby="basic-addon3">
+            </div>
+
+            <div class="col-md-12" id="divAdd">
+
+            </div>
+
+            <a onclick="fillHref()" class="btn btn-primary" role="button" id="lesson-knowledge-point-list">返回</a>
+        </div>
+    </div>
+</div>
+<footer th:replace="component/footer :: footer"></footer>
+
+<script>
+    function getUrl() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for ( var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+    function getid() {
+        var theRequest = new Object();
+        theRequest = getUrl();
+        var id = theRequest["id"];
+        return id;
+    }
+
+    function getLessonDetails() {
+        var theRequest = new Object();
+        theRequest = getUrl();
+        var id = theRequest["id"];
+
+        $.ajax({
+            url: "/genesis/restdetails/get-lessondetailsvo-by-lessonid-list",
+            type: "POST",
+            data: id,
+            contentType: "application/json;charset=utf-8",
+            dataType: 'json',
+            // async: true,
+            success: function (result) {
+                alert(result);
+                if (result.success == false) {
+                    if (result.code == 9002) {
+                        alert("参数错误");
+                    } else if (result.code == 9999) {
+                        alert("系统错误");
+                    }
+                } else {
+                    var vo = result.module;
+                    document.getElementById('basic-url-name').value = vo.courseDTO.name;
+                    document.getElementById('basic-url-year').value = vo.courseDTO.year;
+                    var term = vo.courseDTO.term;
+                    var termText;
+                    if(term == 0)
+                        termText = "上学期";
+                    else if(term == 1)
+                        termText = "下学期";
+                    document.getElementById('basic-url-term').value = termText;
+                    var classNameList = vo.classNameList;
+                    var className = "";
+                    for(var i = 0; i < classNameList.length; i++){
+                        className = className+" "+classNameList[i];
+                    }
+                    document.getElementById('basic-url-lesson-number').value = vo.lessonDO.number;
+
+                }
+            },
+            error: function (e) {
+                alert("getLessonDetails异常");
+            }
+        });
+    }
+
+    function getKnowledgeDetails() {
+        var theRequest = new Object();
+        theRequest = getUrl();
+        var lessonId = theRequest["id"];
+        $.ajax({
+            url: "/genesis/restknowledge/get-knowledgesdetailsvo-by-lessonid-listone",
+            type: "POST",
+            data: lessonId,
+            contentType: "application/json; charset=utf-8",
+            dataType: 'json',
+            async: true,
+            success: function (result) {
+                if (result.success == false) {
+                    if (result.code == 9002) {
+                        alert("参数错误");
+                    } else if (result.code == 9999) {
+                        alert("系统错误");
+                    }
+                } else {
+
+                    var voList = result.module;
+                    for (var i = 0; i < voList.length; i++) {
+                        var vo = voList[i];
+                        var knowledgeId = vo.knowledgeId;
+                        alert("知识点id"+knowledgeId);
+                        if (knowledgeId != null) {
+                            getpictureByKnowledge(knowledgeId);
+                            $.ajax({
+                                url: "/genesis/restknowledge/get-picture-knowlegde",
+                                type: "POST",
+                                data: id,
+                                contentType: "application/json;charset=utf-8",
+                                dataType: 'json',
+                                // async: true,
+                                success: function (result) {
+                                    if (result.success == false) {
+                                        if (result.code == 9002) {
+                                            alert("参数错误");
+                                        } else if (result.code == 9999) {
+                                            alert("系统错误");
+                                        }
+                                    } else {
+
+                                    }
+                                },error: function (e) {
+                                    alert("getLessonDetails异常");
+                                }
+                            });
+                            var listId = i + 1;
+                        }
+
+                    }
+                }
+            }
+        });
+    }
+
+    function getpictureByKnowledge(id) {
+        var theRequest = new Object();
+        var lessonId = theRequest["id"];
+        $.ajax({
+            url: "/genesis/restknowledge/get-picture-knowlegde?knowledgeid=331",
+            type: "POST",
+            data: lessonId,
+            contentType: "application/json; charset=utf-8",
+            dataType: 'json',
+            async: true,
+            success: function (result) {
+                alert(result);
+                alert(result.module);
+                alert(result.module.get(1));
+                if (result.success == false) {
+                    if (result.code == 9002) {
+                        alert("参数错误");
+                    } else if (result.code == 9999) {
+                        alert("系统错误");
+                    }
+                } else {
+                    var voList = result.module;
+                    alert(voList+"图片显示在这儿");
+                    for (var i = 0; i < voList.length; i++) {
+                        $("#divAdd").append(
+                            "<img src='voList' alt='知识点'>"
+                        );
+                    }
+                }
+            },
+            error: function (e) {
+                alert("getKnowledgeDetails异常");
+            }
+        });
+    }
+
+    function fillHref(){
+        document.getElementById("lesson-knowledge-point-list").href = "/genesis/teaching/lesson-knowledge-point-list-a";
+    }
+</script>
+
+<div th:replace="component/footer-lib"></div>
+</body>
+
+</html>
