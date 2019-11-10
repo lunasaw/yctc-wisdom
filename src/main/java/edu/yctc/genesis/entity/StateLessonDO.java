@@ -32,4 +32,15 @@ public class StateLessonDO {
     public void setLessonId(long lessonId) {
         this.lessonId = lessonId;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("StateLessonDO [state=");
+        builder.append(state);
+        builder.append(", lessonId=");
+        builder.append(lessonId);
+        builder.append("]");
+        return builder.toString();
+    }
 }

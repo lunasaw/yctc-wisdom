@@ -44,4 +44,20 @@ public class StudentsLessonStateVO {
     public void setSLEEP(int SLEEP) {
         this.SLEEP = SLEEP;
     }
+
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("StudentsLessonStateVO [LISTENING=");
+        builder.append(LISTENING);
+        builder.append(", PLAY_MOBILE_PHONE=");
+        builder.append(PLAY_MOBILE_PHONE);
+        builder.append(", DAZE=");
+        builder.append(DAZE);
+        builder.append(", SLEEP=");
+        builder.append(SLEEP);
+        builder.append("]");
+        return builder.toString();
+    }
 }

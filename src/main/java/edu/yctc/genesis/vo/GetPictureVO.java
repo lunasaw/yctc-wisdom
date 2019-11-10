@@ -37,4 +37,18 @@ public class GetPictureVO {
     public void setPicture(List<KnowledgePictureDO> picture) {
         this.picture = picture;
     }
+
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("GetPictureVO [id=");
+        builder.append(id);
+        builder.append(", picture=");
+        builder.append(picture);
+        builder.append(", knowledgeid=");
+        builder.append(knowledgeid);
+        builder.append("]");
+        return builder.toString();
+    }
 }

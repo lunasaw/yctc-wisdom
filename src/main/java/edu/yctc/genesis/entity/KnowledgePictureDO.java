@@ -52,4 +52,17 @@ public class KnowledgePictureDO {
         this.picture = picture;
         this.knowledgeid = knowledgeid;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("KnowledgePictureDO [id=");
+        builder.append(id);
+        builder.append(", picture=");
+        builder.append(picture);
+        builder.append(", knowledgeid=");
+        builder.append(knowledgeid);
+        builder.append("]");
+        return builder.toString();
+    }
 }
