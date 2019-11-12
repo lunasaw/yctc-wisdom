@@ -133,7 +133,7 @@ public class FaceFunctionImpl implements FaceFunction {
         }
 
         /** 图片合成视频 */
-        DealMedia.coding("C:\\src\\img", savePath, "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
+        DealMedia.coding("D:\\ffmpeg\\img", savePath, "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
     }
 
     @Override
@@ -181,7 +181,7 @@ public class FaceFunctionImpl implements FaceFunction {
         for (int i = 1; i <= cycleIndex; ++i) {
             faces.clear();
             // TODO 图片改回来
-            MyFaceApi.myDetect("C:\\src\\img\\1.jpg", null, faces);
+            MyFaceApi.myDetect("D:\\ffmpeg\\img\\1.jpg", null, faces);
 
             /** 等待人脸检测完成 */
             WaitForDate.waitForDate(faces);
@@ -275,7 +275,7 @@ public class FaceFunctionImpl implements FaceFunction {
 
         for (int i = 1; i <= cycleIndex; ++i) {
             // TODO 图片改回来
-            String imgPath = "C:\\src\\img\\001.jpg";
+            String imgPath = "D:\\ffmpeg\\img\\001.jpg";
 
             /** 把图片中的背景去掉 */
             removeTheBackground(imgPath);
@@ -295,7 +295,7 @@ public class FaceFunctionImpl implements FaceFunction {
                 searthFaceToken.clear();
                 thresholds.clear();
 
-                MyFaceApi.myDetect("C:\\src\\img\\vgg\\" + j + ".jpg", null, faces);
+                MyFaceApi.myDetect("D:\\ffmpeg\\img\\" + j + ".jpg", null, faces);
 
                 /** 等待人脸检测完成 */
                 WaitForDate.waitForDate(faces);
@@ -328,7 +328,7 @@ public class FaceFunctionImpl implements FaceFunction {
                     /** 在所有学生里面 */
                     if (flag) {
                         /** 用python模型进行状态检测 */
-                        int state = Model.dealPicture("C:\\src\\img\\vgg\\" + j + ".jpg");
+                        int state = Model.dealPicture("D:\\ffmpeg\\img\\" + j + ".jpg");
                         StudentStateDO studentStateDO = new StudentStateDO();
                         studentStateDO.setUserId(userDO.getModule().getId());
                         studentStateDO.setLessonId(Long.parseLong(lessonId));
@@ -392,7 +392,7 @@ public class FaceFunctionImpl implements FaceFunction {
 
         for (int i = 1; i <= cycleIndex; ++i) {
             // TODO 图片改回来
-            String imgPath = "C:\\src\\img\\001.jpg";
+            String imgPath = "D:\\ffmpeg\\img\\001.jpg";
 
             /** 把图片中的背景去掉 */
             removeTheBackground(imgPath);
@@ -412,7 +412,7 @@ public class FaceFunctionImpl implements FaceFunction {
                 searthFaceToken.clear();
                 thresholds.clear();
 
-                MyFaceApi.myDetect("C:\\src\\img\\vgg\\" + j + ".jpg", null, faces);
+                MyFaceApi.myDetect("D:\\ffmpeg\\img\\" + j + ".jpg", null, faces);
 
                 /** 等待人脸检测完成 */
                 WaitForDate.waitForDate(faces);
@@ -445,7 +445,7 @@ public class FaceFunctionImpl implements FaceFunction {
                     /** 在所有学生里面 */
                     if (flag) {
                         /** 用python模型进行状态检测 */
-                        int state = Model.dealPicture("C:\\src\\img\\vgg\\" + j + ".jpg");
+                        int state = Model.dealPicture("D:\\ffmpeg\\img\\" + j + ".jpg");
                         KnowledgeStudentStateDO knowledgeStudentStateDO = new KnowledgeStudentStateDO();
                         knowledgeStudentStateDO.setUserId(userDO.getModule().getId());
                         knowledgeStudentStateDO.setLessonId(Long.parseLong(lessonId));
@@ -633,7 +633,7 @@ public class FaceFunctionImpl implements FaceFunction {
                 /** 保存图片 */
                 PicCut.cut(bodyRectangles.get(i).getLeft(), bodyRectangles.get(i).getTop(),
                     bodyRectangles.get(i).getWidth(), bodyRectangles.get(i).getHeight(), imgPath,
-                    "C:\\src\\img\\vgg\\" + i + ".jpg");
+                    "D:\\ffmpeg\\img\\" + i + ".jpg");
             }
         } catch (IOException e) {
             LOG.error("IO error, exception={}, img={}", e, imgPath);

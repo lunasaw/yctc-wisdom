@@ -2,6 +2,7 @@ package edu.yctc.genesis;
 
 import edu.yctc.genesis.controller.rest.impl.KnowledgeRestControllerImpl;
 import edu.yctc.genesis.face.function.impl.FaceFunctionImpl;
+import edu.yctc.genesis.face.util.CheckKnowledgeThread;
 import edu.yctc.genesis.face.util.DealMedia;
 import edu.yctc.genesis.face.util.OCRUtil;
 import org.junit.Test;
@@ -43,6 +44,7 @@ public class ApplicationTests {
 
     @Test
     public void test(){
-
+        CheckKnowledgeThread checkKnowledgeThread=new CheckKnowledgeThread();
+        checkKnowledgeThread.checkKnowledgeByLessonId(33);
     }
 }

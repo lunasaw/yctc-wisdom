@@ -150,4 +150,13 @@ public class TeachingControllerImpl implements TeachingController {
         return TemplatePath.TEACHING_FILL_KNOWLEDGE_STEP_B;
     }
 
+    @GetMapping("student-stateby-knowledgeand-lesson")
+    public String showBing(Model model, HttpSession httpSession){
+        long lessonId = SessionContentHolder.getSignInUserIdBySessionId(httpSession.getId());
+        long knowledgeId = SessionContentHolder.getSignInUserIdBySessionId(httpSession.getId());
+        model.addAttribute("lessonId", lessonId);
+        model.addAttribute("knowledgeId",knowledgeId);
+        return TemplatePath.TEACHING_FILL_KNOWLEDGE_BING;
+    }
+
 }

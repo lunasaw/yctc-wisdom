@@ -1,6 +1,8 @@
 package edu.yctc.genesis.dao;
 
 import edu.yctc.genesis.entity.KnowledgePictureDO;
+import edu.yctc.genesis.vo.GetBooleanByPictureVO;
+import edu.yctc.genesis.vo.GetPictureBooleanLastVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -32,4 +34,10 @@ public interface PictureKnowledgeDAO {
      * @param id
      */
     public void deleteById(long id);
+
+    /*
+        @param pictureId
+       通过图片id获取GetBooleanByPictureid
+        */
+    public GetPictureBooleanLastVO GetBooleanByPictureid(long pictureId);
 }

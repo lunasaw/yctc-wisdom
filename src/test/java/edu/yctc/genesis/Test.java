@@ -2,6 +2,7 @@ package edu.yctc.genesis;
 
 import edu.yctc.genesis.face.function.FaceFunction;
 import edu.yctc.genesis.face.function.impl.FaceFunctionImpl;
+import edu.yctc.genesis.face.util.CheckKnowledgeThread;
 import edu.yctc.genesis.face.util.DealMedia;
 import edu.yctc.genesis.face.util.Face;
 import edu.yctc.genesis.face.util.OCRUtil;
@@ -19,8 +20,8 @@ import java.io.IOException;
 public class Test {
 
     public static void main(String[] args) {
-        DealMedia.decode("D:\\ffmpeg\\mp4\\3.mp4", "D:\\ffmpeg\\img", "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
-        DealMedia.setFrame("1");
+//        DealMedia.decode("D:\\ffmpeg\\mp4\\3.mp4", "D:\\ffmpeg\\img", "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
+//        DealMedia.setFrame("1");
 //        try {
 //            //图片文件：此图片是需要被识别的图片路径
 //            File file = new File("D://2.jpg");
@@ -31,7 +32,7 @@ public class Test {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        } catch (Exception e) {
-//            e.printStackTrace();
+//            e.prinStackTrace();
 //        }
 
     }

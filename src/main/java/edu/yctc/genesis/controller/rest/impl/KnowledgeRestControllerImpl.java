@@ -99,7 +99,7 @@ public class KnowledgeRestControllerImpl implements KnowledgeRestController {
         return knowledgeService.getKnowledgeDOsByLessonId(lessonId);
     }
 
-    //restknowledge/get-picture-knowlegde
+    //通过知识点id返回知识点图片集合  restknowledge/get-picture-knowlegde
     @Override
     @GetMapping("get-picture-knowlegde")
     public ResultDO<List<KnowledgePictureDO>> getKnowledgePictureDOsByLessonId(long knowledgeid){
@@ -123,7 +123,7 @@ public class KnowledgeRestControllerImpl implements KnowledgeRestController {
                 pictureDOsByKnowledgeIdIdModule);
     }
 
-    //restknowledge/get-picture-lessonId-knowlegde
+    //通过课程id返回该课程的知识点图片  restknowledge/get-picture-lessonId-knowlegde
     @Override
     @RequestMapping("get-picture-lessonId-knowlegde")
     public ResultDO<List<GetPictureVO>> getAllPictureByLessonId(@RequestParam  long lessonId){
@@ -154,6 +154,33 @@ public class KnowledgeRestControllerImpl implements KnowledgeRestController {
         return new ResultDO<List<GetPictureVO>>(true, SUCCESS, ResultCode.MSG_SUCCESS,
                 getPictureVOS);
     }
+
+    //通过知识点id和课程id返回学生状态人数  restknowledge/get-students-Lesson-State
+    //@RequestBody long lessonId,@RequestBody long knowledgeId
+    @Override
+    @GetMapping("get-students-Lesson-State")
+    public ResultDO<StudentsLessonStateVO> studentsLessonStateVO(@RequestParam long lessonId,@RequestParam long knowledgeId){
+//        long lessonId=33;
+//        long knowledgeId=360;
+        if (lessonId <= 0) {
+            return new ResultDO<StudentsLessonStateVO>(false, ResultCode.PARAMETER_INVALID,
+                    ResultCode.MSG_PARAMETER_INVALID,
+                    null);
+        }
+        ResultDO<StudentsLessonStateVO> lessonStateVO = null;
+        StudentsLessonStateVO stateVOModule = null;
+        try {
+            lessonStateVO = knowledgeService.getStudentsLessonStateVO(lessonId, knowledgeId);
+            stateVOModule = lessonStateVO.getModule();
+            LOG.info("lessonStateVO success, lessonId={},knowledgeId={}",lessonId, knowledgeId);
+        } catch (Exception e) {
+            LOG.info("StudentsLessonStateVO error, lessonId={},knowledgeId={}",lessonId, knowledgeId);
+        }
+        LOG.info("StudentsLessonStateVO success, studentsLessonStateVO={}", lessonStateVO);
+        return new ResultDO<StudentsLessonStateVO>(true, SUCCESS, ResultCode.MSG_SUCCESS,
+                stateVOModule);
+    }
+
 
     @Override
     @PostMapping("modify-knowledge")
@@ -204,29 +231,27 @@ public class KnowledgeRestControllerImpl implements KnowledgeRestController {
             lessonDetailsVOList);
     }
 
-    //restknowledge/get-students-Lesson-State
-    //@RequestBody long lessonId,@RequestBody long knowledgeId
+
+    //restknowledge/get-Picture-BooleanLast
+    //
     @Override
-    @RequestMapping("get-students-Lesson-State")
-    public ResultDO<StudentsLessonStateVO> studentsLessonStateVO(@RequestParam long lessonId,@RequestParam long knowledgeId){
-//        long lessonId=33;
-//        long knowledgeId=360;
-        if (lessonId <= 0) {
-            return new ResultDO<StudentsLessonStateVO>(false, ResultCode.PARAMETER_INVALID,
+    @RequestMapping("get-Picture-BooleanLast")
+    public ResultDO<GetBooleanByPictureVO> GetPictureBooleanLastVO(@RequestParam long pictureId) {
+//        long pictureId=1;
+        if (pictureId <= 0) {
+            return new ResultDO<GetBooleanByPictureVO>(false, ResultCode.PARAMETER_INVALID,
                     ResultCode.MSG_PARAMETER_INVALID,
                     null);
         }
-        ResultDO<StudentsLessonStateVO> lessonStateVO = null;
-        StudentsLessonStateVO stateVOModule = null;
-        try {
-            lessonStateVO = knowledgeService.getStudentsLessonStateVO(lessonId, knowledgeId);
-            stateVOModule = lessonStateVO.getModule();
-            LOG.info("lessonStateVO success, lessonId={},knowledgeId={}",lessonId, knowledgeId);
-        } catch (Exception e) {
-            LOG.info("StudentsLessonStateVO error, lessonId={},knowledgeId={}",lessonId, knowledgeId);
+        ResultDO<GetBooleanByPictureVO> byPictureVOResultDO = knowledgeService.GetBooleanByPictureid(pictureId);
+        if (byPictureVOResultDO.isSuccess() == false) {
+            return new ResultDO<GetBooleanByPictureVO> (false, byPictureVOResultDO.getCode(), byPictureVOResultDO.getMsg(), null);
         }
-        LOG.info("StudentsLessonStateVO success, studentsLessonStateVO={}", lessonStateVO);
-        return new ResultDO<StudentsLessonStateVO>(true, SUCCESS, ResultCode.MSG_SUCCESS,
-                stateVOModule);
+        GetBooleanByPictureVO pictureVOResultDOModule = byPictureVOResultDO.getModule();
+        LOG.info("getknowledgesDetailsVOByLessonId success, GetPictureBooleanLastVO={}", pictureVOResultDOModule);
+        return new ResultDO<GetBooleanByPictureVO> (true, SUCCESS, ResultCode.MSG_SUCCESS,
+                pictureVOResultDOModule);
     }
+
+
 }

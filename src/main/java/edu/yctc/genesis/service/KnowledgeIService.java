@@ -3,9 +3,7 @@ package edu.yctc.genesis.service;
 import java.util.List;
 
 import edu.yctc.genesis.entity.*;
-import edu.yctc.genesis.vo.GetPictureVO;
-import edu.yctc.genesis.vo.OneKnowledgeDetailsVO;
-import edu.yctc.genesis.vo.StudentsLessonStateVO;
+import edu.yctc.genesis.vo.*;
 
 public interface KnowledgeIService {
 
@@ -107,5 +105,10 @@ public interface KnowledgeIService {
     通过lessonid获得该堂课的所有知识点的学生状态人数
      */
     public ResultDO<StudentsLessonStateVO> getStudentsLessonStateVO(long lessonId,long knowledgeId);
+
+    /*
+    通过图片id获取GetBooleanByPictureid
+     */
+    public ResultDO<GetBooleanByPictureVO> GetBooleanByPictureid(long pictureId);
 
 }

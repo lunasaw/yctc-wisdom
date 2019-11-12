@@ -10,8 +10,7 @@ import javax.annotation.Resource;
 
 import edu.yctc.genesis.dao.*;
 import edu.yctc.genesis.entity.*;
-import edu.yctc.genesis.vo.GetPictureVO;
-import edu.yctc.genesis.vo.StudentsLessonStateVO;
+import edu.yctc.genesis.vo.*;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +19,6 @@ import org.springframework.stereotype.Service;
 
 import edu.yctc.genesis.constant.ResultCode;
 import edu.yctc.genesis.service.KnowledgeIService;
-import edu.yctc.genesis.vo.OneKnowledgeDetailsVO;
 
 @ComponentScan({"edu.yctc.genesis.dao"})
 @Service("knowledgeService")
@@ -358,7 +356,6 @@ public class KnowledgeServiceImpl implements KnowledgeIService {
         }
     }
 
-
     //获取学生状态集合
     @Override
     public ResultDO<StudentsLessonStateVO> getStudentsLessonStateVO(long lessonId,long knowledgeId){
@@ -396,8 +393,41 @@ public class KnowledgeServiceImpl implements KnowledgeIService {
         } catch (Exception e) {
             LOG.error("get studentsLessonStateVO By knowledgeId fail, parameter invalid, lessonId={},knowledgeId={}",lessonId, knowledgeId,e);
         }
-        return new ResultDO<StudentsLessonStateVO>(false, ResultCode.PARAMETER_INVALID,
+        return new ResultDO<StudentsLessonStateVO>(true, ResultCode.PARAMETER_INVALID,
                 ResultCode.MSG_PARAMETER_INVALID, studentsLessonStateVO);
+    }
+
+    @Override
+    public ResultDO<GetBooleanByPictureVO> GetBooleanByPictureid(long pictureId){
+        System.out.println("正在通过图片id查询是否被识别到集合");
+        if (pictureId <= 0) {
+            LOG.error("get GetBooleanBy ByPictureVO  fail, parameter invalid, pictureId={}",pictureId);
+            return new ResultDO<GetBooleanByPictureVO>(false, ResultCode.PARAMETER_INVALID,
+                    ResultCode.MSG_PARAMETER_INVALID, null);
+        }
+        GetPictureBooleanLastVO GetPictureBooleanLastVO=null;
+        GetBooleanByPictureVO getBooleanByPictureVO=new GetBooleanByPictureVO();
+        try {
+            GetPictureBooleanLastVO = pictureKnowledgeDAO.GetBooleanByPictureid(pictureId);
+            System.out.println(GetPictureBooleanLastVO);
+            getBooleanByPictureVO.setPrictureId(GetPictureBooleanLastVO.getPictureid());
+            getBooleanByPictureVO.setId(GetPictureBooleanLastVO.getId());
+            getBooleanByPictureVO.setKnowledgeid(GetPictureBooleanLastVO.getKnowledgeid());
+            KnowledgeDO knowledgeDO = knowledgeDAO.getKnowledgeDOById(GetPictureBooleanLastVO.getKnowledgeid());
+            getBooleanByPictureVO.setKnowledge(knowledgeDO.getContent());
+            if (GetPictureBooleanLastVO.getPictureBoolean()==1){
+                getBooleanByPictureVO.setCheck(true);
+            }else {
+                getBooleanByPictureVO.setCheck(false);
+            }
+        System.out.println("正在通过图片id查询是否被识别到集合---------------");
+        } catch (Exception e) {
+            LOG.error("get GetBooleanByPictureVO By byPictureVOS fail, parameter invalid, pictureId={}",pictureId,e);
+            return new ResultDO<GetBooleanByPictureVO>(false, ResultCode.PARAMETER_INVALID,
+                    ResultCode.MSG_PARAMETER_INVALID, null);
+        }
+        return new ResultDO<GetBooleanByPictureVO>(true, ResultCode.PARAMETER_INVALID,
+                ResultCode.MSG_PARAMETER_INVALID, getBooleanByPictureVO);
     }
 
 }

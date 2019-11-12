@@ -75,4 +75,9 @@ public interface KnowledgeRestController {
     public ResultDO<StudentsLessonStateVO> studentsLessonStateVO(long lessonId,long knowledgeId);
 //    public ResultDO<StudentsLessonStateVO> studentsLessonStateVO();
 
+     /*
+    通过图片id获取GetBooleanByPictureid
+     */
+     public ResultDO<GetBooleanByPictureVO> GetPictureBooleanLastVO(long pictureId);
+//    public ResultDO<GetBooleanByPictureVO> GetPictureBooleanLastVO();
 }
