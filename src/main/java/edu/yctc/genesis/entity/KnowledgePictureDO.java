@@ -15,9 +15,19 @@ public class KnowledgePictureDO {
 
     private long knowledgeid;
 
+    private String knowledge;
+
     public KnowledgePictureDO(String picture, long knowledgeid) {
         this.picture = picture;
         this.knowledgeid = knowledgeid;
+    }
+
+    public String getKnowledge() {
+        return knowledge;
+    }
+
+    public void setKnowledge(String knowledge) {
+        this.knowledge = knowledge;
     }
 
     public KnowledgePictureDO() {
@@ -62,6 +72,8 @@ public class KnowledgePictureDO {
         builder.append(picture);
         builder.append(", knowledgeid=");
         builder.append(knowledgeid);
+        builder.append(", knowledge=");
+        builder.append(knowledge);
         builder.append("]");
         return builder.toString();
     }

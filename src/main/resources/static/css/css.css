@@ -1,0 +1,19 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif;color:#333;margin:0 auto;text-align:center;}
+table{border-collapse:collapse;border-spacing:0;}
+
+a{color:#333;text-decoration:none;}
+a:hover{color:#c00;text-decoration:underline;}
+
+/* votebox */
+.votebox{width:200px;margin-left:15px;text-align:left;position:relative;z-index:66;}
+/* barbox */
+.barbox{height:16px;line-height:16px;overflow:hidden;}
+.barbox dt a{color:#0048CC;}
+.barbox dd{float:left;}
+.barbox dd.last{color:#999;}
+.barbox dd.barline{width:200px;background:url(../images/jdtbg.png) left center no-repeat;height:16px;overflow:hidden;display:inline;}
+.barbox dd.barline div.charts{height:16px;overflow:hidden;background:url(../images/barbg.gif) right center repeat-x;border-radius:8px;}

@@ -14,16 +14,13 @@
 		WHERE knowledgeid=#{knowledgeid}
 	</select>
 
-	<insert id="insert" parameterType="edu.yctc.genesis.entity.KnowledgePictureDO">
-		<selectKey keyProperty="id" order="AFTER" resultType="long">
-			SELECT LAST_INSERT_ID()
-		</selectKey>
+	<insert id="insertbypicture" parameterType="edu.yctc.genesis.entity.KnowledgePictureDO">
 		INSERT INTO tb_knowledge_picture(
-		picture,
-		knowledgeid
+		picture
+
 		) VALUES(
-		#{picture},
-		#{knowledgeid}
+		#{picture}
+
 		);
 	</insert>
 

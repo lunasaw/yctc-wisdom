@@ -261,13 +261,14 @@ public class KnowledgeServiceImpl implements KnowledgeIService {
         }
     }
 
+    @Override
     //插入知识点对应的图片
     public  ResultDO<Void> insertPictureByKnowledgeId (String picture,long knowledgeId) {
         KnowledgePictureDO knowledgePictureDO =new KnowledgePictureDO();
         knowledgePictureDO.setKnowledgeid(knowledgeId);
         knowledgePictureDO.setPicture(picture);
         try {
-            pictureKnowledgeDAO.insert(knowledgePictureDO);
+            pictureKnowledgeDAO.insertbypicture(knowledgePictureDO);
             LOG.info("insert knowledge success, knowledgePictureDO={}", knowledgePictureDO);
             return new ResultDO<>(true, ResultCode.SUCCESS, ResultCode.MSG_SUCCESS);
         } catch (Exception e) {

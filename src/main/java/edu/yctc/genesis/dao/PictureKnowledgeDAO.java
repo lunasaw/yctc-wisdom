@@ -18,7 +18,7 @@ public interface PictureKnowledgeDAO {
      *
      * @param KnowledgePictureDO
      */
-    public void insert(KnowledgePictureDO KnowledgePictureDO);
+    public void insertbypicture(KnowledgePictureDO KnowledgePictureDO);
 
     /**
      * 知识点id查询图片集合

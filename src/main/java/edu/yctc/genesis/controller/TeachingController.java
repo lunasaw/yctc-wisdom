@@ -126,4 +126,9 @@ public interface TeachingController {
      * @return
      */
     String showLessonKnowledgePointDetails(Model model, HttpSession httpSession);
+
+    /*
+    知识点检测页面
+     */
+    public String showpicture(Model model, HttpSession httpSession);
 }

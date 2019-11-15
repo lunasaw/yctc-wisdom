@@ -10,4 +10,7 @@ public interface StatisticalIService {
      * @return
      */
     Map<String, Integer> getClassroomUsingState();
+
+    public void  insert();
+
 }

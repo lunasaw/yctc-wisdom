@@ -117,7 +117,12 @@ public class KnowledgeRestControllerImpl implements KnowledgeRestController {
         if (knowledgePictureDOsByKnowledgeIdId.isSuccess() == false) {
             return new ResultDO<List<KnowledgePictureDO>>(false, knowledgePictureDOsByKnowledgeIdId.getCode(), knowledgePictureDOsByKnowledgeIdId.getMsg(), null);
         }
+
         List<KnowledgePictureDO> pictureDOsByKnowledgeIdIdModule = knowledgePictureDOsByKnowledgeIdId.getModule();
+        for (int i=0 ;i<pictureDOsByKnowledgeIdIdModule.size();i++){
+            ResultDO<GetBooleanByPictureVO> byPictureVOResultDO = knowledgeService.GetBooleanByPictureid(pictureDOsByKnowledgeIdIdModule.get(i).getId());
+            pictureDOsByKnowledgeIdIdModule.get(i).setKnowledge(byPictureVOResultDO.getModule().getKnowledge());
+        }
         LOG.info("knowledgePictureDOsByKnowledgeIdId success, module={}", knowledgePictureDOsByKnowledgeIdId.getModule());
         return new ResultDO<List<KnowledgePictureDO>>(true, SUCCESS, ResultCode.MSG_SUCCESS,
                 pictureDOsByKnowledgeIdIdModule);
@@ -233,7 +238,7 @@ public class KnowledgeRestControllerImpl implements KnowledgeRestController {
 
 
     //restknowledge/get-Picture-BooleanLast
-    //
+
     @Override
     @RequestMapping("get-Picture-BooleanLast")
     public ResultDO<GetBooleanByPictureVO> GetPictureBooleanLastVO(@RequestParam long pictureId) {

@@ -6,6 +6,8 @@ import edu.yctc.genesis.face.util.CheckKnowledgeThread;
 import edu.yctc.genesis.face.util.DealMedia;
 import edu.yctc.genesis.face.util.Face;
 import edu.yctc.genesis.face.util.OCRUtil;
+import edu.yctc.genesis.service.StatisticalIService;
+import edu.yctc.genesis.service.impl.StatisticalServiceImpl;
 import org.springframework.context.annotation.Bean;
 
 import javax.imageio.ImageIO;
@@ -20,8 +22,11 @@ import java.io.IOException;
 public class Test {
 
     public static void main(String[] args) {
-//        DealMedia.decode("D:\\ffmpeg\\mp4\\3.mp4", "D:\\ffmpeg\\img", "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
-//        DealMedia.setFrame("1");
+//        DealMedia.setFrame("0.2");
+//        DealMedia.setTotalTime("04:28");
+//        DealMedia.decode("D:\\ffmpeg\\mp4\\亲子关系与小学生品德培养.mp4", "src\\img", "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
+        StatisticalIService statisticalIService=new StatisticalServiceImpl();
+        statisticalIService.insert();
 //        try {
 //            //图片文件：此图片是需要被识别的图片路径
 //            File file = new File("D://2.jpg");

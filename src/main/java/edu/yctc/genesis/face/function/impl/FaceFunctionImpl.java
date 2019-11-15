@@ -66,6 +66,8 @@ public class FaceFunctionImpl implements FaceFunction {
     /** 循环次数 */
     private static int cycleIndex = 1;
 
+    final String pathexe="D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe";
+
     /** service层接口 */
     private UserIService userService = (UserServiceImpl)SpringContextUtils.getBeanByClass(UserServiceImpl.class);
     private AttendanceIService attendanceService =
@@ -118,22 +120,22 @@ public class FaceFunctionImpl implements FaceFunction {
         DealMedia.setStartTime(startTime);
         DealMedia.setEndTime(endTime);
         /** 视频解析成图片 */
-        DealMedia.decode(videoPath, "D:\\ffmpeg\\img", "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
+        DealMedia.decode(videoPath, "src\\img", pathexe);
 
         /** 处理图片 */
         try {
             List<String> fileNames = new ArrayList<>();
-            GetFoldFileNames.getFileName(fileNames, "D:\\ffmpeg\\img");
+            GetFoldFileNames.getFileName(fileNames, "src\\img");
             for (String temp : fileNames) {
-                System.out.println("D:\\ffmpeg\\img\\" + temp);
-                DealImage.paint("D:\\ffmpeg\\img\\" + temp);
+                System.out.println("src\\img\\" + temp);
+                DealImage.paint("src\\img\\" + temp);
             }
         } catch (Exception e) {
             LOG.error("img is not exist!, exception={}", e);
         }
 
         /** 图片合成视频 */
-        DealMedia.coding("D:\\ffmpeg\\img", savePath, "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
+        DealMedia.coding("src\\img", savePath, pathexe);
     }
 
     @Override
@@ -633,7 +635,7 @@ public class FaceFunctionImpl implements FaceFunction {
                 /** 保存图片 */
                 PicCut.cut(bodyRectangles.get(i).getLeft(), bodyRectangles.get(i).getTop(),
                     bodyRectangles.get(i).getWidth(), bodyRectangles.get(i).getHeight(), imgPath,
-                    "D:\\ffmpeg\\img\\" + i + ".jpg");
+                    "src\\img\\" + i + ".jpg");
             }
         } catch (IOException e) {
             LOG.error("IO error, exception={}, img={}", e, imgPath);
@@ -650,7 +652,7 @@ public class FaceFunctionImpl implements FaceFunction {
             return false;
         }
         // TODO 使用摄像头拍摄到的截图
-        String image = "c:\\src\\img\\picture.jpg";
+        String image = "src\\img\\picture.jpg";
         // OCR检测图片中的文字
         String toMatch = ocrControl(image);
         // 判断图片中是否存在知识点

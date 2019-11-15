@@ -11,7 +11,7 @@
  Target Server Version : 80012
  File Encoding         : 65001
 
- Date: 09/11/2019 16:30:33
+ Date: 13/11/2019 15:59:54
 */
 
 SET NAMES utf8mb4;
@@ -50,22 +50,22 @@ CREATE TABLE `tb_attendance`  (
   UNIQUE INDEX `uk_attendance`(`user_id`, `lesson_id`) USING BTREE,
   INDEX `idx_user_id`(`user_id`) USING BTREE,
   INDEX `idx_lesson_id`(`lesson_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 358 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '学生考勤点名，算法写入' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 456 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '学生考勤点名，算法写入' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_attendance
 -- ----------------------------
-INSERT INTO `tb_attendance` VALUES (65, 2, 1, 1, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
-INSERT INTO `tb_attendance` VALUES (66, 3, 1, 1, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
-INSERT INTO `tb_attendance` VALUES (67, 4, 1, 1, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
-INSERT INTO `tb_attendance` VALUES (68, 5, 1, 1, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
+INSERT INTO `tb_attendance` VALUES (65, NULL, NULL, 1, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
+INSERT INTO `tb_attendance` VALUES (66, NULL, NULL, 1, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
+INSERT INTO `tb_attendance` VALUES (67, NULL, NULL, 1, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
+INSERT INTO `tb_attendance` VALUES (68, NULL, NULL, 1, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
 INSERT INTO `tb_attendance` VALUES (69, 6, 2, 2, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
 INSERT INTO `tb_attendance` VALUES (70, 7, 2, 1, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
 INSERT INTO `tb_attendance` VALUES (71, 8, 2, 1, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
 INSERT INTO `tb_attendance` VALUES (72, 9, 2, 1, '2019-04-07 13:59:39.000000', '2019-04-11 21:48:30.000000');
-INSERT INTO `tb_attendance` VALUES (73, 10, 3, 2, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
-INSERT INTO `tb_attendance` VALUES (124, 11, 3, 1, '2019-05-11 10:25:26.000000', '2019-05-11 10:25:26.000000');
-INSERT INTO `tb_attendance` VALUES (125, 12, 3, 1, '2019-05-11 10:25:26.000000', '2019-05-11 10:25:26.000000');
+INSERT INTO `tb_attendance` VALUES (73, NULL, NULL, 2, '2019-04-07 13:59:39.000000', '2019-04-07 13:59:39.000000');
+INSERT INTO `tb_attendance` VALUES (124, NULL, NULL, 1, '2019-05-11 10:25:26.000000', '2019-05-11 10:25:26.000000');
+INSERT INTO `tb_attendance` VALUES (125, NULL, NULL, 1, '2019-05-11 10:25:26.000000', '2019-05-11 10:25:26.000000');
 INSERT INTO `tb_attendance` VALUES (126, 13, 4, 1, '2019-05-11 10:25:26.000000', '2019-05-11 10:25:26.000000');
 INSERT INTO `tb_attendance` VALUES (127, 14, 4, 1, '2019-05-11 10:25:26.000000', '2019-05-11 10:25:26.000000');
 INSERT INTO `tb_attendance` VALUES (128, 15, 5, 1, '2019-05-11 10:25:27.000000', '2019-05-11 10:25:27.000000');
@@ -74,36 +74,36 @@ INSERT INTO `tb_attendance` VALUES (130, 17, 7, 1, '2019-05-11 10:25:27.000000',
 INSERT INTO `tb_attendance` VALUES (131, 18, 7, 1, '2019-05-11 10:25:27.000000', '2019-05-11 10:25:27.000000');
 INSERT INTO `tb_attendance` VALUES (132, 19, 8, 1, '2019-05-11 10:25:27.000000', '2019-05-11 10:25:27.000000');
 INSERT INTO `tb_attendance` VALUES (133, 20, 9, 1, '2019-05-11 10:25:27.000000', '2019-05-11 10:25:27.000000');
-INSERT INTO `tb_attendance` VALUES (244, 1, 1, 1, '2019-10-30 13:42:42.000000', '2019-10-30 13:42:42.000000');
+INSERT INTO `tb_attendance` VALUES (244, NULL, NULL, 1, '2019-10-30 13:42:42.000000', '2019-10-30 13:42:42.000000');
 INSERT INTO `tb_attendance` VALUES (245, 1, 2, 1, '2019-10-30 16:48:03.000000', '2019-10-30 16:48:05.000000');
-INSERT INTO `tb_attendance` VALUES (246, 25, 1, 1, '2019-10-30 16:52:11.000000', '2019-10-30 16:52:13.000000');
-INSERT INTO `tb_attendance` VALUES (247, 26, 1, 2, '2019-10-30 16:52:23.000000', '2019-10-30 16:52:25.000000');
+INSERT INTO `tb_attendance` VALUES (246, NULL, NULL, 1, '2019-10-30 16:52:11.000000', '2019-10-30 16:52:13.000000');
+INSERT INTO `tb_attendance` VALUES (247, NULL, NULL, 2, '2019-10-30 16:52:23.000000', '2019-10-30 16:52:25.000000');
 INSERT INTO `tb_attendance` VALUES (248, 27, 2, 2, '2019-10-30 16:52:37.000000', '2019-10-30 16:52:40.000000');
 INSERT INTO `tb_attendance` VALUES (249, 28, 2, 2, '2019-10-30 16:52:54.000000', '2019-10-30 16:52:55.000000');
-INSERT INTO `tb_attendance` VALUES (250, 6, 23, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (250, 6, 23, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (251, 10, 23, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (252, 9, 23, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (253, 8, 23, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (253, 8, 23, 2, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (254, 7, 23, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (255, 1, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (256, 2, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (257, 3, 33, 2, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (258, 4, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (259, 5, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (260, 24, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (261, 25, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (262, 26, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (263, 23, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (264, 27, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (265, 28, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (255, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (256, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (257, NULL, NULL, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (258, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (259, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (260, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (261, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (262, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (263, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (264, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (265, NULL, NULL, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (266, 1, 23, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (267, 29, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (268, 11, 1, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (269, 12, 1, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (270, 13, 1, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (271, 14, 1, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (272, 15, 1, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (273, 16, 2, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (267, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (268, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (269, NULL, NULL, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (270, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (271, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (272, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (273, 16, 2, 2, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (274, 17, 2, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (275, 18, 2, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (276, 19, 2, 1, NULL, NULL);
@@ -111,8 +111,8 @@ INSERT INTO `tb_attendance` VALUES (277, 20, 2, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (278, 21, 2, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (279, 22, 2, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (280, 28, 23, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (281, 1, 34, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (282, 2, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (281, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (282, NULL, NULL, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (283, 1, 36, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (284, 2, 36, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (285, 3, 36, 2, NULL, NULL);
@@ -122,8 +122,8 @@ INSERT INTO `tb_attendance` VALUES (288, 1, 5, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (289, 2, 5, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (290, 3, 5, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (291, 4, 5, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (292, 5, 5, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (293, 1, 8, 0, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (292, 5, 5, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (293, 1, 8, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (294, 2, 8, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (295, 3, 8, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (296, 4, 8, 2, NULL, NULL);
@@ -133,23 +133,23 @@ INSERT INTO `tb_attendance` VALUES (299, 7, 35, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (300, 8, 35, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (301, 9, 35, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (302, 10, 35, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (303, 16, 34, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (304, 17, 34, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (305, 18, 34, 2, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (306, 19, 34, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (307, 20, 34, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (308, 21, 34, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (309, 11, 37, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (310, 12, 37, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (311, 13, 37, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (313, 14, 37, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (303, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (304, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (305, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (306, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (307, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (308, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (309, 11, 37, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (310, 12, 37, 3, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (311, 13, 37, 4, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (313, 14, 37, 5, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (314, 15, 37, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (315, 1, 35, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (316, 6, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (317, 7, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (318, 8, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (319, 9, 33, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (320, 10, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (316, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (317, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (318, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (319, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (320, NULL, NULL, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (321, 1, 241, 0, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (322, 2, 241, 0, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (323, 3, 241, 0, NULL, NULL);
@@ -160,10 +160,10 @@ INSERT INTO `tb_attendance` VALUES (327, 2, 259, 0, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (328, 3, 249, 0, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (329, 4, 249, 0, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (330, 5, 249, 0, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (331, 23, 1, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (332, 27, 1, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (333, 28, 1, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (334, 29, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (331, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (332, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (333, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (334, NULL, NULL, 1, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (335, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (336, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (337, NULL, NULL, NULL, NULL, NULL);
@@ -172,8 +172,8 @@ INSERT INTO `tb_attendance` VALUES (339, 2, 253, 0, '2019-11-01 15:44:37.000000'
 INSERT INTO `tb_attendance` VALUES (340, 3, 253, 0, '2019-11-01 15:44:37.000000', '2019-11-01 15:44:37.000000');
 INSERT INTO `tb_attendance` VALUES (341, 4, 253, 0, '2019-11-01 15:44:37.000000', '2019-11-01 15:44:37.000000');
 INSERT INTO `tb_attendance` VALUES (342, 5, 253, 0, '2019-11-01 15:44:37.000000', '2019-11-01 15:44:37.000000');
-INSERT INTO `tb_attendance` VALUES (343, 22, 1, 1, NULL, NULL);
-INSERT INTO `tb_attendance` VALUES (344, 24, 1, 0, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (343, NULL, NULL, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (344, NULL, NULL, 0, NULL, NULL);
 INSERT INTO `tb_attendance` VALUES (345, 1, 254, 0, '2019-11-02 14:16:47.000000', '2019-11-02 14:16:47.000000');
 INSERT INTO `tb_attendance` VALUES (346, 16, 257, 0, '2019-11-02 14:21:32.000000', '2019-11-02 14:21:32.000000');
 INSERT INTO `tb_attendance` VALUES (347, 17, 257, 0, '2019-11-02 14:21:32.000000', '2019-11-02 14:21:32.000000');
@@ -187,6 +187,104 @@ INSERT INTO `tb_attendance` VALUES (354, 18, 261, 0, '2019-11-03 14:34:58.000000
 INSERT INTO `tb_attendance` VALUES (355, 19, 261, 0, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
 INSERT INTO `tb_attendance` VALUES (356, 20, 261, 0, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
 INSERT INTO `tb_attendance` VALUES (357, 21, 261, 0, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
+INSERT INTO `tb_attendance` VALUES (358, 11, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (359, 12, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (360, 13, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (361, 14, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (362, 15, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (363, 16, 1, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (364, 17, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (365, 18, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (366, 19, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (367, 20, 1, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (368, 21, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (369, 22, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (370, 23, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (371, 24, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (372, 25, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (373, 26, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (374, 27, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (375, 28, 1, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (376, 29, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (377, 1, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (378, 2, 1, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (379, 3, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (380, 4, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (381, 5, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (382, 6, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (383, 7, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (384, 8, 1, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (385, 9, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (386, 10, 1, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (387, 11, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (388, 12, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (389, 13, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (390, 14, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (391, 15, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (392, 16, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (393, 17, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (394, 18, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (395, 19, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (396, 20, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (397, 21, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (398, 22, 33, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (399, 23, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (400, 24, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (401, 25, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (402, 26, 33, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (403, 27, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (404, 28, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (405, 29, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (406, 1, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (407, 2, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (408, 3, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (409, 4, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (410, 5, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (411, 6, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (412, 7, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (413, 8, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (414, 9, 33, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (415, 10, 33, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (416, 11, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (417, 12, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (418, 13, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (419, 14, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (420, 15, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (421, 16, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (422, 17, 34, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (423, 18, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (424, 19, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (425, 20, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (426, 21, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (427, 22, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (428, 23, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (429, 24, 34, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (430, 25, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (431, 26, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (432, 27, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (433, 28, 34, 2, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (434, 29, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (435, 1, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (436, 2, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (437, 3, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (438, 4, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (439, 5, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (440, 6, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (441, 7, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (442, 8, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (443, 16, 262, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_attendance` VALUES (444, 17, 262, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_attendance` VALUES (445, 18, 262, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_attendance` VALUES (446, 19, 262, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_attendance` VALUES (447, 20, 262, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_attendance` VALUES (448, 21, 262, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_attendance` VALUES (449, 9, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (450, 10, 34, 1, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (451, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (452, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (453, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (454, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `tb_attendance` VALUES (455, NULL, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tb_building_floor
@@ -219,6 +317,72 @@ INSERT INTO `tb_building_floor` VALUES (10, '6号楼', '一楼', '2019-03-04 13:
 INSERT INTO `tb_building_floor` VALUES (11, '6号楼', '二楼', '2019-03-04 13:07:12.000000', '2019-03-04 13:08:03.000000');
 INSERT INTO `tb_building_floor` VALUES (12, '主楼', '十一楼', '2019-03-04 13:07:12.000000', '2019-04-07 17:17:42.000000');
 INSERT INTO `tb_building_floor` VALUES (13, '主楼', '一楼', '2019-10-30 13:42:42.000000', '2019-10-30 13:42:42.000000');
+
+-- ----------------------------
+-- Table structure for tb_checkpicture
+-- ----------------------------
+DROP TABLE IF EXISTS `tb_checkpicture`;
+CREATE TABLE `tb_checkpicture`  (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `pictureId` int(255) NULL DEFAULT NULL,
+  `intflag` int(11) NULL DEFAULT NULL,
+  `knowledgeid` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 332 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of tb_checkpicture
+-- ----------------------------
+INSERT INTO `tb_checkpicture` VALUES (51, 1, 2, 331);
+INSERT INTO `tb_checkpicture` VALUES (52, 2, 1, 331);
+INSERT INTO `tb_checkpicture` VALUES (53, 3, 1, 331);
+INSERT INTO `tb_checkpicture` VALUES (54, 4, 1, 331);
+INSERT INTO `tb_checkpicture` VALUES (55, 5, 1, 331);
+INSERT INTO `tb_checkpicture` VALUES (56, 6, 2, 2);
+INSERT INTO `tb_checkpicture` VALUES (57, 7, 2, 2);
+INSERT INTO `tb_checkpicture` VALUES (58, 8, 2, 2);
+INSERT INTO `tb_checkpicture` VALUES (59, 9, 2, 2);
+INSERT INTO `tb_checkpicture` VALUES (60, 10, 2, 2);
+INSERT INTO `tb_checkpicture` VALUES (61, 11, 1, 331);
+INSERT INTO `tb_checkpicture` VALUES (62, 12, 1, 331);
+INSERT INTO `tb_checkpicture` VALUES (63, 13, 1, 331);
+INSERT INTO `tb_checkpicture` VALUES (64, 14, 1, 331);
+INSERT INTO `tb_checkpicture` VALUES (65, 15, 1, 331);
+INSERT INTO `tb_checkpicture` VALUES (66, 16, 1, 360);
+INSERT INTO `tb_checkpicture` VALUES (67, 17, 1, 360);
+INSERT INTO `tb_checkpicture` VALUES (68, 18, 1, 360);
+INSERT INTO `tb_checkpicture` VALUES (69, 19, 1, 360);
+INSERT INTO `tb_checkpicture` VALUES (70, 20, 2, 360);
+INSERT INTO `tb_checkpicture` VALUES (71, 21, 2, 360);
+INSERT INTO `tb_checkpicture` VALUES (72, 22, 2, 360);
+INSERT INTO `tb_checkpicture` VALUES (73, 23, 2, 362);
+INSERT INTO `tb_checkpicture` VALUES (74, 24, 2, 362);
+INSERT INTO `tb_checkpicture` VALUES (75, 25, 1, 362);
+INSERT INTO `tb_checkpicture` VALUES (76, 26, 1, 362);
+INSERT INTO `tb_checkpicture` VALUES (77, 27, 1, 362);
+INSERT INTO `tb_checkpicture` VALUES (78, 28, 1, 363);
+INSERT INTO `tb_checkpicture` VALUES (79, 29, 1, 363);
+INSERT INTO `tb_checkpicture` VALUES (80, 30, 2, 363);
+INSERT INTO `tb_checkpicture` VALUES (81, 31, 2, 363);
+INSERT INTO `tb_checkpicture` VALUES (82, 32, 2, 363);
+INSERT INTO `tb_checkpicture` VALUES (83, 33, 2, 364);
+INSERT INTO `tb_checkpicture` VALUES (84, 34, 2, 364);
+INSERT INTO `tb_checkpicture` VALUES (85, 35, 1, 364);
+INSERT INTO `tb_checkpicture` VALUES (86, 36, 1, 364);
+INSERT INTO `tb_checkpicture` VALUES (87, 37, 1, 364);
+INSERT INTO `tb_checkpicture` VALUES (88, 38, 1, 365);
+INSERT INTO `tb_checkpicture` VALUES (89, 39, 1, 365);
+INSERT INTO `tb_checkpicture` VALUES (90, 40, 1, 365);
+INSERT INTO `tb_checkpicture` VALUES (91, 41, 2, 365);
+INSERT INTO `tb_checkpicture` VALUES (92, 42, 2, 365);
+INSERT INTO `tb_checkpicture` VALUES (93, 43, 2, 342);
+INSERT INTO `tb_checkpicture` VALUES (94, 44, 2, 342);
+INSERT INTO `tb_checkpicture` VALUES (95, 45, 2, 342);
+INSERT INTO `tb_checkpicture` VALUES (96, 46, 2, 342);
+INSERT INTO `tb_checkpicture` VALUES (97, 47, 2, 342);
+INSERT INTO `tb_checkpicture` VALUES (98, 48, 1, 343);
+INSERT INTO `tb_checkpicture` VALUES (99, 49, 1, 343);
+INSERT INTO `tb_checkpicture` VALUES (100, 50, 1, 343);
 
 -- ----------------------------
 -- Table structure for tb_class
@@ -268,25 +432,25 @@ CREATE TABLE `tb_class_score`  (
   UNIQUE INDEX `uk_class_score`(`user_id`, `lesson_id`) USING BTREE,
   INDEX `idx_user_id`(`user_id`) USING BTREE,
   INDEX `idx_lesson_id`(`lesson_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 206 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '学生上课评分，算法写入' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 304 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '学生上课评分，算法写入' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_class_score
 -- ----------------------------
-INSERT INTO `tb_class_score` VALUES (2, 2, 1, 0078.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (3, 3, 1, 0067.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (65, 4, 1, 0078.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (66, 5, 1, 0089.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (2, NULL, NULL, 0078.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (3, NULL, NULL, 0067.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (65, NULL, NULL, 0078.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (66, NULL, NULL, 0089.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (67, 6, 2, 0067.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (68, 7, 2, 0089.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (69, 8, 2, 0087.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (70, 9, 2, 0086.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (71, 10, 2, 0087.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (72, 11, 3, 0091.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (73, 12, 3, 0092.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (74, 13, 3, 0097.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (75, 14, 3, 0086.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (76, 15, 3, 0086.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (72, NULL, NULL, 0091.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (73, NULL, NULL, 0092.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (74, NULL, NULL, 0097.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (75, NULL, NULL, 0086.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (76, NULL, NULL, 0086.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (77, 16, 4, 0086.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (78, 17, 4, 0073.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (79, 18, 7, 0076.000, NULL, NULL);
@@ -294,13 +458,13 @@ INSERT INTO `tb_class_score` VALUES (80, 19, 8, 0076.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (81, 20, 9, 0056.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (82, 21, 10, 0087.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (83, 22, 11, 0086.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (84, 23, 1, 0084.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (84, NULL, NULL, 0084.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (85, 24, 2, 0081.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (87, 25, 9, 0076.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (88, 26, 2, 0085.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (89, 27, 4, 0076.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (90, 28, 5, 0065.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (91, 27, 1, 0082.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (91, NULL, NULL, 0082.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (92, 16, 2, 0077.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (93, 23, 6, 0065.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (94, 6, 23, 0076.000, NULL, NULL);
@@ -308,23 +472,23 @@ INSERT INTO `tb_class_score` VALUES (95, 10, 23, 0087.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (96, 9, 23, 0066.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (97, 8, 23, 0089.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (98, 7, 23, 0076.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (99, 1, 33, 0089.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (100, 2, 33, 0072.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (101, 3, 33, 0059.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (102, 4, 33, 0075.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (103, 5, 33, 0074.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (104, 24, 33, 0077.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (105, 25, 33, 0088.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (106, 26, 33, 0076.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (107, 23, 33, 0075.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (108, 27, 33, 0081.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (109, 28, 33, 0071.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (110, 29, 33, 0064.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (111, 11, 1, 0067.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (112, 12, 1, 0066.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (113, 13, 1, 0077.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (114, 14, 1, 0088.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (115, 15, 1, 0091.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (99, NULL, NULL, 0089.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (100, NULL, NULL, 0072.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (101, NULL, NULL, 0059.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (102, NULL, NULL, 0075.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (103, NULL, NULL, 0074.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (104, NULL, NULL, 0077.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (105, NULL, NULL, 0088.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (106, NULL, NULL, 0076.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (107, NULL, NULL, 0075.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (108, NULL, NULL, 0081.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (109, NULL, NULL, 0071.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (110, NULL, NULL, 0064.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (111, NULL, NULL, 0067.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (112, NULL, NULL, 0066.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (113, NULL, NULL, 0077.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (114, NULL, NULL, 0088.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (115, NULL, NULL, 0091.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (117, 17, 2, 0061.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (118, 18, 2, 0068.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (119, 19, 2, 0069.000, NULL, NULL);
@@ -352,15 +516,15 @@ INSERT INTO `tb_class_score` VALUES (140, 7, 35, 0068.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (141, 8, 35, 0082.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (142, 9, 35, 0074.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (143, 10, 35, 0093.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (144, 16, 34, 0075.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (145, 17, 34, 0083.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (146, 18, 34, 0060.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (147, 19, 34, 0087.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (148, 20, 34, 0084.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (149, 21, 34, 0074.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (151, 1, 34, 0065.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (152, 2, 34, 0066.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (153, 1, 1, 0092.000, '2019-10-31 17:03:04.000000', '2019-10-31 23:23:43.000000');
+INSERT INTO `tb_class_score` VALUES (144, NULL, NULL, 0075.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (145, NULL, NULL, 0083.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (146, NULL, NULL, 0060.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (147, NULL, NULL, 0087.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (148, NULL, NULL, 0084.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (149, NULL, NULL, 0074.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (151, NULL, NULL, 0065.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (152, NULL, NULL, 0066.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (153, NULL, NULL, 0092.000, '2019-10-31 17:03:04.000000', '2019-10-31 23:23:43.000000');
 INSERT INTO `tb_class_score` VALUES (154, 11, 37, 0081.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (155, 12, 37, 0072.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (156, 13, 37, 0074.000, NULL, NULL);
@@ -369,15 +533,15 @@ INSERT INTO `tb_class_score` VALUES (158, 15, 37, 0067.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (159, 1, 23, 0068.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (160, 1, 25, 0082.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (161, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (162, 28, 1, 0077.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (163, 29, 1, 0077.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (162, NULL, NULL, 0077.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (163, NULL, NULL, 0077.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (164, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (165, 1, 8, 0074.000, NULL, '2019-10-31 23:23:43.000000');
-INSERT INTO `tb_class_score` VALUES (166, 6, 33, 0074.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (167, 7, 33, 0093.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (168, 8, 33, 0075.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (169, 9, 33, 0083.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (170, 10, 33, 0060.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (166, NULL, NULL, 0074.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (167, NULL, NULL, 0093.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (168, NULL, NULL, 0075.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (169, NULL, NULL, 0083.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (170, NULL, NULL, 0060.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (171, NULL, NULL, 0087.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (172, NULL, NULL, 0084.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (173, NULL, NULL, NULL, NULL, NULL);
@@ -397,9 +561,9 @@ INSERT INTO `tb_class_score` VALUES (186, 2, 253, 0000.000, '2019-11-01 15:44:37
 INSERT INTO `tb_class_score` VALUES (187, 3, 253, 0000.000, '2019-11-01 15:44:37.000000', '2019-11-01 15:44:37.000000');
 INSERT INTO `tb_class_score` VALUES (188, 4, 253, 0000.000, '2019-11-01 15:44:37.000000', '2019-11-01 15:44:37.000000');
 INSERT INTO `tb_class_score` VALUES (189, 5, 253, 0000.000, '2019-11-01 15:44:37.000000', '2019-11-01 15:44:37.000000');
-INSERT INTO `tb_class_score` VALUES (190, 24, 1, 0058.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (191, 22, 1, 0076.000, NULL, NULL);
-INSERT INTO `tb_class_score` VALUES (192, 25, 1, 0083.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (190, NULL, NULL, 0058.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (191, NULL, NULL, 0076.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (192, NULL, NULL, 0083.000, NULL, NULL);
 INSERT INTO `tb_class_score` VALUES (193, 1, 254, 0000.000, '2019-11-02 14:16:47.000000', '2019-11-02 14:16:47.000000');
 INSERT INTO `tb_class_score` VALUES (194, 16, 257, 0000.000, '2019-11-02 14:21:32.000000', '2019-11-02 14:21:32.000000');
 INSERT INTO `tb_class_score` VALUES (195, 17, 257, 0000.000, '2019-11-02 14:21:32.000000', '2019-11-02 14:21:32.000000');
@@ -413,6 +577,99 @@ INSERT INTO `tb_class_score` VALUES (202, 18, 261, 0000.000, '2019-11-03 14:34:5
 INSERT INTO `tb_class_score` VALUES (203, 19, 261, 0000.000, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
 INSERT INTO `tb_class_score` VALUES (204, 20, 261, 0000.000, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
 INSERT INTO `tb_class_score` VALUES (205, 21, 261, 0000.000, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
+INSERT INTO `tb_class_score` VALUES (211, 11, 33, 0076.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (212, 12, 33, 0056.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (213, 13, 33, 0087.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (214, 14, 33, 0086.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (215, 15, 33, 0084.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (216, 16, 33, 0081.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (217, 17, 33, 0076.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (218, 18, 33, 0085.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (219, 19, 33, 0076.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (220, 20, 33, 0065.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (221, 21, 33, 0082.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (222, 22, 33, 0077.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (223, 23, 33, 0072.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (224, 24, 33, 0076.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (225, 25, 33, 0087.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (226, 26, 33, 0071.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (227, 27, 33, 0089.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (228, 28, 33, 0076.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (229, 29, 33, 0089.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (230, 1, 33, 0072.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (231, 2, 33, 0059.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (232, 3, 33, 0075.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (233, 4, 33, 0074.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (234, 5, 33, 0077.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (235, 6, 33, 0088.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (236, 7, 33, 0076.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (237, 8, 33, 0075.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (238, 9, 33, 0061.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (239, 10, 33, 0071.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (240, 11, 1, 0075.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (241, 12, 1, 0081.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (242, 13, 1, 0071.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (243, 14, 1, 0085.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (244, 15, 1, 0077.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (245, 16, 1, 0084.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (246, 17, 1, 0077.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (247, 18, 1, 0088.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (248, 19, 1, 0091.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (249, 20, 1, 0084.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (250, 21, 1, 0068.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (251, 22, 1, 0069.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (252, 23, 1, 0071.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (253, 24, 1, 0073.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (254, 25, 1, 0091.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (255, 26, 1, 0067.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (256, 27, 1, 0076.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (257, 28, 1, 0083.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (258, 29, 1, 0075.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (259, 1, 1, 0071.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (260, 2, 1, 0074.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (261, 3, 1, 0071.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (262, 4, 1, 0082.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (263, 5, 1, 0092.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (264, 6, 1, 0091.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (265, 7, 1, 0093.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (266, 8, 1, 0076.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (267, 9, 1, 0084.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (268, 10, 1, 0072.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (269, 11, 34, 0075.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (270, 12, 34, 0071.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (271, 13, 34, 0074.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (272, 14, 34, 0071.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (273, 15, 34, 0082.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (274, 16, 34, 0092.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (275, 17, 34, 0061.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (276, 18, 34, 0093.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (277, 19, 34, 0076.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (278, 16, 262, 0000.000, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_class_score` VALUES (279, 17, 262, 0000.000, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_class_score` VALUES (280, 18, 262, 0000.000, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_class_score` VALUES (281, 19, 262, 0000.000, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_class_score` VALUES (282, 20, 262, 0000.000, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_class_score` VALUES (283, 21, 262, 0000.000, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_class_score` VALUES (284, 20, 34, 0081.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (285, 21, 34, 0072.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (286, 22, 34, 0074.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (287, 23, 34, 0075.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (288, 24, 34, 0067.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (289, 25, 34, 0068.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (290, 26, 34, 0082.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (291, 27, 34, 0074.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (292, 28, 34, 0070.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (293, 29, 34, 0075.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (294, 1, 34, 0083.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (295, 2, 34, 0085.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (296, 3, 34, 0087.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (297, 4, 34, 0084.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (298, 5, 34, 0074.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (299, 6, 34, 0073.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (300, 7, 34, 0083.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (301, 8, 34, 0092.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (302, 9, 34, 0081.000, NULL, NULL);
+INSERT INTO `tb_class_score` VALUES (303, 10, 34, 0072.000, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tb_classroom
@@ -451,85 +708,86 @@ INSERT INTO `tb_classroom` VALUES (10, 1, '主A103', '[17,18]', '2019-02-12 23:2
 DROP TABLE IF EXISTS `tb_classroom_state`;
 CREATE TABLE `tb_classroom_state`  (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `classroom_id` bigint(20) UNSIGNED NOT NULL COMMENT '教室id',
-  `lesson_id` bigint(20) UNSIGNED NOT NULL COMMENT '课时id',
-  `state` int(11) NOT NULL COMMENT '占用状态',
-  `create_time` datetime(6) NOT NULL,
-  `modify_time` datetime(6) NOT NULL,
+  `classroom_id` bigint(20) UNSIGNED NULL DEFAULT NULL COMMENT '教室id',
+  `lesson_id` bigint(20) UNSIGNED NULL DEFAULT NULL COMMENT '课时id',
+  `state` int(11) NULL DEFAULT NULL COMMENT '占用状态',
+  `create_time` datetime(6) NULL DEFAULT NULL,
+  `modify_time` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `uk_lesson_id`(`lesson_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 97 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '教室占用情况' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 255 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '教室占用情况' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_classroom_state
 -- ----------------------------
-INSERT INTO `tb_classroom_state` VALUES (29, 2, 2, 1, '2019-03-27 21:14:37.000000', '2019-03-27 21:14:37.000000');
-INSERT INTO `tb_classroom_state` VALUES (30, 2, 3, 1, '2019-03-27 21:17:24.000000', '2019-03-27 21:17:24.000000');
-INSERT INTO `tb_classroom_state` VALUES (31, 2, 4, 1, '2019-03-29 14:52:34.000000', '2019-03-29 14:52:34.000000');
-INSERT INTO `tb_classroom_state` VALUES (32, 2, 5, 1, '2019-03-29 14:55:35.000000', '2019-03-29 14:55:35.000000');
-INSERT INTO `tb_classroom_state` VALUES (33, 3, 6, 1, '2019-03-29 14:57:12.000000', '2019-03-29 14:57:12.000000');
-INSERT INTO `tb_classroom_state` VALUES (34, 3, 7, 1, '2019-03-29 15:00:59.000000', '2019-03-29 15:00:59.000000');
-INSERT INTO `tb_classroom_state` VALUES (35, 2, 8, 1, '2019-03-29 20:00:27.000000', '2019-03-29 20:00:27.000000');
-INSERT INTO `tb_classroom_state` VALUES (36, 3, 9, 1, '2019-03-29 20:00:28.000000', '2019-03-29 20:00:28.000000');
-INSERT INTO `tb_classroom_state` VALUES (37, 6, 10, 1, '2019-03-29 23:11:19.000000', '2019-03-29 23:11:19.000000');
-INSERT INTO `tb_classroom_state` VALUES (38, 1, 11, 1, '2019-04-03 12:29:46.000000', '2019-04-03 12:29:46.000000');
-INSERT INTO `tb_classroom_state` VALUES (39, 3, 12, 1, '2019-04-05 13:21:23.000000', '2019-04-05 13:21:23.000000');
-INSERT INTO `tb_classroom_state` VALUES (40, 1, 13, 1, '2019-04-05 13:23:05.000000', '2019-04-05 13:23:05.000000');
-INSERT INTO `tb_classroom_state` VALUES (41, 4, 14, 1, '2019-04-05 13:28:59.000000', '2019-04-05 13:28:59.000000');
-INSERT INTO `tb_classroom_state` VALUES (42, 1, 15, 1, '2019-04-05 13:43:04.000000', '2019-04-05 13:43:04.000000');
-INSERT INTO `tb_classroom_state` VALUES (43, 1, 136, 1, '2019-04-05 15:49:37.000000', '2019-04-05 15:49:37.000000');
-INSERT INTO `tb_classroom_state` VALUES (44, 8, 138, 1, '2019-04-05 16:08:37.000000', '2019-04-05 16:08:37.000000');
-INSERT INTO `tb_classroom_state` VALUES (45, 1, 139, 1, '2019-04-05 16:11:55.000000', '2019-04-05 16:11:55.000000');
-INSERT INTO `tb_classroom_state` VALUES (46, 2, 146, 1, '2019-04-05 16:24:54.000000', '2019-04-05 16:24:54.000000');
-INSERT INTO `tb_classroom_state` VALUES (47, 2, 149, 1, '2019-04-05 16:37:50.000000', '2019-04-05 16:37:50.000000');
-INSERT INTO `tb_classroom_state` VALUES (48, 2, 152, 1, '2019-04-05 16:39:54.000000', '2019-04-05 16:39:54.000000');
-INSERT INTO `tb_classroom_state` VALUES (49, 2, 156, 1, '2019-04-05 16:49:43.000000', '2019-04-05 16:49:43.000000');
-INSERT INTO `tb_classroom_state` VALUES (50, 1, 158, 1, '2019-04-05 16:57:40.000000', '2019-04-05 16:57:40.000000');
-INSERT INTO `tb_classroom_state` VALUES (51, 1, 159, 1, '2019-04-05 17:05:57.000000', '2019-04-05 17:05:57.000000');
-INSERT INTO `tb_classroom_state` VALUES (52, 1, 160, 1, '2019-04-05 17:11:04.000000', '2019-04-05 17:11:04.000000');
-INSERT INTO `tb_classroom_state` VALUES (53, 2, 163, 1, '2019-04-05 17:14:09.000000', '2019-04-05 17:14:09.000000');
-INSERT INTO `tb_classroom_state` VALUES (54, 1, 165, 1, '2019-04-05 17:25:42.000000', '2019-04-05 17:25:42.000000');
-INSERT INTO `tb_classroom_state` VALUES (55, 10, 166, 1, '2019-04-05 17:26:15.000000', '2019-04-05 17:26:15.000000');
-INSERT INTO `tb_classroom_state` VALUES (56, 9, 167, 1, '2019-04-05 17:26:59.000000', '2019-04-05 17:26:59.000000');
-INSERT INTO `tb_classroom_state` VALUES (57, 1, 168, 1, '2019-04-05 17:35:02.000000', '2019-04-05 17:35:02.000000');
-INSERT INTO `tb_classroom_state` VALUES (58, 2, 169, 1, '2019-04-05 18:05:44.000000', '2019-04-05 18:05:44.000000');
-INSERT INTO `tb_classroom_state` VALUES (59, 2, 171, 1, '2019-04-05 18:06:21.000000', '2019-04-05 18:06:21.000000');
-INSERT INTO `tb_classroom_state` VALUES (60, 2, 172, 1, '2019-04-05 18:07:45.000000', '2019-04-05 18:07:45.000000');
-INSERT INTO `tb_classroom_state` VALUES (61, 7, 173, 1, '2019-04-07 15:22:06.000000', '2019-04-07 15:22:06.000000');
-INSERT INTO `tb_classroom_state` VALUES (62, 2, 174, 1, '2019-04-07 15:56:52.000000', '2019-04-07 15:56:52.000000');
-INSERT INTO `tb_classroom_state` VALUES (63, 1, 175, 1, '2019-04-07 17:16:20.000000', '2019-04-07 17:16:20.000000');
-INSERT INTO `tb_classroom_state` VALUES (64, 3, 177, 1, '2019-04-09 17:45:43.000000', '2019-04-09 17:45:43.000000');
-INSERT INTO `tb_classroom_state` VALUES (65, 5, 178, 1, '2019-04-09 17:46:08.000000', '2019-04-09 17:46:08.000000');
-INSERT INTO `tb_classroom_state` VALUES (66, 2, 179, 1, '2019-04-09 17:46:39.000000', '2019-04-09 17:46:39.000000');
-INSERT INTO `tb_classroom_state` VALUES (67, 1, 181, 1, '2019-04-09 17:51:13.000000', '2019-04-09 17:51:13.000000');
-INSERT INTO `tb_classroom_state` VALUES (68, 9, 182, 1, '2019-04-09 17:51:45.000000', '2019-04-09 17:51:45.000000');
-INSERT INTO `tb_classroom_state` VALUES (69, 1, 183, 1, '2019-04-09 17:52:14.000000', '2019-04-09 17:52:14.000000');
-INSERT INTO `tb_classroom_state` VALUES (70, 10, 184, 1, '2019-04-09 17:52:42.000000', '2019-04-09 17:52:42.000000');
-INSERT INTO `tb_classroom_state` VALUES (71, 8, 185, 1, '2019-04-09 17:53:09.000000', '2019-04-09 17:53:09.000000');
-INSERT INTO `tb_classroom_state` VALUES (72, 1, 187, 1, '2019-04-09 19:47:02.000000', '2019-04-09 19:47:02.000000');
-INSERT INTO `tb_classroom_state` VALUES (73, 8, 188, 1, '2019-04-10 00:05:42.000000', '2019-04-10 00:05:42.000000');
-INSERT INTO `tb_classroom_state` VALUES (74, 8, 189, 1, '2019-04-10 12:08:15.000000', '2019-04-10 12:08:15.000000');
-INSERT INTO `tb_classroom_state` VALUES (75, 3, 190, 1, '2019-04-11 20:56:34.000000', '2019-04-11 20:56:34.000000');
-INSERT INTO `tb_classroom_state` VALUES (76, 2, 191, 1, '2019-04-11 20:57:52.000000', '2019-04-11 20:57:52.000000');
-INSERT INTO `tb_classroom_state` VALUES (77, 7, 192, 1, '2019-04-11 21:08:58.000000', '2019-04-11 21:08:58.000000');
-INSERT INTO `tb_classroom_state` VALUES (78, 2, 205, 1, '2019-04-12 23:39:39.000000', '2019-04-12 23:39:39.000000');
-INSERT INTO `tb_classroom_state` VALUES (79, 9, 206, 1, '2019-05-11 10:21:13.000000', '2019-05-11 10:21:13.000000');
-INSERT INTO `tb_classroom_state` VALUES (80, 2, 207, 1, '2019-05-11 10:53:00.000000', '2019-05-11 10:53:00.000000');
-INSERT INTO `tb_classroom_state` VALUES (81, 2, 208, 1, '2019-05-14 19:58:13.000000', '2019-05-14 19:58:13.000000');
-INSERT INTO `tb_classroom_state` VALUES (82, 2, 209, 1, '2019-05-15 19:42:18.000000', '2019-05-15 19:42:18.000000');
-INSERT INTO `tb_classroom_state` VALUES (83, 2, 210, 1, '2019-05-26 13:29:33.000000', '2019-05-26 13:29:33.000000');
-INSERT INTO `tb_classroom_state` VALUES (84, 1, 215, 1, '2019-08-05 22:06:52.000000', '2019-08-05 22:06:52.000000');
-INSERT INTO `tb_classroom_state` VALUES (85, 1, 221, 1, '2019-10-16 14:37:55.000000', '2019-10-16 14:37:55.000000');
-INSERT INTO `tb_classroom_state` VALUES (86, 1, 1, 0, '2019-10-30 13:42:43.000000', '2019-10-30 13:42:43.000000');
-INSERT INTO `tb_classroom_state` VALUES (87, 1, 223, 1, '2019-10-31 15:58:40.000000', '2019-10-31 15:58:40.000000');
-INSERT INTO `tb_classroom_state` VALUES (89, 1, 236, 1, '2019-10-31 23:31:50.000000', '2019-10-31 23:31:50.000000');
-INSERT INTO `tb_classroom_state` VALUES (90, 1, 241, 1, '2019-10-31 23:42:12.000000', '2019-10-31 23:42:12.000000');
-INSERT INTO `tb_classroom_state` VALUES (91, 6, 249, 1, '2019-11-01 12:47:18.000000', '2019-11-01 12:47:18.000000');
-INSERT INTO `tb_classroom_state` VALUES (92, 4, 250, 1, '2019-11-01 15:05:01.000000', '2019-11-01 15:05:01.000000');
-INSERT INTO `tb_classroom_state` VALUES (93, 3, 253, 1, '2019-11-01 15:44:37.000000', '2019-11-01 15:44:37.000000');
-INSERT INTO `tb_classroom_state` VALUES (94, 3, 254, 1, '2019-11-02 14:16:47.000000', '2019-11-02 14:16:47.000000');
-INSERT INTO `tb_classroom_state` VALUES (95, 1, 257, 1, '2019-11-02 14:21:32.000000', '2019-11-02 14:21:32.000000');
-INSERT INTO `tb_classroom_state` VALUES (96, 4, 261, 1, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
+INSERT INTO `tb_classroom_state` VALUES (1, 1, 1, 1, '2019-03-27 21:14:37.000000', '2019-03-27 21:14:37.000000');
+INSERT INTO `tb_classroom_state` VALUES (3, 2, 3, 1, '2019-03-27 21:17:24.000000', '2019-03-27 21:17:24.000000');
+INSERT INTO `tb_classroom_state` VALUES (4, 3, 4, 1, '2019-03-29 14:52:34.000000', '2019-03-29 14:52:34.000000');
+INSERT INTO `tb_classroom_state` VALUES (5, 4, 5, 1, '2019-03-29 14:55:35.000000', '2019-03-29 14:55:35.000000');
+INSERT INTO `tb_classroom_state` VALUES (6, 5, 6, 1, '2019-03-29 14:57:12.000000', '2019-03-29 14:57:12.000000');
+INSERT INTO `tb_classroom_state` VALUES (7, 6, 7, 1, '2019-03-29 15:00:59.000000', '2019-03-29 15:00:59.000000');
+INSERT INTO `tb_classroom_state` VALUES (8, 7, 8, 1, '2019-03-29 20:00:27.000000', '2019-03-29 20:00:27.000000');
+INSERT INTO `tb_classroom_state` VALUES (9, 8, 9, 1, '2019-03-29 20:00:28.000000', '2019-03-29 20:00:28.000000');
+INSERT INTO `tb_classroom_state` VALUES (10, 9, 10, 1, '2019-03-29 23:11:19.000000', '2019-03-29 23:11:19.000000');
+INSERT INTO `tb_classroom_state` VALUES (11, 10, 11, 1, '2019-04-03 12:29:46.000000', '2019-04-03 12:29:46.000000');
+INSERT INTO `tb_classroom_state` VALUES (12, 1, 12, 1, '2019-04-05 13:21:23.000000', '2019-04-05 13:21:23.000000');
+INSERT INTO `tb_classroom_state` VALUES (13, 2, 13, 1, '2019-04-05 13:23:05.000000', '2019-04-05 13:23:05.000000');
+INSERT INTO `tb_classroom_state` VALUES (14, 3, 14, 1, '2019-04-05 13:28:59.000000', '2019-04-05 13:28:59.000000');
+INSERT INTO `tb_classroom_state` VALUES (15, 4, 15, 1, '2019-04-05 13:43:04.000000', '2019-04-05 13:43:04.000000');
+INSERT INTO `tb_classroom_state` VALUES (16, 5, 16, 1, '2019-04-05 15:49:37.000000', '2019-04-05 15:49:37.000000');
+INSERT INTO `tb_classroom_state` VALUES (17, 6, 17, 1, '2019-04-05 16:08:37.000000', '2019-04-05 16:08:37.000000');
+INSERT INTO `tb_classroom_state` VALUES (18, 7, 18, 1, '2019-04-05 16:11:55.000000', '2019-04-05 16:11:55.000000');
+INSERT INTO `tb_classroom_state` VALUES (19, 8, 19, 1, '2019-04-05 16:24:54.000000', '2019-04-05 16:24:54.000000');
+INSERT INTO `tb_classroom_state` VALUES (20, 9, 20, 1, '2019-04-05 16:37:50.000000', '2019-04-05 16:37:50.000000');
+INSERT INTO `tb_classroom_state` VALUES (21, 10, 21, 1, '2019-04-05 16:39:54.000000', '2019-04-05 16:39:54.000000');
+INSERT INTO `tb_classroom_state` VALUES (22, 1, 22, 1, '2019-04-05 16:49:43.000000', '2019-04-05 16:49:43.000000');
+INSERT INTO `tb_classroom_state` VALUES (23, 2, 23, 1, '2019-04-05 16:57:40.000000', '2019-04-05 16:57:40.000000');
+INSERT INTO `tb_classroom_state` VALUES (25, 3, 25, 1, '2019-04-05 17:05:57.000000', '2019-04-05 17:05:57.000000');
+INSERT INTO `tb_classroom_state` VALUES (33, 4, 33, 1, '2019-04-05 17:11:04.000000', '2019-04-05 17:11:04.000000');
+INSERT INTO `tb_classroom_state` VALUES (34, 5, 34, 1, '2019-04-05 17:14:09.000000', '2019-04-05 17:14:09.000000');
+INSERT INTO `tb_classroom_state` VALUES (35, 6, 35, 1, '2019-04-05 17:25:42.000000', '2019-04-05 17:25:42.000000');
+INSERT INTO `tb_classroom_state` VALUES (36, 7, 36, 1, '2019-04-05 17:26:15.000000', '2019-04-05 17:26:15.000000');
+INSERT INTO `tb_classroom_state` VALUES (37, 8, 37, 1, '2019-04-05 17:26:59.000000', '2019-04-05 17:26:59.000000');
+INSERT INTO `tb_classroom_state` VALUES (58, 10, NULL, 1, '2019-04-05 18:05:44.000000', '2019-04-05 18:05:44.000000');
+INSERT INTO `tb_classroom_state` VALUES (59, NULL, NULL, 1, '2019-04-05 18:06:21.000000', '2019-04-05 18:06:21.000000');
+INSERT INTO `tb_classroom_state` VALUES (60, NULL, NULL, 1, '2019-04-05 18:07:45.000000', '2019-04-05 18:07:45.000000');
+INSERT INTO `tb_classroom_state` VALUES (61, NULL, NULL, 1, '2019-04-07 15:22:06.000000', '2019-04-07 15:22:06.000000');
+INSERT INTO `tb_classroom_state` VALUES (62, NULL, NULL, 1, '2019-04-07 15:56:52.000000', '2019-04-07 15:56:52.000000');
+INSERT INTO `tb_classroom_state` VALUES (63, NULL, NULL, 1, '2019-04-07 17:16:20.000000', '2019-04-07 17:16:20.000000');
+INSERT INTO `tb_classroom_state` VALUES (64, NULL, NULL, 1, '2019-04-09 17:45:43.000000', '2019-04-09 17:45:43.000000');
+INSERT INTO `tb_classroom_state` VALUES (65, NULL, NULL, 1, '2019-04-09 17:46:08.000000', '2019-04-09 17:46:08.000000');
+INSERT INTO `tb_classroom_state` VALUES (66, NULL, NULL, 1, '2019-04-09 17:46:39.000000', '2019-04-09 17:46:39.000000');
+INSERT INTO `tb_classroom_state` VALUES (67, NULL, NULL, 1, '2019-04-09 17:51:13.000000', '2019-04-09 17:51:13.000000');
+INSERT INTO `tb_classroom_state` VALUES (68, NULL, NULL, 1, '2019-04-09 17:51:45.000000', '2019-04-09 17:51:45.000000');
+INSERT INTO `tb_classroom_state` VALUES (69, NULL, NULL, 1, '2019-04-09 17:52:14.000000', '2019-04-09 17:52:14.000000');
+INSERT INTO `tb_classroom_state` VALUES (70, NULL, NULL, 1, '2019-04-09 17:52:42.000000', '2019-04-09 17:52:42.000000');
+INSERT INTO `tb_classroom_state` VALUES (71, NULL, NULL, 1, '2019-04-09 17:53:09.000000', '2019-04-09 17:53:09.000000');
+INSERT INTO `tb_classroom_state` VALUES (72, NULL, NULL, 1, '2019-04-09 19:47:02.000000', '2019-04-09 19:47:02.000000');
+INSERT INTO `tb_classroom_state` VALUES (73, NULL, NULL, 1, '2019-04-10 00:05:42.000000', '2019-04-10 00:05:42.000000');
+INSERT INTO `tb_classroom_state` VALUES (74, NULL, NULL, 1, '2019-04-10 12:08:15.000000', '2019-04-10 12:08:15.000000');
+INSERT INTO `tb_classroom_state` VALUES (75, NULL, NULL, 1, '2019-04-11 20:56:34.000000', '2019-04-11 20:56:34.000000');
+INSERT INTO `tb_classroom_state` VALUES (76, NULL, NULL, 1, '2019-04-11 20:57:52.000000', '2019-04-11 20:57:52.000000');
+INSERT INTO `tb_classroom_state` VALUES (77, NULL, NULL, 1, '2019-04-11 21:08:58.000000', '2019-04-11 21:08:58.000000');
+INSERT INTO `tb_classroom_state` VALUES (78, NULL, NULL, 1, '2019-04-12 23:39:39.000000', '2019-04-12 23:39:39.000000');
+INSERT INTO `tb_classroom_state` VALUES (79, NULL, NULL, 1, '2019-05-11 10:21:13.000000', '2019-05-11 10:21:13.000000');
+INSERT INTO `tb_classroom_state` VALUES (80, NULL, NULL, 1, '2019-05-11 10:53:00.000000', '2019-05-11 10:53:00.000000');
+INSERT INTO `tb_classroom_state` VALUES (81, NULL, NULL, 1, '2019-05-14 19:58:13.000000', '2019-05-14 19:58:13.000000');
+INSERT INTO `tb_classroom_state` VALUES (82, NULL, NULL, 1, '2019-05-15 19:42:18.000000', '2019-05-15 19:42:18.000000');
+INSERT INTO `tb_classroom_state` VALUES (83, NULL, NULL, 1, '2019-05-26 13:29:33.000000', '2019-05-26 13:29:33.000000');
+INSERT INTO `tb_classroom_state` VALUES (84, NULL, NULL, 1, '2019-08-05 22:06:52.000000', '2019-08-05 22:06:52.000000');
+INSERT INTO `tb_classroom_state` VALUES (85, NULL, NULL, 1, '2019-10-16 14:37:55.000000', '2019-10-16 14:37:55.000000');
+INSERT INTO `tb_classroom_state` VALUES (86, NULL, NULL, 0, '2019-10-30 13:42:43.000000', '2019-10-30 13:42:43.000000');
+INSERT INTO `tb_classroom_state` VALUES (87, NULL, NULL, 1, '2019-10-31 15:58:40.000000', '2019-10-31 15:58:40.000000');
+INSERT INTO `tb_classroom_state` VALUES (89, NULL, NULL, 1, '2019-10-31 23:31:50.000000', '2019-10-31 23:31:50.000000');
+INSERT INTO `tb_classroom_state` VALUES (90, NULL, NULL, 1, '2019-10-31 23:42:12.000000', '2019-10-31 23:42:12.000000');
+INSERT INTO `tb_classroom_state` VALUES (91, NULL, NULL, 1, '2019-11-01 12:47:18.000000', '2019-11-01 12:47:18.000000');
+INSERT INTO `tb_classroom_state` VALUES (92, NULL, NULL, 1, '2019-11-01 15:05:01.000000', '2019-11-01 15:05:01.000000');
+INSERT INTO `tb_classroom_state` VALUES (93, NULL, NULL, 1, '2019-11-01 15:44:37.000000', '2019-11-01 15:44:37.000000');
+INSERT INTO `tb_classroom_state` VALUES (94, NULL, NULL, 1, '2019-11-02 14:16:47.000000', '2019-11-02 14:16:47.000000');
+INSERT INTO `tb_classroom_state` VALUES (95, NULL, NULL, 1, '2019-11-02 14:21:32.000000', '2019-11-02 14:21:32.000000');
+INSERT INTO `tb_classroom_state` VALUES (96, NULL, NULL, 1, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
+INSERT INTO `tb_classroom_state` VALUES (253, 9, 253, 1, '2019-04-05 17:35:02.000000', '2019-04-05 17:35:02.000000');
+INSERT INTO `tb_classroom_state` VALUES (254, 3, 262, 1, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
 
 -- ----------------------------
 -- Table structure for tb_course
@@ -651,7 +909,6 @@ INSERT INTO `tb_knowledge` VALUES (374, '曲面方程与空间曲线方程的概
 INSERT INTO `tb_knowledge` VALUES (375, '曲面方程与空间曲线方程的概念', 5.0, '2019-11-03 16:48:04.000000', '2019-11-03 16:48:04.000000');
 INSERT INTO `tb_knowledge` VALUES (378, '平面的点法式方程', 8.5, '2019-11-03 16:54:00.000000', '2019-11-03 16:54:00.000000');
 INSERT INTO `tb_knowledge` VALUES (379, '计算机网络在信息时代中的作用', 12.0, '2019-11-03 19:09:57.000000', '2019-11-03 19:09:57.000000');
-INSERT INTO `tb_knowledge` VALUES (380, 'nihao ', 5.0, '2019-11-05 19:38:20.000000', '2019-11-05 19:38:20.000000');
 
 -- ----------------------------
 -- Table structure for tb_knowledge_lesson
@@ -666,7 +923,7 @@ CREATE TABLE `tb_knowledge_lesson`  (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `uk_lesson_knowledge`(`lesson_id`, `knowledge_id`) USING BTREE,
   INDEX `idx_lesson_id`(`lesson_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 108 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 121 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_knowledge_lesson
@@ -727,7 +984,6 @@ INSERT INTO `tb_knowledge_lesson` VALUES (100, NULL, NULL, NULL, NULL);
 INSERT INTO `tb_knowledge_lesson` VALUES (102, 261, 375, '2019-11-03 16:48:04.000000', '2019-11-03 16:48:04.000000');
 INSERT INTO `tb_knowledge_lesson` VALUES (105, 261, 378, '2019-11-03 16:54:00.000000', '2019-11-03 16:54:00.000000');
 INSERT INTO `tb_knowledge_lesson` VALUES (106, 253, 379, '2019-11-03 19:09:57.000000', '2019-11-03 19:09:57.000000');
-INSERT INTO `tb_knowledge_lesson` VALUES (107, 253, 380, '2019-11-05 19:38:20.000000', '2019-11-05 19:38:20.000000');
 INSERT INTO `tb_knowledge_lesson` VALUES (112, 253, 357, NULL, NULL);
 INSERT INTO `tb_knowledge_lesson` VALUES (113, 253, 358, NULL, NULL);
 INSERT INTO `tb_knowledge_lesson` VALUES (114, 253, 359, NULL, NULL);
@@ -747,7 +1003,7 @@ CREATE TABLE `tb_knowledge_picture`  (
   `picture` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '识别到的照片',
   `knowledgeid` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 332 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 389 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_knowledge_picture
@@ -817,6 +1073,13 @@ INSERT INTO `tb_knowledge_picture` VALUES (378, 'D:\\ffmpeg\\img', 345);
 INSERT INTO `tb_knowledge_picture` VALUES (379, NULL, NULL);
 INSERT INTO `tb_knowledge_picture` VALUES (380, NULL, NULL);
 INSERT INTO `tb_knowledge_picture` VALUES (381, NULL, NULL);
+INSERT INTO `tb_knowledge_picture` VALUES (382, NULL, NULL);
+INSERT INTO `tb_knowledge_picture` VALUES (383, NULL, NULL);
+INSERT INTO `tb_knowledge_picture` VALUES (384, NULL, NULL);
+INSERT INTO `tb_knowledge_picture` VALUES (385, NULL, NULL);
+INSERT INTO `tb_knowledge_picture` VALUES (386, NULL, NULL);
+INSERT INTO `tb_knowledge_picture` VALUES (387, NULL, NULL);
+INSERT INTO `tb_knowledge_picture` VALUES (388, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tb_knowledge_student_state
@@ -836,42 +1099,42 @@ CREATE TABLE `tb_knowledge_student_state`  (
   INDEX `idx_user_id`(`user_id`) USING BTREE,
   INDEX `idx_lesson_id`(`lesson_id`) USING BTREE,
   INDEX `idx_user_id_lesson_id`(`user_id`, `lesson_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 254 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_knowledge_student_state
 -- ----------------------------
-INSERT INTO `tb_knowledge_student_state` VALUES (2, 2, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (2, 2, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (3, 1, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (4, 3, 33, 4, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (5, 4, 33, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (4, 3, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (5, 4, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (6, 5, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 360, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (7, 6, 34, 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 331, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (7, 6, 34, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 331, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (8, 7, 34, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 331, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (9, 8, 34, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 331, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (10, 9, 34, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 331, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (11, 10, 34, 2, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000', 332, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (12, 11, 34, 3, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000', 332, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (11, 10, 34, 1, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000', 332, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (12, 11, 34, 1, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000', 332, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (13, 12, 34, 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 332, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (14, 13, 34, 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 332, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (14, 13, 34, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 332, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (15, 14, 34, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 332, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (16, 15, 34, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 332, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (17, 2, 241, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 358, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (18, 3, 241, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 358, '2019-07-08 15:44:40.000000', '2019-07-08 15:44:40.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (17, 2, 241, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 358, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (18, 3, 241, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 358, '2019-07-08 15:44:40.000000', '2019-07-08 15:44:40.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (19, 4, 241, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 358, '2019-10-30 13:42:43.000000', '2019-10-30 13:42:43.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (20, 1, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 2, '2019-10-31 17:03:05.000000', '2019-10-31 17:03:05.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (21, 1, 241, 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 357, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (22, 2, 241, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 357, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (23, 3, 241, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 357, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (22, 2, 241, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 357, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (23, 3, 241, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 357, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (24, 4, 241, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 357, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (25, 5, 241, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 357, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (26, 2, 1, 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (27, 3, 1, 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 2, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (25, 5, 241, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 357, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (26, 2, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (27, 3, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 2, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (28, 4, 1, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (29, 5, 1, 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (30, 5, 241, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 358, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (31, 1, 241, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 358, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (32, 2, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (29, 5, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (30, 5, 241, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 358, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (31, 1, 241, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 358, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (32, 2, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (33, 1, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (34, 3, 33, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (35, 4, 33, 4, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 361, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
@@ -882,49 +1145,49 @@ INSERT INTO `tb_knowledge_student_state` VALUES (39, 3, 33, 1, '2019-07-08 15:44
 INSERT INTO `tb_knowledge_student_state` VALUES (40, 4, 33, 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 362, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (41, 5, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (42, 2, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (43, 1, 33, 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (43, 1, 33, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (44, 3, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (45, 4, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 363, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (46, 5, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (47, 2, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (47, 2, 33, 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (48, 1, 33, 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (49, 3, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (50, 4, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 364, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (51, 5, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (52, 2, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (53, 1, 33, 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (52, 2, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (53, 1, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (54, 3, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (55, 4, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 365, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (56, 5, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (57, 6, 34, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 342, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (57, 6, 34, 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 342, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (58, 7, 34, 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 342, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (59, 8, 34, 4, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 342, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (60, 9, 34, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 342, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (61, 10, 34, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 342, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (62, 6, 34, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 343, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (63, 7, 34, 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 343, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (64, 8, 34, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 343, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (62, 6, 34, 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 343, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (63, 7, 34, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 343, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (64, 8, 34, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 343, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (65, 9, 34, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 343, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (66, 10, 34, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 343, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (67, 6, 34, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 344, NULL, NULL);
-INSERT INTO `tb_knowledge_student_state` VALUES (68, 7, 34, 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 344, NULL, NULL);
+INSERT INTO `tb_knowledge_student_state` VALUES (68, 7, 34, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 344, NULL, NULL);
 INSERT INTO `tb_knowledge_student_state` VALUES (69, 8, 34, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 344, NULL, NULL);
 INSERT INTO `tb_knowledge_student_state` VALUES (70, 9, 34, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 344, NULL, NULL);
 INSERT INTO `tb_knowledge_student_state` VALUES (71, 10, 34, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 344, NULL, NULL);
 INSERT INTO `tb_knowledge_student_state` VALUES (72, 6, 34, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 345, NULL, NULL);
-INSERT INTO `tb_knowledge_student_state` VALUES (73, 7, 34, 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 345, NULL, NULL);
+INSERT INTO `tb_knowledge_student_state` VALUES (73, 7, 34, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 345, NULL, NULL);
 INSERT INTO `tb_knowledge_student_state` VALUES (74, 8, 34, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 345, NULL, NULL);
 INSERT INTO `tb_knowledge_student_state` VALUES (75, 9, 34, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 345, NULL, NULL);
 INSERT INTO `tb_knowledge_student_state` VALUES (76, 10, 34, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 345, NULL, NULL);
 INSERT INTO `tb_knowledge_student_state` VALUES (77, 2, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (78, 3, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 3, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (79, 4, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (80, 5, 1, 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (80, 5, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (81, 1, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-10-31 17:03:05.000000', '2019-10-31 17:03:05.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (82, 2, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 4, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (83, 3, 1, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 4, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (83, 3, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 4, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (84, 4, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 4, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (85, 5, 1, 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 4, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (85, 5, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 4, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (86, 1, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 4, '2019-10-31 17:03:05.000000', '2019-10-31 17:03:05.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (87, 2, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 5, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (88, 3, 1, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 5, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
@@ -946,7 +1209,7 @@ INSERT INTO `tb_knowledge_student_state` VALUES (103, 2, 253, 1, '2019-07-08 15:
 INSERT INTO `tb_knowledge_student_state` VALUES (104, 3, 253, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 357, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (105, 4, 253, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 357, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (106, 5, 253, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 357, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (108, 1, 253, 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 358, '2019-10-31 17:03:05.000000', '2019-10-31 17:03:05.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (108, 1, 253, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 358, '2019-10-31 17:03:05.000000', '2019-10-31 17:03:05.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (109, 2, 253, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 358, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (110, 3, 253, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 358, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (111, 4, 253, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 358, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
@@ -956,14 +1219,142 @@ INSERT INTO `tb_knowledge_student_state` VALUES (114, 2, 253, 1, '2019-07-08 15:
 INSERT INTO `tb_knowledge_student_state` VALUES (115, 3, 253, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 359, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (116, 4, 253, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 359, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
 INSERT INTO `tb_knowledge_student_state` VALUES (117, 5, 253, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 359, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
-INSERT INTO `tb_knowledge_student_state` VALUES (118, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `tb_knowledge_student_state` VALUES (119, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `tb_knowledge_student_state` VALUES (120, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `tb_knowledge_student_state` VALUES (121, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `tb_knowledge_student_state` VALUES (122, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `tb_knowledge_student_state` VALUES (123, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `tb_knowledge_student_state` VALUES (124, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `tb_knowledge_student_state` VALUES (125, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `tb_knowledge_student_state` VALUES (118, 11, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (119, 12, 33, 4, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (120, 13, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (121, 14, 33, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (122, 15, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 360, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (123, 16, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (124, 17, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (125, 18, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (126, 19, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (127, 20, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 360, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (128, 21, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (129, 22, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (130, 23, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (131, 27, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 360, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (132, 28, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 360, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (133, 29, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 360, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (134, 11, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (135, 12, 33, 4, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (136, 13, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (137, 14, 33, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (138, 15, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 361, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (139, 16, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (140, 17, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (141, 18, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (142, 19, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (143, 20, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 361, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (144, 21, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (145, 22, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (146, 23, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (147, 27, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 361, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (148, 28, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 361, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (149, 29, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 361, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (150, 11, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (151, 12, 33, 4, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (152, 13, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (153, 14, 33, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (154, 15, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 362, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (155, 16, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (156, 17, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (157, 18, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (158, 19, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (159, 20, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 362, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (160, 21, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (161, 22, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (162, 23, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (163, 27, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 362, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (164, 28, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 362, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (165, 29, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 362, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (166, 11, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (167, 12, 33, 4, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (168, 13, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (169, 14, 33, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (170, 15, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 363, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (171, 16, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (172, 17, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (173, 18, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (174, 19, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (175, 20, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 363, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (176, 21, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (177, 22, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (178, 23, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (179, 27, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 363, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (180, 28, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 363, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (181, 29, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 363, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (182, 11, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (183, 12, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (184, 13, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (185, 14, 33, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (186, 15, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 364, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (187, 16, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (188, 17, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (189, 18, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (190, 19, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (191, 20, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 364, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (192, 21, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (193, 22, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (194, 23, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (195, 27, 33, 4, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 364, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (196, 28, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 364, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (197, 29, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 364, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (198, 11, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (199, 12, 33, 4, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (200, 13, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (201, 14, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (202, 15, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 365, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (203, 16, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (204, 17, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (205, 18, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (206, 19, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (207, 20, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 365, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (208, 21, 33, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (209, 22, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (210, 23, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (211, 27, 33, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 365, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (212, 28, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 365, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (213, 29, 33, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 365, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (214, 11, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (215, 12, 1, 4, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (216, 13, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (217, 14, 1, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (218, 15, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (219, 16, 1, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (220, 17, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (221, 18, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (222, 19, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (223, 20, 1, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (224, 21, 1, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (225, 22, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (226, 23, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (227, 27, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 2, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (228, 28, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (229, 29, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (230, 1, 1, 2, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (231, 3, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (232, 4, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 3, '2019-07-08 15:44:38.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (233, 5, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (234, 2, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:39.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (235, 11, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (236, 12, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (237, 13, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (238, 14, 1, 3, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (239, 15, 1, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (240, 16, 1, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (241, 17, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (242, 18, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (243, 19, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (244, 20, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (245, 21, 1, 2, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-06 13:08:38.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (246, 22, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-06 16:02:50.000000', '2019-07-08 15:03:19.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (247, 23, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (248, 27, 1, 1, '2019-07-08 15:44:39.000000', '2019-07-08 15:44:38.000000', 3, '2019-07-08 15:03:19.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (249, 28, 1, 1, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000', 3, '2019-07-08 15:03:20.000000', '2019-07-08 15:03:20.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (250, 29, 1, 3, '2019-07-08 15:44:38.000000', '2019-11-10 14:06:00.000000', 3, '2019-07-08 15:03:19.000000', '2019-11-10 14:06:07.000000');
+INSERT INTO `tb_knowledge_student_state` VALUES (251, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `tb_knowledge_student_state` VALUES (252, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `tb_knowledge_student_state` VALUES (253, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for tb_lesson
@@ -985,12 +1376,12 @@ CREATE TABLE `tb_lesson`  (
   INDEX `idx_number`(`number`) USING BTREE,
   INDEX `idx_course_id`(`course_id`) USING BTREE,
   INDEX `idx_classroom_id`(`classroom_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 262 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 263 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_lesson
 -- ----------------------------
-INSERT INTO `tb_lesson` VALUES (1, 1, 2, 1, '2017-08-01 22:52:12.000000', '2018-01-31 22:52:21.000000', NULL, NULL);
+INSERT INTO `tb_lesson` VALUES (1, 1, 2, 1, '2018-09-01 22:52:12.000000', '2019-01-31 22:52:21.000000', NULL, NULL);
 INSERT INTO `tb_lesson` VALUES (3, 5, 2, 3, '2019-04-08 21:00:00.000000', '2019-04-08 22:40:00.000000', '2019-04-09 17:45:43.000000', '2019-04-09 17:45:43.000000');
 INSERT INTO `tb_lesson` VALUES (4, 6, 2, 2, '2019-04-10 19:00:00.000000', '2019-04-10 20:40:00.000000', '2019-04-09 17:46:39.000000', '2019-04-09 17:46:39.000000');
 INSERT INTO `tb_lesson` VALUES (5, NULL, 2, NULL, '2019-04-12 01:00:00.000000', '2019-04-12 02:40:00.000000', '2019-04-09 17:51:13.000000', '2019-04-09 17:51:13.000000');
@@ -1019,6 +1410,7 @@ INSERT INTO `tb_lesson` VALUES (35, 2, 64, 6, '2019-09-15 17:18:55.000000', '202
 INSERT INTO `tb_lesson` VALUES (36, NULL, NULL, NULL, '2020-01-31 17:19:51.000000', '2020-06-01 17:19:56.000000', '2019-10-31 17:20:00.000000', '2019-10-31 17:20:03.000000');
 INSERT INTO `tb_lesson` VALUES (37, 3, 64, 4, '2020-01-01 17:19:51.000000', '2020-06-01 17:19:56.000000', '2019-10-31 17:20:00.000000', '2019-10-31 17:20:03.000000');
 INSERT INTO `tb_lesson` VALUES (253, 7, 2, 3, '2019-12-18 16:00:00.000000', '2019-12-18 17:40:00.000000', '2019-11-01 15:44:37.000000', '2019-11-01 15:44:37.000000');
+INSERT INTO `tb_lesson` VALUES (262, 4, 2, 3, '2019-12-18 08:00:00.000000', '2019-12-18 09:40:00.000000', '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
 
 -- ----------------------------
 -- Table structure for tb_news
@@ -1032,7 +1424,7 @@ CREATE TABLE `tb_news`  (
   `modify_time` datetime(6) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `idx_title`(`title`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 65 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 66 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_news
@@ -1050,6 +1442,7 @@ INSERT INTO `tb_news` VALUES (61, '上课通知!', '李丽老师有新授课计�
 INSERT INTO `tb_news` VALUES (62, '申请通知!', '您有新的教室申请!请查看', NULL, NULL);
 INSERT INTO `tb_news` VALUES (63, '申请反馈!', '您的申请已接受!请查收', NULL, NULL);
 INSERT INTO `tb_news` VALUES (64, '上课通知!', '李丽老师有新授课计划,请注意查看课表.该通知由系统自动推送.', '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
+INSERT INTO `tb_news` VALUES (65, '上课通知!', '李丽老师有新授课计划,请注意查看课表.该通知由系统自动推送.', '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
 
 -- ----------------------------
 -- Table structure for tb_permission
@@ -1807,7 +2200,7 @@ CREATE TABLE `tb_teacher_lesson`  (
   UNIQUE INDEX `uk_lesson_id`(`lesson_id`) USING BTREE,
   INDEX `idx_user_id`(`user_id`) USING BTREE,
   INDEX `idx_lesson_id`(`lesson_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 107 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 108 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_teacher_lesson
@@ -1837,8 +2230,7 @@ INSERT INTO `tb_teacher_lesson` VALUES (94, 33, 33, '2019-10-31 15:58:40.000000'
 INSERT INTO `tb_teacher_lesson` VALUES (98, NULL, NULL, NULL, NULL);
 INSERT INTO `tb_teacher_lesson` VALUES (99, NULL, NULL, NULL, NULL);
 INSERT INTO `tb_teacher_lesson` VALUES (103, 33, 253, '2019-11-01 15:44:37.000000', '2019-11-01 15:44:37.000000');
-INSERT INTO `tb_teacher_lesson` VALUES (105, 33, 257, '2019-11-02 14:21:32.000000', '2019-11-02 14:21:32.000000');
-INSERT INTO `tb_teacher_lesson` VALUES (106, 33, 261, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
+INSERT INTO `tb_teacher_lesson` VALUES (107, 33, 262, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
 
 -- ----------------------------
 -- Table structure for tb_user
@@ -1893,18 +2285,18 @@ INSERT INTO `tb_user` VALUES (17, 2, 4, '1812630918', '8d969eef6ecad3c29a3a62928
 INSERT INTO `tb_user` VALUES (18, 2, 4, '1812630919', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '胡续冬', 2, '男', '1812630919', '1812630919', '1812630919@qq.com', 'http://123.206.53.234/yctc/1812630919.jpg', '05d5899a345ab1b323da70e36cfb9297', '2019-01-25 13:38:50.000000', '2019-04-06 15:19:19.000000');
 INSERT INTO `tb_user` VALUES (19, 2, 4, '1812630920', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '李碧华', 2, '男', '1812630920', '18126309200', '1812630920@qq.com', 'http://123.206.53.234/yctc/1812630920.jpg', 'a245bc2ac26ed94fa85cc4185748be20', '2019-01-25 13:38:50.000000', '2019-04-06 15:19:30.000000');
 INSERT INTO `tb_user` VALUES (20, 2, 4, '1812630921', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '冯志丹', 2, '男', '1812630921', '18126309211', '1812630921@qq.com', 'http://123.206.53.234/yctc/1812630921.jpg', 'f4b657a27b12a6ef6ffe323d708af84d', '2019-01-25 13:38:50.000000', '2019-04-06 15:19:43.000000');
-INSERT INTO `tb_user` VALUES (21, 2, 4, '1812630922', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '傅光明', 2, '男', '1812630922', '1812630922', '1812630922@qq.com', 'http://123.206.53.234/yctc/1812630922.jpg', '202d5526387715feb729d7e1155ca72f', '2019-01-25 13:38:50.000000', '2019-04-06 15:19:54.000000');
-INSERT INTO `tb_user` VALUES (22, 2, 4, '1812630923', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '李银河', 2, '男', '1812630923', '1812630923', '1812630923@qq.com', 'http://123.206.53.234/yctc/1812630923.jpg', '1ed8835863ffbdedf3b7ddc9336fee63', '2019-01-25 13:38:50.000000', '2019-04-06 15:20:06.000000');
+INSERT INTO `tb_user` VALUES (21, 2, 5, '1812630922', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '傅光明', 2, '男', '1812630922', '1812630922', '1812630922@qq.com', 'http://123.206.53.234/yctc/1812630922.jpg', '202d5526387715feb729d7e1155ca72f', '2019-01-25 13:38:50.000000', '2019-04-06 15:19:54.000000');
+INSERT INTO `tb_user` VALUES (22, 2, 5, '1812630923', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '李银河', 2, '男', '1812630923', '1812630923', '1812630923@qq.com', 'http://123.206.53.234/yctc/1812630923.jpg', '1ed8835863ffbdedf3b7ddc9336fee63', '2019-01-25 13:38:50.000000', '2019-04-06 15:20:06.000000');
 INSERT INTO `tb_user` VALUES (23, 2, 5, '1812630924', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '陈众议', 2, '男', '1812630924', '1812630924', '1812630924@qq.com', 'http://123.206.53.234/yctc/1812630924.jpg', 'd63843d9d0ecc28e480c710846993c8e', '2019-01-25 13:38:50.000000', '2019-04-06 15:20:18.000000');
-INSERT INTO `tb_user` VALUES (24, 2, 1, '1812630925', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '刘墉', 2, '男', '1812630925', '1812630925', '1812630925@qq.com', 'http://123.206.53.234/yctc/1812630925.jpg', 'b11a8406ad32630ff48080c99ecf4cfb', '2019-01-25 13:38:50.000000', '2019-04-06 15:20:29.000000');
-INSERT INTO `tb_user` VALUES (25, 2, 1, '1812630928', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '韩雨山', 2, '男', '1812630928', '1812630928', '1812630928@qq.com', 'http://123.206.53.234/yctc/1812630928.jpg', '017c8dfa56b645f3b8209250bc151bff', '2019-01-25 13:38:51.000000', '2019-04-06 15:20:42.000000');
-INSERT INTO `tb_user` VALUES (26, 2, 1, '1812630930', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '韩松落', 2, '男', '1812630930', '1812630930', '1812630930@qq.com', 'http://123.206.53.234/yctc/1812630930.jpg', 'fa3780e224f4712d0ae1a7939bb5b4f3', '2019-01-25 13:38:51.000000', '2019-04-06 15:20:53.000000');
-INSERT INTO `tb_user` VALUES (27, 2, 5, '1812630933', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '恭小兵', 2, '男', '1812630933', '1812630933', '1812630933@qq.com', 'http://123.206.53.234/yctc/1812630933.jpg', 'f6dbaa1cdb3eca9fde3b9efced58a8e3', '2019-01-25 13:38:51.000000', '2019-04-06 15:21:06.000000');
-INSERT INTO `tb_user` VALUES (28, 2, 5, '1812630934', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '关凌', 2, '男', '1812630934', '1812630934', '1812630934@qq.com', 'http://123.206.53.234/yctc/1812630934.jpg', 'fb083493e4ab96f725feb434c89f11f0', '2019-01-25 13:38:51.000000', '2019-04-06 15:21:19.000000');
-INSERT INTO `tb_user` VALUES (29, 2, 5, '1812630935', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '高远', 2, '男', '1812630935', '1812630935', '1812630935@qq.com', 'http://123.206.53.234/yctc/1812630935.jpg', 'c14cfbbe34c456de49a3a350273fa802', '2019-01-25 13:38:51.000000', '2019-04-06 15:21:30.000000');
+INSERT INTO `tb_user` VALUES (24, 2, 5, '1812630925', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '刘墉', 2, '男', '1812630925', '1812630925', '1812630925@qq.com', 'http://123.206.53.234/yctc/1812630925.jpg', 'b11a8406ad32630ff48080c99ecf4cfb', '2019-01-25 13:38:50.000000', '2019-04-06 15:20:29.000000');
+INSERT INTO `tb_user` VALUES (25, 2, 5, '1812630928', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '韩雨山', 2, '男', '1812630928', '1812630928', '1812630928@qq.com', 'http://123.206.53.234/yctc/1812630928.jpg', '017c8dfa56b645f3b8209250bc151bff', '2019-01-25 13:38:51.000000', '2019-04-06 15:20:42.000000');
+INSERT INTO `tb_user` VALUES (26, 2, 2, '1812630930', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '韩松落', 2, '男', '1812630930', '1812630930', '1812630930@qq.com', 'http://123.206.53.234/yctc/1812630930.jpg', 'fa3780e224f4712d0ae1a7939bb5b4f3', '2019-01-25 13:38:51.000000', '2019-04-06 15:20:53.000000');
+INSERT INTO `tb_user` VALUES (27, 2, 2, '1812630933', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '恭小兵', 2, '男', '1812630933', '1812630933', '1812630933@qq.com', 'http://123.206.53.234/yctc/1812630933.jpg', 'f6dbaa1cdb3eca9fde3b9efced58a8e3', '2019-01-25 13:38:51.000000', '2019-04-06 15:21:06.000000');
+INSERT INTO `tb_user` VALUES (28, 2, 2, '1812630934', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '关凌', 2, '男', '1812630934', '1812630934', '1812630934@qq.com', 'http://123.206.53.234/yctc/1812630934.jpg', 'fb083493e4ab96f725feb434c89f11f0', '2019-01-25 13:38:51.000000', '2019-04-06 15:21:19.000000');
+INSERT INTO `tb_user` VALUES (29, 2, 2, '1812630935', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', '高远', 2, '男', '1812630935', '1812630935', '1812630935@qq.com', 'http://123.206.53.234/yctc/1812630935.jpg', 'c14cfbbe34c456de49a3a350273fa802', '2019-01-25 13:38:51.000000', '2019-04-06 15:21:30.000000');
 INSERT INTO `tb_user` VALUES (31, 1, NULL, '10001', '94edf28c6d6da38fd35d7ad53e485307f89fbeaf120485c8d17a43f323deee71', '管理员', 1, '男', '879656566532x', '17788888888', 'testTeacher@qq.com', NULL, NULL, '2019-02-02 00:00:00.000000', '2019-02-03 00:00:00.000000');
 INSERT INTO `tb_user` VALUES (32, 2, 1, '10003', '94edf28c6d6da38fd35d7ad53e485307f89fbeaf120485c8d17a43f323deee71', '王小明', 1, '男', '879626566532x', '13789677568', '13789677568@163.com', NULL, NULL, '2019-10-29 22:13:10.000000', '2019-10-29 22:13:15.000000');
-INSERT INTO `tb_user` VALUES (33, 2, 2, '10002', '94edf28c6d6da38fd35d7ad53e485307f89fbeaf120485c8d17a43f323deee71', '李丽', 1, '女', '879656566533x', '17788888883', '10002@qq.com', NULL, NULL, '2019-02-02 00:00:00.000000', '2019-02-03 00:00:00.000000');
+INSERT INTO `tb_user` VALUES (33, 2, 2, '10002', '94edf28c6d6da38fd35d7ad53e485307f89fbeaf120485c8d17a43f323deee71', '王小明', 1, '女', '879656566533x', '17788888883', '10002@qq.com', NULL, NULL, '2019-02-02 00:00:00.000000', '2019-02-03 00:00:00.000000');
 INSERT INTO `tb_user` VALUES (34, 2, 3, '10004', '94edf28c6d6da38fd35d7ad53e485307f89fbeaf120485c8d17a43f323deee71', '冯小红', 1, '女', '879656576533x', '17788888884', '10004@qq.com', NULL, NULL, '2019-02-02 00:00:00.000000', '2019-02-03 00:00:00.000000');
 INSERT INTO `tb_user` VALUES (35, 2, 4, '10005', '94edf28c6d6da38fd35d7ad53e485307f89fbeaf120485c8d17a43f323deee71', '梁用心', 1, '女', '879656166533x', '17788888885', '10005@qq.com', NULL, NULL, '2019-02-02 00:00:00.000000', '2019-02-03 00:00:00.000000');
 INSERT INTO `tb_user` VALUES (134, 2, 2, '00001', 'd4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35', 'Administrator', 3, '男', '12345', '18816236008', 'wanglt1234@126.com', '22', 'ccc', '2019-02-13 14:02:55.000000', '2019-06-16 20:37:04.000000');
@@ -1924,7 +2316,7 @@ CREATE TABLE `tb_user_news`  (
   UNIQUE INDEX `uk_user_id_news_id`(`user_id`, `news_id`) USING BTREE,
   INDEX `idx_user_id`(`user_id`) USING BTREE,
   INDEX `idx_news_id`(`news_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 140 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 146 CHARACTER SET = big5 COLLATE = big5_chinese_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of tb_user_news
@@ -1973,5 +2365,11 @@ INSERT INTO `tb_user_news` VALUES (136, 18, 64, 0, '2019-11-03 14:34:58.000000',
 INSERT INTO `tb_user_news` VALUES (137, 19, 64, 0, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
 INSERT INTO `tb_user_news` VALUES (138, 20, 64, 0, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
 INSERT INTO `tb_user_news` VALUES (139, 21, 64, 0, '2019-11-03 14:34:58.000000', '2019-11-03 14:34:58.000000');
+INSERT INTO `tb_user_news` VALUES (140, 16, 65, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_user_news` VALUES (141, 17, 65, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_user_news` VALUES (142, 18, 65, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_user_news` VALUES (143, 19, 65, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_user_news` VALUES (144, 20, 65, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
+INSERT INTO `tb_user_news` VALUES (145, 21, 65, 0, '2019-11-10 14:33:58.000000', '2019-11-10 14:33:58.000000');
 
 SET FOREIGN_KEY_CHECKS = 1;

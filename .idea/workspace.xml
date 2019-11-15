@@ -2,25 +2,243 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ce93256-7767-4fc7-bc4f-823aaa289049" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/GetBooleanByPictureVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/GetPictureBooleanLastVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/picture_flag_sql_map.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/teaching/student-stateby-knowledgeand-lesson.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fwwb.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/007.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/008.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/009.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/015.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/017.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/018.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/020.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/021.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/022.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/023.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/024.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/025.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/026.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/027.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/028.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/029.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/030.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/031.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/032.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/033.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/034.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/035.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/036.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/037.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/038.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/039.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/040.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/041.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/042.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/043.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/044.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/045.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/046.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/047.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/048.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/049.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/050.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/051.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/052.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/053.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/054.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/css.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/font/xcon.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/tooplate-infinite-loop.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/css/all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fontawesome-5.5/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/barbg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/jdtbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/550x650.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/details/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-img-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-img-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-img-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-img-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-img-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-img-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-tn-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-tn-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-tn-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-tn-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-tn-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/gallery-tn-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/infinite-loop-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/infinite-loop-02-mobile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/infinite-loop-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/infinite-loop-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/logo/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/logo/quote.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/news/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/news/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/news/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/news/300x200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/partners/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/partners/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/partners/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/partners/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/600x600.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/slider/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/slider/2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/slider/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/001.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/003.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/004.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/006.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/007.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/008.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/009.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/012.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/013.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/015.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/017.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/018.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/019.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/020.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/021.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/022.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/023.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/024.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/025.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/026.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/027.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/028.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/029.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/030.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/031.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/032.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/033.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/034.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/035.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/036.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/037.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/038.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/039.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/040.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/041.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/042.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/043.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/044.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/045.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/046.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/047.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/048.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/049.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/050.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/051.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/052.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/053.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/src/img/054.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/svg/gps-fixed-indicator.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/svg/message.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/svg/phone-call.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/svg/responsive.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/svg/safari.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/svg/suport.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/team/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/testimonial-img-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/testimonial-img-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/testimonial-img-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/testimonial-img-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/the-town-bg-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-1.9.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.singlePageNav.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/magnific-popup/jquery.magnific-popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/magnific-popup/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/slick/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/slick/config.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/slick/fonts/slick.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/slick/fonts/slick.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/slick/fonts/slick.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/slick/fonts/slick.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/slick/slick-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/slick/slick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/slick/slick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/slick/slick.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/slick/slick.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/js/init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/js/plugins.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid84920.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid88536.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/constant/TemplatePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/constant/TemplatePath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/TeachingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/TeachingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/impl/TeachingControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/impl/TeachingControllerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/KnowledgeRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/KnowledgeRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/impl/KnowledgeRestControllerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/impl/KnowledgeRestControllerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/dao/PictureKnowledgeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/dao/PictureKnowledgeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/entity/KnowledgePictureDO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/entity/KnowledgePictureDO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/impl/FaceFunctionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/impl/FaceFunctionImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/KnowledgeIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/KnowledgeIService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/DealMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/DealMedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/StatisticalIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/StatisticalIService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/KnowledgeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/KnowledgeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/StatisticalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/StatisticalServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/knowledge_picture_sql_map.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/knowledge_picture_sql_map.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/component/footer-lib.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/component/footer-lib.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/component/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/component/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/component/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/component/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/component/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/component/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details-a.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details-a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list-a.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list-a.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/ApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study.sql" beforeDir="false" afterPath="$PROJECT_DIR$/study.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,12 +254,26 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list.html">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details-a.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2295">
-              <caret line="135" column="91" selection-start-line="135" selection-start-column="91" selection-end-line="135" selection-end-column="91" />
+            <state relative-caret-position="866">
+              <caret line="103" column="33" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/css.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -67,6 +299,7 @@
       <find>KnowledgeRestController</find>
       <find>get-picture-knowlegde</find>
       <find>get-lessondetailsvo-by-lessonid-list</find>
+      <find>TEACHING_LESSON_KNOWLEDGE_POINT_DETAILS_A</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -75,21 +308,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/templates/component/footer.html" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OcrContorl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/OcrRecognizer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/DealMedia.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/jquery.min.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/poper.min.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/component/footer-lib.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-c.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/component/sidebar.html" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/TeachingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/dao/PictureLessonDAO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/knowledge_picture_sql_map.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowlegde-point-details-a.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details-a.html" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/StudentsLessonState.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/entity/StudentState.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/knowledge_student_state_sql_map.xml" />
@@ -101,31 +322,43 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/GetPictureVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/entity/StateLessonDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/StudentsLessonStateVO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/entity/KnowledgePictureDO.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/test/pppp.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list-a.html" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/util/myUtils/Coding.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/impl/FaceFunctionImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/Test.java" />
-        <option value="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/ApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/GetBooleanByPicture.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/knowledge_picture_sql_map.xml" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/entity/ResultDO.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/KnowledgeIService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/dao/PictureKnowledgeDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/KnowledgeRestController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/picture_flag_sql_map.xml" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/GetPictureBooleanLastVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/GetBooleanByPictureVO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/student-stateby-knowledgeand-lesson.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/component/sidebar.html" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/home.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/component/header.html" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/TeachingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/impl/TeachingControllerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/constant/TemplatePath.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-b.html" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/impl/FaceFunctionImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/StatisticalIService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/DealMedia.java" />
+        <option value="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/knowledge_picture_sql_map.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/dao/PictureKnowledgeDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/StatisticalServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/entity/KnowledgePictureDO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/edu/yctc/genesis/ApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/component/footer-lib.html" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/KnowledgeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/impl/KnowledgeRestControllerImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/constant/TemplatePath.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/impl/TeachingControllerImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/student-stateby-knowledgeand-lesson.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list-a.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details-a.html" />
       </list>
     </option>
   </component>
@@ -179,10 +412,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="137" />
-    <option name="y" value="12" />
-    <option name="width" value="1395" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="76" />
+    <option name="y" value="30" />
+    <option name="width" value="1815" />
     <option name="height" value="995" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -191,6 +424,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="CatdeaLogs" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -248,72 +483,7 @@
               <item name="Genesis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="yctc" type="462c0819:PsiDirectoryNode" />
-              <item name="genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="yctc" type="462c0819:PsiDirectoryNode" />
-              <item name="genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="yctc" type="462c0819:PsiDirectoryNode" />
-              <item name="genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="yctc" type="462c0819:PsiDirectoryNode" />
-              <item name="genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="genesis" type="b2602c69:ProjectViewProjectNode" />
@@ -360,8 +530,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="CatdeaLogs" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -374,7 +542,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="kotlin.migration.detection.enabled" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/teaching" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -395,18 +563,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\myproject\Genesis\src\main\resources\static\img" />
+      <recent name="D:\myproject\Genesis\src\main\resources\static\vendor\bootstrap\js" />
       <recent name="D:\myproject\Genesis\src\main\resources\templates\teaching" />
       <recent name="D:\myproject\Genesis\src\main\resources\templates\test" />
       <recent name="D:\myproject\Genesis\src\main\resources\mapper" />
-      <recent name="D:\myproject\Genesis\src\main\resources\log" />
-      <recent name="D:\myproject\Genesis\src\main\resources\templates\user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\myproject\Genesis\src\main\resources\static" />
+      <recent name="D:\myproject\Genesis\src\main\resources\static\img\src" />
       <recent name="D:\myproject\Genesis\src\main\resources\templates\teaching" />
       <recent name="D:\myproject\Genesis\src\main\resources\mapper" />
       <recent name="D:\myproject\Genesis\src\main\java\edu\yctc\genesis\util" />
-      <recent name="D:\myproject\Genesis\src\main\resources\static" />
-      <recent name="D:\myproject\Genesis\src\main\resources\static\js" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -440,21 +608,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="genesis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="edu.yctc.genesis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="edu.yctc.genesis" />
-      <option name="MAIN_CLASS_NAME" value="edu.yctc.genesis.ApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="genesis" />
       <extension name="coverage">
@@ -466,6 +619,22 @@
       <option name="PACKAGE_NAME" value="edu.yctc.genesis" />
       <option name="MAIN_CLASS_NAME" value="edu.yctc.genesis.ApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApplicationTests.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="genesis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.yctc.genesis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.yctc.genesis" />
+      <option name="MAIN_CLASS_NAME" value="edu.yctc.genesis.ApplicationTests" />
+      <option name="METHOD_NAME" value="insert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -512,11 +681,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApplicationTests.test" />
+        <item itemvalue="JUnit.ApplicationTests.insert" />
         <item itemvalue="Application.Test" />
         <item itemvalue="JUnit.ApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.ApplicationTests.test" />
         <item itemvalue="JUnit.ApplicationTests.ocrfunction" />
-        <item itemvalue="JUnit.ApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -622,7 +791,21 @@
       <workItem from="1573517902806" duration="832000" />
       <workItem from="1573520012089" duration="3743000" />
       <workItem from="1573525677026" duration="3167000" />
-      <workItem from="1573533456401" duration="9891000" />
+      <workItem from="1573533456401" duration="10241000" />
+      <workItem from="1573556432112" duration="15828000" />
+      <workItem from="1573608502728" duration="1392000" />
+      <workItem from="1573630570166" duration="10195000" />
+      <workItem from="1573653126831" duration="4679000" />
+      <workItem from="1573690154970" duration="35000" />
+      <workItem from="1573690276179" duration="2450000" />
+      <workItem from="1573693367659" duration="95000" />
+      <workItem from="1573693570754" duration="9217000" />
+      <workItem from="1573720491205" duration="10568000" />
+      <workItem from="1573740187887" duration="882000" />
+      <workItem from="1573741373388" duration="4382000" />
+      <workItem from="1573782820748" duration="11535000" />
+      <workItem from="1573801500121" duration="526000" />
+      <workItem from="1573809905686" duration="234000" />
     </task>
     <task id="LOCAL-00001" summary="优化了提交样式和关闭刷新,更换了登陆主界面,改变了全局样式">
       <created>1572771729150</created>
@@ -743,43 +926,50 @@
       <option name="project" value="LOCAL" />
       <updated>1573361488305</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="解决了状态分析的饼状图实现,也实现了查找知识点对应图片,及通过识别到的图片id返回知识点内容">
+      <created>1573550848478</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1573550848478</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ApplicationTests_test - 2019.11.06 at 23h 04m 16s.xml">
-      <configuration name="ApplicationTests.test" configurationId="JUnit" />
+    <history-entry file="ApplicationTests_contextLoads - 2019.11.13 at 21h 37m 28s.xml">
+      <configuration name="ApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTests_test - 2019.11.06 at 23h 07m 40s.xml">
-      <configuration name="ApplicationTests.test" configurationId="JUnit" />
+    <history-entry file="ApplicationTests_contextLoads - 2019.11.13 at 21h 44m 17s.xml">
+      <configuration name="ApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTests_test - 2019.11.07 at 17h 42m 17s.xml">
-      <configuration name="ApplicationTests.test" configurationId="JUnit" />
+    <history-entry file="ApplicationTests_contextLoads - 2019.11.13 at 21h 45m 06s.xml">
+      <configuration name="ApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTests_test - 2019.11.07 at 17h 53m 14s.xml">
-      <configuration name="ApplicationTests.test" configurationId="JUnit" />
+    <history-entry file="ApplicationTests_contextLoads - 2019.11.13 at 21h 45m 22s.xml">
+      <configuration name="ApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTests_test - 2019.11.07 at 17h 55m 23s.xml">
-      <configuration name="ApplicationTests.test" configurationId="JUnit" />
+    <history-entry file="ApplicationTests_contextLoads - 2019.11.13 at 21h 45m 54s.xml">
+      <configuration name="ApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTests_test - 2019.11.07 at 17h 55m 58s.xml">
-      <configuration name="ApplicationTests.test" configurationId="JUnit" />
+    <history-entry file="ApplicationTests_contextLoads - 2019.11.13 at 21h 47m 53s.xml">
+      <configuration name="ApplicationTests.contextLoads" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTests_test - 2019.11.07 at 17h 57m 11s.xml">
-      <configuration name="ApplicationTests.test" configurationId="JUnit" />
+    <history-entry file="ApplicationTests_insert - 2019.11.14 at 08h 29m 35s.xml">
+      <configuration name="ApplicationTests.insert" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTests_test - 2019.11.07 at 17h 58m 43s.xml">
-      <configuration name="ApplicationTests.test" configurationId="JUnit" />
+    <history-entry file="ApplicationTests_insert - 2019.11.14 at 08h 30m 23s.xml">
+      <configuration name="ApplicationTests.insert" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTests_test - 2019.11.07 at 18h 02m 18s.xml">
-      <configuration name="ApplicationTests.test" configurationId="JUnit" />
+    <history-entry file="ApplicationTests_insert - 2019.11.14 at 08h 49m 02s.xml">
+      <configuration name="ApplicationTests.insert" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ApplicationTests_test - 2019.11.11 at 20h 15m 00s.xml">
-      <configuration name="ApplicationTests.test" configurationId="JUnit" />
+    <history-entry file="ApplicationTests_insert - 2019.11.14 at 10h 02m 08s.xml">
+      <configuration name="ApplicationTests.insert" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286688000" />
+    <option name="totallyTimeSpent" value="358822000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -791,10 +981,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="61" y="24" width="1452" height="796" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1802949" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20014347" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -803,9 +993,9 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.22076024" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.76675606" visible="true" weight="0.4093567" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.65497077" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.21962617" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.76675606" weight="0.046728972" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6542056" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.41812867" />
@@ -813,16 +1003,16 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.04385965" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23324397" side_tool="true" weight="0.12426901" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.33040935" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.26168224" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.04385965" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.20911528" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.18160743" />
       <window_info anchor="right" id="SciView" order="6" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
@@ -830,7 +1020,7 @@
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1802949" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24729522" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -840,7 +1030,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.22076024" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.76675606" visible="true" weight="0.04385965" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.76675606" visible="true" weight="0.046728972" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.65497077" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -849,14 +1039,14 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.04385965" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.23324397" side_tool="true" weight="0.12426901" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.33040935" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.26168224" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.04385965" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.20911528" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.27211797" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="SciView" order="6" />
@@ -924,7 +1114,9 @@
     <MESSAGE value="修复了一些样式显示,加入了sql文件" />
     <MESSAGE value="增加状态饼图页面,实现了知识点对应图片,和球机拍摄的视频截图,图片识别正在写,实现了知识点图片和响应是数据进一步完整" />
     <MESSAGE value="进行文档修正和输出方式改变,导入了新的sql文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="进行文档修正和输出方式改变,导入了新的sql文件" />
+    <MESSAGE value="解决了状态分析的饼状图实现,也实现了查找知识点对应图片,及通过识别到的图片id返回知识点内容" />
+    <MESSAGE value="解决了图片识别相关问题,能动态显示识别效果,更新了数据源,优化显示样式" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决了图片识别相关问题,能动态显示识别效果,更新了数据源,优化显示样式" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -935,78 +1127,126 @@
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/resources/templates/teaching/newfile.html</url>
-          <line>13</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/student_state_lesson_sql_map.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        <state relative-caret-position="238">
+          <caret line="14" column="120" selection-start-line="14" selection-start-column="120" selection-end-line="14" selection-end-column="120" />
+          <folding>
+            <element signature="e#845#851#0" expanded="true" />
+            <element signature="e#851#857#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/util/myUtils/DealImage.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/util/myUtils/Coding.java" />
-    <entry file="file://$PROJECT_DIR$/mvnw.cmd">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/student-stateby-knowledgeand-lesson.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-383">
-          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        <state relative-caret-position="347">
+          <caret line="57" column="41" lean-forward="true" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1007#1536#0" />
+            <element signature="e#3946#5575#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mvnw">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/TeachingController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="9" selection-end-column="50" />
+        <state relative-caret-position="180">
+          <caret line="115" column="7" lean-forward="true" selection-start-line="115" selection-start-column="7" selection-end-line="115" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="362">
-            <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/constant/TemplatePath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hs_err_pid84920.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/verify-identity-step-a.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-picture-details.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/impl/TeachingControllerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-248" />
+        <state relative-caret-position="258">
+          <caret line="159" column="5" lean-forward="true" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
+          <folding>
+            <element signature="e#5446#5447#0" expanded="true" />
+            <element signature="e#5512#5513#0" expanded="true" />
+            <element signature="e#5613#5614#0" expanded="true" />
+            <element signature="e#5679#5680#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/verify-identity-step-b-email.html">
+    <entry file="file://$PROJECT_DIR$/hs_err_pid32628.log" />
+    <entry file="file://$PROJECT_DIR$/src/img/019.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/013.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/270.jpg" />
+    <entry file="file://$PROJECT_DIR$/src/img/001.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/002.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/003.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/005.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/007.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/011.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/015.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/017.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/CheckKnowledgeThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2033" />
+        <state relative-caret-position="205">
+          <caret line="141" column="53" selection-start-line="141" selection-start-column="53" selection-end-line="141" selection-end-column="53" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/DealMedia.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/GetFoldFileNames.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="148" column="5" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
+        <state relative-caret-position="205">
+          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/DealImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/FaceFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="37" column="21" lean-forward="true" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/impl/FaceFunctionImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-196">
-          <caret line="528" column="14" selection-start-line="528" selection-start-column="14" selection-end-line="528" selection-end-column="14" />
+        <state relative-caret-position="339">
+          <caret line="127" column="35" selection-start-line="127" selection-start-column="35" selection-end-line="127" selection-end-column="35" />
           <folding>
             <element signature="method#checkByLessonId#0;class#FaceFunctionImpl#0" />
             <element signature="method#checkStatusByLessonId#0;class#FaceFunctionImpl#0" />
@@ -1015,329 +1255,203 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/function/FaceFunction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/DealMedia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="103" column="26" selection-start-line="103" selection-start-column="26" selection-end-line="103" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/ApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/face/util/CheckKnowledgeThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="78" column="21" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/dao/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1037">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/entity/AcademyClassesDO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="71" column="34" lean-forward="true" selection-start-line="70" selection-start-column="8" selection-end-line="71" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/impl/MetadataRestControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/entity/ResultDO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-          <folding>
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1166#1167#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
-            <element signature="e#1232#1233#0" expanded="true" />
-            <element signature="e#1259#1260#0" expanded="true" />
-            <element signature="e#1296#1297#0" expanded="true" />
-            <element signature="e#1328#1329#0" expanded="true" />
-            <element signature="e#1358#1359#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-            <element signature="e#1452#1453#0" expanded="true" />
-            <element signature="e#1560#1561#0" expanded="true" />
-            <element signature="e#1589#1590#0" expanded="true" />
-            <element signature="e#1648#1649#0" expanded="true" />
-            <element signature="e#1684#1685#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/MetadataRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/KnowledgeIService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="153">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/knowledge_picture_sql_map.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="144">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logback.dtd">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/StatisticalServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log/logback.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/picture_flag_sql_map.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/GetPictureBooleanLastVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="96" selection-start-line="25" selection-start-column="96" selection-end-line="25" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/dao/PictureKnowledgeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/dao/KnowledgeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/GetBooleanByPictureVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        <state relative-caret-position="230">
+          <caret line="51" column="59" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="51" selection-end-column="59" />
           <folding>
-            <element signature="e#506#507#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/impl/CommonControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/impl/ManagerControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/CommonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/EducationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/impl/LearningControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.2.RELEASE/spring-context-5.1.2.RELEASE-sources.jar!/org/springframework/scheduling/annotation/EnableScheduling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="207" column="11" lean-forward="true" selection-start-line="207" selection-start-column="11" selection-end-line="207" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/constant/TemplatePath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2499">
-          <caret line="147" column="59" selection-start-line="147" selection-start-column="59" selection-end-line="147" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="25" column="52" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/KnowledgeRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details-a.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="72" column="70" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/student-stateby-knowledgeand-lesson.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="93" lean-forward="true" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#4662#4801#0" />
-            <element signature="e#4835#4952#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/impl/TeachingControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="152" column="45" selection-start-line="152" selection-start-column="33" selection-end-line="152" selection-end-column="45" />
-          <folding>
-            <element signature="method#showLessonKnowledgePointDetails_a#0;class#TeachingControllerImpl#0" />
-            <element signature="e#5613#5614#0" expanded="true" />
-            <element signature="e#5679#5680#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list-a.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1916">
-          <caret line="121" column="64" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/impl/KnowledgeRestControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="173" column="25" selection-start-line="173" selection-start-column="12" selection-end-line="173" selection-end-column="25" />
-          <folding>
-            <element signature="method#getLessonAndKnowledgeByTeacherId#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#getKnowledgeDOsByLessonId#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#getKnowledgePictureDOsByLessonId#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#getAllPictureByLessonId#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#modifyKnowledge#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#deleteKnowledgeById#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#insertKnowledge#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#getknowledgesDetailsVOByLessonId#0;class#KnowledgeRestControllerImpl#0" />
-            <element signature="method#GetPictureBooleanLastVO#0;class#KnowledgeRestControllerImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/KnowledgeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="220" selection-start-line="220" selection-end-line="220" />
-          <folding>
-            <element signature="method#checkKnowledge#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#getLessonDOListByUserId4Teacher#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#getCourseDOById#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#getClassroomDOById#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#getKnowledgeDOsByLessonId#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#getKnowledgePictureDOsByKnowledgeId#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#insertPictureByKnowledgeId#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#modifyKnowledge#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#deleteKnowledgeById#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#insertKnowledge#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#insertKnowledgeAndStudentStateDO#0;class#KnowledgeServiceImpl#0" />
-            <element signature="method#getStudentsLessonStateVO#0;class#KnowledgeServiceImpl#0" />
+            <element signature="method#getClassroomUsingState#0;class#StatisticalServiceImpl#0" />
+            <element signature="method#insert#0;class#StatisticalServiceImpl#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="61" column="26" lean-forward="true" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+        <state relative-caret-position="-324">
+          <caret line="106" column="15" lean-forward="true" selection-start-line="106" selection-start-column="15" selection-end-line="106" selection-end-column="15" />
           <folding>
             <element signature="n#div#1;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/testimonial-img-01.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="135" column="91" selection-start-line="135" selection-start-column="91" selection-end-line="135" selection-end-column="91" />
+        <state relative-caret-position="111">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/yctc/genesis/ApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="169" column="50" selection-start-line="169" selection-start-column="50" selection-end-line="169" selection-end-column="50" />
+          <folding>
+            <element signature="n#section#3;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/fill-knowledge-step-b.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-847">
+          <caret line="97" column="47" lean-forward="true" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/js/plugins.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#li#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/component/footer-lib.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/img/550x650.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-details-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="80" column="58" selection-start-line="80" selection-start-column="52" selection-end-line="80" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/impl/KnowledgeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="249" column="22" lean-forward="true" selection-start-line="249" selection-start-column="22" selection-end-line="249" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/GetPictureVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/service.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/KnowledgeRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/entity/KnowledgePictureDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/dao/PictureKnowledgeDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/StatisticalIService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/vo/GetBooleanByPictureVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/service/KnowledgeIService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/yctc/genesis/controller/rest/impl/KnowledgeRestControllerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-336">
+          <caret line="101" column="59" lean-forward="true" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="59" />
+          <folding>
+            <element signature="method#getLessonAndKnowledgeByTeacherId#0;class#KnowledgeRestControllerImpl#0" />
+            <element signature="method#getKnowledgeDOsByLessonId#0;class#KnowledgeRestControllerImpl#0" />
+            <element signature="method#getAllPictureByLessonId#0;class#KnowledgeRestControllerImpl#0" />
+            <element signature="method#studentsLessonStateVO#0;class#KnowledgeRestControllerImpl#0" />
+            <element signature="method#modifyKnowledge#0;class#KnowledgeRestControllerImpl#0" />
+            <element signature="method#deleteKnowledgeById#0;class#KnowledgeRestControllerImpl#0" />
+            <element signature="method#insertKnowledge#0;class#KnowledgeRestControllerImpl#0" />
+            <element signature="method#getknowledgesDetailsVOByLessonId#0;class#KnowledgeRestControllerImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list-a.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="144" column="21" lean-forward="true" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-details-a.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="866">
+          <caret line="103" column="33" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/teaching/lesson-knowledge-point-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/css.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -1407,6 +1521,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

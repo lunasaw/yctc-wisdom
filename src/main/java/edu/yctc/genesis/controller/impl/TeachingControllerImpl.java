@@ -159,4 +159,13 @@ public class TeachingControllerImpl implements TeachingController {
         return TemplatePath.TEACHING_FILL_KNOWLEDGE_BING;
     }
 
+    @Override
+    @GetMapping("lesson-knowledge-point-detail-picture-a")
+    public String showpicture(Model model, HttpSession httpSession){
+        long lessonId = SessionContentHolder.getSignInUserIdBySessionId(httpSession.getId());
+        long knowledgeId = SessionContentHolder.getSignInUserIdBySessionId(httpSession.getId());
+        model.addAttribute("lessonId", lessonId);
+        return TemplatePath.TEACHING_FILL_KNOWLEDGE_PICTURE;
+    }
+
 }

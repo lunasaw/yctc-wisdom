@@ -16,16 +16,16 @@ public class DealMedia {
     /** 日志 */
     private final static Logger LOG = LoggerFactory.getLogger("serviceLogger");
     /** 每秒帧数 */
-    private static String frame = "10";
+    private static String frame = "1";
     /** 分辨率 */
-    private static String resolutionRatio = "1280*720";
+    private static String resolutionRatio = "1920*1080";
     /** 视频生成总时长 */
-    private static String totalTime = "10";
+    private static String totalTime = "04:28";
 
     /** 解析视频开始时间 */
-    private static String startTime = "00:00";
+    private static String startTime = "00:02";
     /** 解析视频结束时间 */
-    private static String endTime = "00:10";
+    private static String endTime = "04:30";
 
     /**
      * 获得每秒帧数

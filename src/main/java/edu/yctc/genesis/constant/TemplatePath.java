@@ -145,7 +145,11 @@ public class TemplatePath {
     /** 填写知识点页面B */
     public static final String TEACHING_FILL_KNOWLEDGE_STEP_B = "teaching/fill-knowledge-step-b";
 
+    /*饼图页面*/
     public static final String TEACHING_FILL_KNOWLEDGE_BING = "teaching/student-stateby-knowledgeand-lesson";
+
+    /*知识点检测页面*/
+    public static final String TEACHING_FILL_KNOWLEDGE_PICTURE = "teaching/lesson-knowledge-point-details-a";
 
     /** 知识点学情列表页 */
     public static final String TEACHING_LESSON_KNOWLEDGE_POINT_LIST = "teaching/lesson-knowledge-point-list";
