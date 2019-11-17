@@ -4,10 +4,9 @@ import edu.yctc.genesis.controller.rest.impl.KnowledgeRestControllerImpl;
 import edu.yctc.genesis.dao.PictureKnowledgeDAO;
 import edu.yctc.genesis.entity.KnowledgePictureDO;
 import edu.yctc.genesis.face.function.impl.FaceFunctionImpl;
-import edu.yctc.genesis.face.util.CheckKnowledgeThread;
-import edu.yctc.genesis.face.util.DealMedia;
-import edu.yctc.genesis.face.util.GetFoldFileNames;
-import edu.yctc.genesis.face.util.OCRUtil;
+import edu.yctc.genesis.face.util.*;
+import edu.yctc.genesis.service.KnowledgeIService;
+import edu.yctc.genesis.service.impl.KnowledgeServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,15 +23,17 @@ import java.util.List;
 public class ApplicationTests {
     @Resource
     private PictureKnowledgeDAO pictureKnowledgeDAO;//知识点图片
+
+    private KnowledgeIService knowledgeService =
+            (KnowledgeServiceImpl) SpringContextUtils.getBeanByClass(KnowledgeServiceImpl.class);
     @Test
     public void  contextLoads() {
         DealMedia.decode("D:\\ffmpeg\\亲子关系与小学生品德培养.mp4", "D:\\ffmpeg\\img", "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
     }
 
     @Test
-    public void insert() {
-//        faceFunction.dealMedia("D:\\ffmpeg\\mp4\\亲子关系与小学生品德培养.mp4",
-//                "src\\img","00:03","04:30","04:30","1","1920*1080");
+    public void checkPictureKnowledge(String knowledge) {
+//       DealMedia.decode("D:\\ffmpeg\\亲子关系与小学生品德培养.mp4", "\\genesis\\img\\src\\img", "D:\\ffmpeg\\ffmpeg\\bin\\ffmpeg.exe");
         try {
             List<String> fileNames = new ArrayList<>();
             GetFoldFileNames.getFileName(fileNames, "src\\img");
@@ -41,8 +42,12 @@ public class ApplicationTests {
             for (String temp : fileNames) {
                 System.out.println("src/img/" + temp);
                 s="src/img/" + temp;
-                knowledgePictureDO.setPicture(s);
-                pictureKnowledgeDAO.insertbypicture(knowledgePictureDO);
+                String ocrRecognise = OcrContorl.ocrRecognise(s);
+                Boolean aBoolean = knowledgeService.checkKnowledge(knowledge, ocrRecognise).getModule();
+                if (aBoolean) {
+                    knowledgePictureDO.setPicture(s);
+                    pictureKnowledgeDAO.insertbypicture(knowledgePictureDO);
+                }
             }
 
         } catch (Exception e) {
@@ -53,6 +58,5 @@ public class ApplicationTests {
 
 
     }
-
 
 }

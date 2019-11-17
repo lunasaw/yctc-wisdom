@@ -80,4 +80,5 @@ public interface KnowledgeRestController {
      */
      public ResultDO<GetBooleanByPictureVO> GetPictureBooleanLastVO(long pictureId);
 //    public ResultDO<GetBooleanByPictureVO> GetPictureBooleanLastVO();
+
 }

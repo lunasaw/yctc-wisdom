@@ -10,6 +10,10 @@ import javax.annotation.Resource;
 
 import edu.yctc.genesis.dao.*;
 import edu.yctc.genesis.entity.*;
+import edu.yctc.genesis.face.function.FaceFunction;
+import edu.yctc.genesis.face.function.impl.FaceFunctionImpl;
+import edu.yctc.genesis.face.util.GetFoldFileNames;
+import edu.yctc.genesis.face.util.OcrContorl;
 import edu.yctc.genesis.vo.*;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -267,7 +271,11 @@ public class KnowledgeServiceImpl implements KnowledgeIService {
         KnowledgePictureDO knowledgePictureDO =new KnowledgePictureDO();
         knowledgePictureDO.setKnowledgeid(knowledgeId);
         knowledgePictureDO.setPicture(picture);
+        FaceFunction faceFunction=new FaceFunctionImpl();
         try {
+
+//            faceFunction.checkKnowledge()
+
             pictureKnowledgeDAO.insertbypicture(knowledgePictureDO);
             LOG.info("insert knowledge success, knowledgePictureDO={}", knowledgePictureDO);
             return new ResultDO<>(true, ResultCode.SUCCESS, ResultCode.MSG_SUCCESS);
@@ -429,6 +437,30 @@ public class KnowledgeServiceImpl implements KnowledgeIService {
         }
         return new ResultDO<GetBooleanByPictureVO>(true, ResultCode.PARAMETER_INVALID,
                 ResultCode.MSG_PARAMETER_INVALID, getBooleanByPictureVO);
+    }
+
+    public List<String> checkPicture (String knowledge){
+        if (knowledge!=null) {
+            try {
+                List<String> fileNames = new ArrayList<>();
+                List<String> list = new ArrayList<>();
+                GetFoldFileNames.getFileName(fileNames, "src\\img");
+                String s = "";
+                for (String temp : fileNames) {
+                    System.out.println("src/img/" + temp);
+                    s = "src/img/" + temp;
+                    String ocrRecognise = OcrContorl.ocrRecognise(s);
+                    list.add(ocrRecognise);
+                }
+                return list;
+            } catch (Exception e) {
+//            LOG.error("img is not exist!, exception={}", e.toString());
+                e.printStackTrace();
+            }
+        }else {
+            return null;
+        }
+        return null;
     }
 
 }

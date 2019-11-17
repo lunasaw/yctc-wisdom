@@ -111,4 +111,9 @@ public interface KnowledgeIService {
      */
     public ResultDO<GetBooleanByPictureVO> GetBooleanByPictureid(long pictureId);
 
+    /*
+    检测图片
+     */
+    public List<String> checkPicture (String knowledge);
+
 }

@@ -14,10 +14,51 @@
     <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
 
+        .inner{
+            height: 20px;
+            width: 0;
+            background: #e4a348;
+            position: relative;
+            /*top: 2px;*/
+            /*left: 5px;*/
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        /*img{*/
+            /*position: absolute;*/
+            /*top: 103px;*/
+            /*left: 395px;*/
+        /*}*/
+        .data{
+            height: 24px;
+            width:43px;
+            border: 1px solid;
+            position: absolute;
+            /*left: 396px;*/
+            /*top: 65px;*/
+            text-align: center;
+        }
+        #myProgress {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        #myBar {
+            width: 10%;
+            height: 30px;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+    </style>
 </head>
 
-<body onload="getKnowledgepictures();fillHref()">
+<body onload="move();getKnowledgepictures();fillHref();">
+
 <header th:replace="component/header :: header"></header>
 
 <!-- Begin page content -->
@@ -27,14 +68,27 @@
 
         <div th:replace="component/sidebar"></div>
 
-        <div class="col-md-9">
-            <div th:replace="component/page-title::pageTitle('知识点检测中')"></div>
 
-            <div><img id="image" src="/genesis/img/avatar-0.jpg" width="550" height="410"/>
-                <br>
+
+        <div class="col-md-9">
+            <!--进度条 -->
+
+            <div th:replace="component/page-title::pageTitle('知识点检测中...')">
+
             </div>
-            <input class="btn btn-primary" width="500" type="text" id="button" value="">
-            <a onclick="fillHref()" class="btn btn-primary" role="button" id="lesson-knowledge-point-list">返回</a>
+
+            <div id="myProgress">
+                <div id="myBar" style="color:blue;background: lightgreen;border:2px solid wheat;width: 690px; ">10%</div>
+            </div>
+
+
+            <div><img id="image" src="/genesis/img/IMG_1010.jpg" width="825" height="410"/>
+
+                <input class="col-md-6" width="500" type="text" id="button" value="">
+                <a onclick="fillHref()" class="btn btn-primary" role="button" id="lesson-knowledge-point-list">返回</a>
+            </div>
+
+
         </div>
 
     </div>
@@ -43,6 +97,21 @@
 <footer th:replace="component/footer :: footer"></footer>
 
 <script>
+    function move() {
+        var elem = document.getElementById("myBar");
+        var width = 10;
+        var id = setInterval(frame,70);
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+            } else {
+                width++;
+                elem.style.width = width + '%';
+                elem.innerHTML = width * 1  + '%';
+            }
+        }
+    }
+
     function getUrl() {
         var url = location.search; //获取url中"?"符后的字串
         var theRequest = new Object();
@@ -91,39 +160,44 @@
                         arrknowledge[i]=voList[i].knowledge
                     }
                     length = arr.length;
+
                     var i=0;
                     var ima= document.getElementById("image");
                     var imax= document.getElementById("button");
+                    if (ima=="/genesis/img/IMG_1010.jpg"){
+                        alert("对不起,您未在课程中接入设备,请联系管理员")
+                    }
+                    for (i;i<length;i++) {
+                        (function (i) {
+                            setTimeout(function () {
+                                ima.src = arr[i];
+                                console.log(i);
+                                imax.value = arrknowledge[i];
+                            }, (i + 1) * 3500);
+                        })(i);
+                        // (function (i) {
+                        //     setTimeout(function () {
+                        //
+                        //         console.log(i);
+                        //     }, (i + 1) * 3000);
+                        // })(i);
+                    }
 
-                    // for (i;i<length;i++) {
-                    //     (function(i) {
-                    //         setTimeout(function() {
-                    //             ima.src = arr[i];
-                    //             console.log(i);
-                    //         },(i+1)* 5000);
-                    //     })(i);
-                    //     (function(i) {
-                    //         setTimeout(function() {
-                    //             imax.value=arrknowledge[i];
-                    //             console.log(i);
-                    //         },(i+1)* 3000);
-                    //     })(i);
-
-                    (function (i) {
-                        setTimeout(function() {
-                            for (i; i < length; i++) {
-                                        ima.src = arr[i];
-                                        console.log(i);
-                                (function (i) {
-                                    setTimeout(function () {
-                                        imax.value = arrknowledge[i];
-                                        console.log(i);
-                                    }, (i + 1) * 1000);
-                                })(i);
-                            }
-                        },(i + 1) * 3000);
-
-                    })(i);
+                    // (function (i) {
+                    //     setTimeout(function() {
+                    //         for (i; i < length; i++) {
+                    //                     ima.src = arr[i];
+                    //                     console.log(i);
+                    //             (function (i) {
+                    //                 setTimeout(function () {
+                    //                     imax.value = arrknowledge[i];
+                    //                     console.log(i);
+                    //                 }, (i + 1) * 1000);
+                    //             })(i);
+                    //         }
+                    //     },(i + 1) * 3000);
+                    //
+                    // })(i);
 
                 }
             }
@@ -183,6 +257,7 @@
                     }
                 } else {
                     var voList = result.module;
+
                     for (var i = 0; i < voList.length; i++) {
                         (function (i) {
                             setTimeout(function () {
@@ -193,19 +268,21 @@
                                 // checkpicture(pictureId);
 
                                 console.log(i);
-                            }, (i + 1) * 5000);
+                            }, (i + 1) * 2000);
                         })(i);
+
                     }
-
-
-
-
+                    var img= document.getElementById("image");
+                    if (img=="/genesis/img/IMG_1010.jpg"){
+                        alert("对不起,您未在课程中接入设备,请联系管理员")
+                    }
                 }
             },
             error: function (e) {
                 alert("getKnowledgeDetails异常");
             }
         });
+
     }
 
     function fillHref() {

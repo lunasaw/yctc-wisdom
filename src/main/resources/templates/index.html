@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" /> -->
 </head>
-<body>
+<body onload="getCookie();">
 <!-- Hero section -->
-<section id="infinite" class="text-white tm-font-big tm-parallax">
+<section id="infinite" class="text-white tm-font-big tm-parallax" >
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
         <div class="container">
@@ -34,16 +34,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link tm-nav-link" href="index.html">首页</a>
+                        <a class="nav-link tm-nav-link" href="#infinite">首页</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link tm-nav-link" href="#whatwedo">概述</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link tm-nav-link" href="#testimonials">作者信息</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/genesis/user/sign-in" class="nav-link tm-nav-link">登陆</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link tm-nav-link" href="#contact">联系我们</a>
@@ -53,7 +51,7 @@
         </div>
     </nav>
 
-    <div class="text-center tm-hero-text-container">
+    <div class="text-center tm-hero-text-container" style="position: static">
         <div class="tm-hero-text-container-inner">
             <h2 class="tm-hero-title">智慧教室</h2>
             <p class="tm-hero-subtitle">
@@ -70,10 +68,9 @@
     </div>
 </section>
 
+
 <section id="whatwedo" class="tm-section-pad-top">
-
     <div class="container">
-
         <div class="row tm-content-box"><!-- first row -->
             <div class="col-lg-12 col-xl-12">
                 <div class="tm-intro-text-container">
@@ -121,7 +118,7 @@
                         老师根据 <strong>报告和数据图</strong>查看学生知识点,了解<strong>学生</strong>对于指定知识点的掌握情况 </p>
 
                     <div class="tm-continue">
-                        <a href="/genesis/user/sign-in" class="tm-intro-text tm-btn-primary">Learn More</a>
+                        <a  href="/genesis/user/sign-in" class="tm-intro-text tm-btn-primary">登陆</a>
                     </div>
                 </div>
             </div>

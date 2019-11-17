@@ -24,10 +24,16 @@ public class StatisticalRestControlImpl implements StatisticalRestControl {
     @Autowired
     private StatisticalIService statisticalService;
 
+
+
+
     @Override
     @PostMapping("get-classroom-using-state")
     public Map<String, Integer> getClassroomUsingState() {
         return statisticalService.getClassroomUsingState();
     }
+
+
+
 
 }
