@@ -2,10 +2,7 @@ package edu.yctc.genesis.face.function.impl;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -52,6 +49,7 @@ import edu.yctc.genesis.service.impl.LessonServiceImpl;
 import edu.yctc.genesis.service.impl.MessageServiceImpl;
 import edu.yctc.genesis.service.impl.StudentStateServiceImpl;
 import edu.yctc.genesis.service.impl.UserServiceImpl;
+import org.springframework.core.io.ClassPathResource;
 
 /**
  * 人脸识别相关功能
@@ -180,6 +178,9 @@ public class FaceFunctionImpl implements FaceFunction {
          * dealMedia("C:\\src\\mp4\\1.mp4", "C:\\src\\mp4\\test.mp4", "00:00", "00:10", "10", "10", null);
          */
 
+
+
+//        InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("templates/1.jpg");
         for (int i = 1; i <= cycleIndex; ++i) {
             faces.clear();
             // TODO 图片改回来
@@ -528,7 +529,7 @@ public class FaceFunctionImpl implements FaceFunction {
     /**
      * 去除重复的StudentStateDO
      *
-     * @param studentStateDOs StudentStateDO列表
+//     * @param studentStateDOs StudentStateDO列表
      * @return 去重后的StudentStateDO列表
      */
     private List<KnowledgeStudentStateDO>
@@ -554,7 +555,7 @@ public class FaceFunctionImpl implements FaceFunction {
     /**
      * 去除图片中的背景 图片大小不变 返回的是png格式
      *
-     * @param inputPath 图片地址
+//     * @param inputPath 图片地址
      */
     private void removeTheBackground(String imgPath) {
         /** base64解码器 */

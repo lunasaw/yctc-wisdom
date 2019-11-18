@@ -8,6 +8,7 @@ import edu.yctc.genesis.vo.StudentsLessonStateVO;
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.yctc.genesis.entity.KnowledgeStudentStateDO;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface KnowledgeStudentStateDAO {
@@ -48,7 +49,7 @@ public interface KnowledgeStudentStateDAO {
      * @param lessonId
      * @return
      */
-    public List<KnowledgeStudentStateDO> getKnowledgeStudentStateDOsByUserIdAndLessonId(long userId, long lessonId);
+    public List<KnowledgeStudentStateDO> getKnowledgeStudentStateDOsByUserIdAndLessonId(@Param("userId") long userId, @Param("lessonId")long lessonId);
 
     /**
      * 更新扫描结束时间
@@ -63,7 +64,7 @@ public interface KnowledgeStudentStateDAO {
      * @param lessonId
      * @return
      */
-    public Integer getSumByLessonId(long lessonId, long knowledgeId);
+    public Integer getSumByLessonId(@Param("lessonId") long lessonId,@Param("knowledgeId")  long knowledgeId);
 
     /**
      * 通过lessonId获取认真听课人数
@@ -71,7 +72,7 @@ public interface KnowledgeStudentStateDAO {
      * @param lessonId
      * @return
      */
-    public Integer getSumOfCarefulByLessonId(long lessonId, long knowledgeId);
+    public Integer getSumOfCarefulByLessonId(@Param("lessonId") long lessonId,@Param("knowledgeId")  long knowledgeId);
 
     /**
      * 通过knowledgeId获取知识点开始讲授时间
@@ -103,10 +104,10 @@ public interface KnowledgeStudentStateDAO {
      * @param lessonId
      * @param knowledgeId
      */
-    public void updateScanEndTimeByLessonIdAndKnowledgeId(long lessonId, long knowledgeId);
+    public void updateScanEndTimeByLessonIdAndKnowledgeId(@Param("lessonId") long lessonId,@Param("knowledgeId") long knowledgeId);
 
     /*
     通过lessonid获得该堂课的所有知识点的学生状态人数
      */
-    public List<StateLessonDO> getKnowledgeStudentStateLessonStateVO(long lessonId, long knowledgeId);
+    public List<StateLessonDO> getKnowledgeStudentStateLessonStateVO(@Param("lessonId")long lessonId,@Param("knowledgeId")  long knowledgeId);
 }

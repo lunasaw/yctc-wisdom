@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.yctc.genesis.entity.AttendanceDO;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface AttendanceDAO {
@@ -52,7 +53,7 @@ public interface AttendanceDAO {
      * @param lessonId
      * @param userId
      */
-    public Integer getAttendStateByLessonIdAndUserId(long lessonId, long userId);
+    public Integer getAttendStateByLessonIdAndUserId(@Param("lessonId") long lessonId,@Param("userId") long userId);
 
     /**
      * 通过lessonId获得所有attendState集
@@ -68,7 +69,7 @@ public interface AttendanceDAO {
      * @param userId
      * @param attendState
      */
-    public int getSumByLessonIdAndUserIdAndAttendState(long lessonId, long userId, int attendState);
+    public int getSumByLessonIdAndUserIdAndAttendState(@Param("lessonId") long lessonId,@Param("userId") long userId,@Param("attendState") int attendState);
 
     /**
      * 通过lessonId和userId获得满足传入参数条件的记录总数量

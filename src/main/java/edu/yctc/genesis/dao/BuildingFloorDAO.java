@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.yctc.genesis.entity.BuildingFloorDO;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface BuildingFloorDAO {
@@ -45,7 +46,7 @@ public interface BuildingFloorDAO {
      * @param floor
      * @return
      */
-    public BuildingFloorDO getBuildingFloorDOByBuildingAndFloor(String building, String floor);
+    public BuildingFloorDO getBuildingFloorDOByBuildingAndFloor(@Param("building") String building,@Param("floor") String floor);
 
     /**
      * 返回库中楼号集

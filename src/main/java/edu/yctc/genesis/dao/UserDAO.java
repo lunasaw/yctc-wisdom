@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.yctc.genesis.entity.UserDO;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface UserDAO {
@@ -31,7 +32,7 @@ public interface UserDAO {
      * @param password
      * @return
      */
-    public UserDO getUserDOByNumberAndPassword(String number, String password);
+    public UserDO getUserDOByNumberAndPassword(@Param("number") String number,@Param("password") String password);
 
     /**
      * 更新用户信息
@@ -109,7 +110,7 @@ public interface UserDAO {
      * @param classId
      * @return
      */
-    public List<UserDO> getStudentDOByAcademyIdAndClassId(long academyId, long classId);
+    public List<UserDO> getStudentDOByAcademyIdAndClassId(@Param("academyId") long academyId,@Param("classId") long classId);
 
     /**
      * 返回库中班级id集

@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.yctc.genesis.entity.StudentStateDO;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface StudentStateDAO {
@@ -52,7 +53,7 @@ public interface StudentStateDAO {
      * @param lessonId
      * @return
      */
-    public List<StudentStateDO> getStudentStateDOByUserIdAndLessonId(long userId, long lessonId);
+    public List<StudentStateDO> getStudentStateDOByUserIdAndLessonId(@Param("userId") long userId,@Param("lessonId") long lessonId);
 
     /**
      * 获取被检测的学生的userId

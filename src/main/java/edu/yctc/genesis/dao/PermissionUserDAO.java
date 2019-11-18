@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.yctc.genesis.entity.PermissionUserDO;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface PermissionUserDAO {
@@ -53,6 +54,6 @@ public interface PermissionUserDAO {
      * @param permissionId
      * @return
      */
-    public PermissionUserDO getPermissionUserDOIdByBothId(long userId, long permissionId);
+    public PermissionUserDO getPermissionUserDOIdByBothId(@Param("userId") long userId,@Param("permissionId") long permissionId);
 
 }

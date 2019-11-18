@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.yctc.genesis.entity.KnowledgeLessonDO;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface KnowledgeLessonDAO {
@@ -60,6 +61,6 @@ public interface KnowledgeLessonDAO {
      * @param knowledge
      * @return
      */
-    public KnowledgeLessonDO getKnowledgeLessonDOByLessonIdAndKnowledge(long lessonId, String knowledge);
+    public KnowledgeLessonDO getKnowledgeLessonDOByLessonIdAndKnowledge(@Param("lessonId") long lessonId,@Param("knowledge") String knowledge);
 
 }

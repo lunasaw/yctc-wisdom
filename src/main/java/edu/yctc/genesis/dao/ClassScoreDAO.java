@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.yctc.genesis.entity.ClassScoreDO;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface ClassScoreDAO {
@@ -44,14 +45,14 @@ public interface ClassScoreDAO {
      * @param lessonId
      * @param userId
      */
-    public Double getScoreByLessonIdAndUserId(long lessonId, long userId);
+    public Double getScoreByLessonIdAndUserId(@Param("lessonId") long lessonId, @Param("userId")long userId);
 
     /**
      * 通过lessonId和获得score集
      * 
      * @param lessonId
      */
-    public List<Double> getScoresByLessonId(long lessonId);
+    public List<Double> getScoresByLessonId(@Param("lessonId")long lessonId);
 
     /**
      * 验证是否存在学生id
@@ -68,6 +69,6 @@ public interface ClassScoreDAO {
      * @param lessonId
      * @return
      */
-    public ClassScoreDO getClassScoreDOByUserIdAndLessonId(long userId, long lessonId);
+    public ClassScoreDO getClassScoreDOByUserIdAndLessonId(@Param("userId") long userId,@Param("lessonId") long lessonId);
 
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.yctc.genesis.entity.ClassDO;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface ClassDAO {
@@ -53,7 +54,7 @@ public interface ClassDAO {
      * @param number
      * @return
      */
-    public ClassDO getClassDOByAcademyIdAndNumber(long academyId, String number);
+    public ClassDO getClassDOByAcademyIdAndNumber(@Param("academyId") long academyId,@Param("number") String number);
 
     /**
      * 通过number返回classDO

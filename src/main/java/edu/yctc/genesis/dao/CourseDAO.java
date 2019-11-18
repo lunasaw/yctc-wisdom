@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import edu.yctc.genesis.entity.CourseDO;
+import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface CourseDAO {
@@ -52,7 +53,7 @@ public interface CourseDAO {
      * @param term
      * @return
      */
-    public List<CourseDO> getCourseDOByYearAndTerm(String year, int term);
+    public List<CourseDO> getCourseDOByYearAndTerm(@Param("year")String year,@Param("term") int term);
 
     /**
      * 通过id和学年和学期查询课程
@@ -60,7 +61,7 @@ public interface CourseDAO {
      * @param id
      * @return
      */
-    public CourseDO getCourseDOByIdAndYearAndTerm(long id, String year, int term);
+    public CourseDO getCourseDOByIdAndYearAndTerm(@Param("id") long id, @Param("year")String year, @Param("term")int term);
 
     /**
      * 通过学年返回学期集
@@ -77,7 +78,7 @@ public interface CourseDAO {
      * @param term
      * @return
      */
-    public List<String> getCourseByYearAndTerm(String year, int term);
+    public List<String> getCourseByYearAndTerm(@Param("year") String year,@Param("term") int term);
 
     /**
      * 通过学年、学期和课程名返回课程集
@@ -87,7 +88,7 @@ public interface CourseDAO {
      * @param courseName
      * @return
      */
-    public CourseDO getCourseDOByYearAndTermAndCourse(String year, int term, String courseName);
+    public CourseDO getCourseDOByYearAndTermAndCourse(@Param("year") String year,@Param("term") int term,@Param("courseName") String courseName);
 
     /**
      * 通过课程名查询课程Id
