@@ -59,7 +59,7 @@
     <resource url="http://mybatis.org/dtd/mybatis-3-config.dtd" location="D:/JAVA/mybits/dtd/mybatis-3-config.dtd" />
     <resource url="http://mybatis.org/dtd/mybatis-3-mapper.dtd" location="D:/JAVA/mybits/dtd/mybatis-3-mapper.dtd" />
     <resource url="http://www.springframework.org/schema/aop/spring-aop-4.3.xsd" location="D:/JAVA/jdk-11.0.2!/java.xml.crypto/com/sun/org/apache/xml/internal/security/resource/config.dtd" />
-    <resource url="http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd" location="$PROJECT_DIR$/logback.dtd" />
+    <resource url="http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd" location="$PROJECT_DIR$/src/main/logback.dtd" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="jdk11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

@@ -38,7 +38,7 @@
 			<charset>UTF-8</charset>
 		</encoder>
 	</appender>
-	
+	<property name="log.path" value="/logs" />
 
 	<!-- 开发阶段日志全部输出到控制台方便观察 -->
 	<!-- service层日志 <logger name="serviceLogger" additivity="false"> <level value="INFO" /> <appender-ref ref="serviceLog" /> </logger> -->
