@@ -183,7 +183,7 @@ public class FaceFunctionImpl implements FaceFunction {
         for (int i = 1; i <= cycleIndex; ++i) {
             faces.clear();
             // TODO 图片改回来
-            MyFaceApi.myDetect("D:\\ffmpeg\\img\\1.jpg", null, faces);
+            MyFaceApi.myDetect("src/main/1.jpg", null, faces);
 
             /** 等待人脸检测完成 */
             WaitForDate.waitForDate(faces);
