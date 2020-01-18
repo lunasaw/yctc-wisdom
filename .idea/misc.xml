@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -14,37 +17,10 @@
         <expanded-state>
           <State />
           <State>
-            <id>Android</id>
-          </State>
-          <State>
-            <id>Annotations verifyingGroovy</id>
-          </State>
-          <State>
-            <id>Class structureJava</id>
-          </State>
-          <State>
-            <id>Groovy</id>
-          </State>
-          <State>
-            <id>Guice</id>
-          </State>
-          <State>
-            <id>JSP</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>LintAndroid</id>
-          </State>
-          <State>
-            <id>Potentially confusing code constructsGroovy</id>
+            <id>Google Web Toolkit</id>
           </State>
           <State>
             <id>UI Form</id>
-          </State>
-          <State>
-            <id>UsabilityLintAndroid</id>
           </State>
         </expanded-state>
         <selected-state>
@@ -58,10 +34,8 @@
   <component name="ProjectResources">
     <resource url="http://mybatis.org/dtd/mybatis-3-config.dtd" location="D:/JAVA/mybits/dtd/mybatis-3-config.dtd" />
     <resource url="http://mybatis.org/dtd/mybatis-3-mapper.dtd" location="D:/JAVA/mybits/dtd/mybatis-3-mapper.dtd" />
-    <resource url="http://www.springframework.org/schema/aop/spring-aop-4.3.xsd" location="D:/JAVA/jdk-11.0.2!/java.xml.crypto/com/sun/org/apache/xml/internal/security/resource/config.dtd" />
-    <resource url="http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd" location="$PROJECT_DIR$/src/main/logback.dtd" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="jdk11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
