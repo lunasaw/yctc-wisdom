@@ -20,7 +20,7 @@ yctc-genesis
     <img src="https://i.loli.net/2020/07/28/5MzIVArBZyp8NgX.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">"完美的"开发工具</h3>
+  <h3 align="center">智慧教学系统</h3>
   <p align="center">
     市场上许多界面和工具的集合,例如ftp,httpd等文件与工具操作，包括但不限于图像处理、人脸识别等的api。让你免去寻找工具的烦恼
     <br />
