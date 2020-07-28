@@ -22,7 +22,7 @@ yctc-genesis
 
   <h3 align="center">智慧教学系统</h3>
   <p align="center">
-    市场上许多界面和工具的集合,例如ftp,httpd等文件与工具操作，包括但不限于图像处理、人脸识别等的api。让你免去寻找工具的烦恼
+  一个基于机器识别学习分析的智能学情知识点分析系统
     <br />
     <a href="https://github.com/czy1024/yctc-genesis"><strong>探索本项目的文档 »</strong></a>
     <br />
