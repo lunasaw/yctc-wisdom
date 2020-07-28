@@ -1,454 +1,322 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>智助教学</title>
-    <link rel="stylesheet" th:href="@{/fontawesome-5.5/css/all.min.css}" />
-    <link rel="stylesheet" th:href="@{/slick/slick.css}">
-    <link rel="stylesheet" th:href="@{/slick/slick-theme.css}">
-    <link rel="stylesheet" th:href="@{/magnific-popup/magnific-popup.css}">
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
-    <link rel="stylesheet" th:href="@{/css/tooplate-infinite-loop.css}" />
-    <!-- <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
-    <link rel="stylesheet" href="slick/slick.css">
-    <link rel="stylesheet" href="slick/slick-theme.css">
-    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" /> -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="renderer" content="webkit">
+	<title>智慧教学辅助系统</title>
+	<!-- 避免IE使用兼容模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link th:href="@{favicon.ico}" rel="stylesheet"/>
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+	<link th:href="@{/css/jquery.contextMenu.min.css}" rel="stylesheet"/>
+	<link th:href="@{/css/font-awesome.min.css}" rel="stylesheet"/>
+	<link th:href="@{/css/animate.css}" rel="stylesheet"/>
+	<link th:href="@{/css/style.css}" rel="stylesheet"/>
+	<link th:href="@{/css/skins.css}" rel="stylesheet"/>
+	<link th:href="@{/yctc/css/yctc.css?v=4.2.0}" rel="stylesheet"/>
 </head>
-<body onload="getCookie();">
-<!-- Hero section -->
-<section id="infinite" class="text-white tm-font-big tm-parallax" >
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
-        <div class="container">
-            <div class="tm-next">
-                <a href="#infinite" class="navbar-brand">智●助教学</a>
-            </div>
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow: hidden">
+<div id="wrapper">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars navbar-toggler-icon"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link tm-nav-link" href="#infinite">首页</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link tm-nav-link" href="#whatwedo">概述</a>
-                    </li>
+	<!--左侧导航开始-->
+	<nav class="navbar-default navbar-static-side" role="navigation">
+		<div class="nav-close">
+			<i class="fa fa-times-circle"></i>
+		</div>
+		<a th:href="@{/index}">
+			<li class="logo hidden-xs">
+				<span class="logo-lg">智慧教学辅助系统</span>
+			</li>
+		</a>
+		<div class="sidebar-collapse">
+			<ul class="nav" id="side-menu">
+				<li>
+					<div class="user-panel">
+						<a class="menuItem" title="个人中心" th:href="@{/system/user/profile}">
+							<div class="hide" th:text="个人中心"></div>
+							<div class="pull-left image">
+								<img th:src="(${user.avatar} == '') ? @{/img/profile.jpg} : @{${user.avatar}}"
+								     class="img-circle" alt="User Image">
+							</div>
+						</a>
+						<div class="pull-left info">
+							<p>[[${user.loginName}]]</p>
+							<a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+							<a th:href="@{logout}" style="padding-left:5px;"><i class="fa fa-sign-out text-danger"></i>
+								注销</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a th:href="@{/demo}" target="_blank"><i class="fa fa-home"></i> <span class="nav-label">主页</span>
+						<span class="fa arrow"></span></a>
+				</li>
+				<li th:each="menu : ${menus}">
+					<a th:class="@{${menu.url != '' && menu.url != '#'} ? ${menu.target}}"
+					   th:href="@{${menu.url == ''} ? |#| : ${menu.url}}">
+						<i class="fa fa-bar-chart-o" th:class="${menu.icon}"></i>
+						<span class="nav-label" th:text="${menu.menuName}">一级菜单</span>
+						<span th:class="${menu.url == '' || menu.url == '#'} ? |fa arrow|"></span>
+					</a>
+					<ul class="nav nav-second-level collapse">
+						<li th:each="cmenu : ${menu.children}">
+							<a th:if="${#lists.isEmpty(cmenu.children)}"
+							   th:class="${cmenu.target == ''} ? |menuItem| : ${cmenu.target}"
+							   th:utext="${cmenu.menuName}" th:href="@{${cmenu.url}}">二级菜单</a>
+							<a th:if="${not #lists.isEmpty(cmenu.children)}" href="#">[[${cmenu.menuName}]]<span
+									class="fa arrow"></span></a>
+							<ul th:if="${not #lists.isEmpty(cmenu.children)}" class="nav nav-third-level">
+								<li th:each="emenu : ${cmenu.children}">
+									<a th:if="${#lists.isEmpty(emenu.children)}"
+									   th:class="${emenu.target == ''} ? |menuItem| : ${emenu.target}"
+									   th:text="${emenu.menuName}" th:href="@{${emenu.url}}">三级菜单</a>
+									<a th:if="${not #lists.isEmpty(emenu.children)}" href="#">[[${emenu.menuName}]]<span
+											class="fa arrow"></span></a>
+									<ul th:if="${not #lists.isEmpty(emenu.children)}" class="nav nav-four-level">
+										<li th:each="fmenu : ${emenu.children}"><a
+												th:if="${#lists.isEmpty(fmenu.children)}"
+												th:class="${fmenu.target == ''} ? |menuItem| : ${fmenu.target}"
+												th:text="${fmenu.menuName}" th:href="@{${fmenu.url}}">四级菜单</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li th:if="${demoEnabled}">
+					<a href="#"><i class="fa fa-desktop"></i><span class="nav-label">实例演示</span><span
+							class="fa arrow"></span></a>
+					<ul class="nav nav-second-level collapse">
+						<li><a>表单<span class="fa arrow"></span></a>
+							<ul class="nav nav-third-level">
+								<li><a class="menuItem" th:href="@{/demo/form/button}">按钮</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/grid}">栅格</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/select}">下拉框</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/timeline}">时间轴</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/basic}">基本表单</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/cards}">卡片列表</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/jasny}">功能扩展</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/sortable}">拖动排序</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/tabs_panels}">选项卡 & 面板</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/validate}">表单校验</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/wizard}">表单向导</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/upload}">文件上传</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/datetime}">日期和时间</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/summernote}">富文本编辑器</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/duallistbox}">左右互选组件</a></li>
+								<li><a class="menuItem" th:href="@{/demo/form/autocomplete}">搜索自动补全</a></li>
+							</ul>
+						</li>
+						<li><a>表格<span class="fa arrow"></span></a>
+							<ul class="nav nav-third-level">
+								<li><a class="menuItem" th:href="@{/demo/table/search}">查询条件</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/footer}">数据汇总</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/groupHeader}">组合表头</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/export}">表格导出</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/remember}">翻页记住选择</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/pageGo}">跳转至指定页</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/params}">自定义查询参数</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/multi}">初始多表格</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/button}">点击按钮加载表格</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/fixedColumns}">表格冻结列</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/event}">自定义触发事件</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/detail}">表格细节视图</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/child}">表格父子视图</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/image}">表格图片预览</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/curd}">动态增删改查</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/reorder}">表格拖拽操作</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/editable}">表格行内编辑</a></li>
+								<li><a class="menuItem" th:href="@{/demo/table/other}">表格其他操作</a></li>
+							</ul>
+						</li>
+						<li><a>弹框<span class="fa arrow"></span></a>
+							<ul class="nav nav-third-level">
+								<li><a class="menuItem" th:href="@{/demo/modal/dialog}">模态窗口</a></li>
+								<li><a class="menuItem" th:href="@{/demo/modal/layer}">弹层组件</a></li>
+								<li><a class="menuItem" th:href="@{/demo/modal/table}">弹层表格</a></li>
+							</ul>
+						</li>
+						<li><a>操作<span class="fa arrow"></span></a>
+							<ul class="nav nav-third-level">
+								<li><a class="menuItem" th:href="@{/demo/operate/table}">表格</a></li>
+								<li><a class="menuItem" th:href="@{/demo/operate/other}">其他</a></li>
+							</ul>
+						</li>
+						<li><a>报表<span class="fa arrow"></span></a>
+							<ul class="nav nav-third-level">
+								<li><a class="menuItem" th:href="@{/demo/report/echarts}">百度ECharts</a></li>
+								<li><a class="menuItem" th:href="@{/demo/report/peity}">peity</a></li>
+								<li><a class="menuItem" th:href="@{/demo/report/sparkline}">sparkline</a></li>
+								<li><a class="menuItem" th:href="@{/demo/report/metrics}">图表组合</a></li>
+							</ul>
+						</li>
+						<li><a>图标<span class="fa arrow"></span></a>
+							<ul class="nav nav-third-level">
+								<li><a class="menuItem" th:href="@{/demo/icon/fontawesome}">Font Awesome</a></li>
+								<li><a class="menuItem" th:href="@{/demo/icon/glyphicons}">Glyphicons</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">四层菜单 </span><span
+									class="fa arrow"></span></a>
+							<ul class="nav nav-second-level collapse">
+								<li>
+									<a href="#" id="damian">三级菜单1<span class="fa arrow"></span></a>
+									<ul class="nav nav-third-level">
+										<li>
+											<a href="#">四级菜单1</a>
+										</li>
+										<li>
+											<a href="#">四级菜单2</a>
+										</li>
+									</ul>
+								</li>
+								<li><a href="#">三级菜单2</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!--左侧导航结束-->
 
-<!--                    <li class="nav-item">-->
-<!--                        <a class="nav-link tm-nav-link" href="#testimonials">作者信息</a>-->
-<!--                    </li>-->
-                    <li class="nav-item">
-                        <a class="nav-link tm-nav-link" href="#contact">联系我们</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+	<!--右侧部分开始-->
+	<div id="page-wrapper" class="gray-bg dashbard-1">
+		<div class="row border-bottom">
+			<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+				<div class="navbar-header">
+					<a class="navbar-minimalize minimalize-styl-2" style="color:#FFF;" href="#" title="收起菜单">
+						<i class="fa fa-bars"></i>
+					</a>
+				</div>
+				<ul class="nav navbar-top-links navbar-right welcome-message">
+					<li class="dropdown user-menu">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-hover="dropdown">
+							<img th:src="(${user.avatar} == '') ? @{/img/profile.jpg} : @{${user.avatar}}"
+							     class="user-image">
+							<span class="hidden-xs">[[${#strings.defaultString(user.userName, '-')}]]</span>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="mt5">
+								<a th:href="@{/system/user/profile}" class="menuItem">
+									<i class="fa fa-user"></i> 个人中心</a>
+							</li>
+							<li>
+								<a onclick="resetPwd()">
+									<i class="fa fa-key"></i> 修改密码</a>
+							</li>
+							<li>
+								<a onclick="switchSkin()">
+									<i class="fa fa-dashboard"></i> 切换主题</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a th:href="@{logout}">
+									<i class="fa fa-sign-out"></i> 退出登录</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="row content-tabs">
+			<button class="roll-nav roll-left tabLeft">
+				<i class="fa fa-backward"></i>
+			</button>
+			<nav class="page-tabs menuTabs">
+				<div class="page-tabs-content">
+					<a href="javascript:;" class="active menuTab" data-id="/system/main">首页</a>
+				</div>
+			</nav>
+			<button class="roll-nav roll-right tabRight">
+				<i class="fa fa-forward"></i>
+			</button>
+			<a href="javascript:void(0);" class="roll-nav roll-right tabReload"><i class="fa fa-refresh"></i> 刷新</a>
+		</div>
 
-    <div class="text-center tm-hero-text-container" style="position: static">
-        <div class="tm-hero-text-container-inner">
-            <h2 class="tm-hero-title">智●助教学</h2>
-            <p class="tm-hero-subtitle" style="font-size: 1.25em">
-                智能知识点分析系统
+		<a id="ax_close_max" class="ax_close_max" href="#" title="关闭全屏"> <i class="fa fa-times-circle-o"></i> </a>
 
-            </p>
-        </div>
-    </div>
+		<div class="row mainContent" id="content-main">
+			<iframe class="RuoYi_iframe" name="iframe0" width="100%" height="100%" data-id="/system/main"
+			        th:src="@{/demo}" frameborder="0" seamless></iframe>
+		</div>
+		<!--        <div class="footer">-->
+		<!--            <div class="pull-right">© [[${copyrightYear}]] yctc Copyright </div>-->
+		<!--        </div>-->
+		<div th:replace="include :: copy2020"/>
+	</div>
+</div>
+<!--右侧部分结束-->
 
-    <div class="tm-next tm-intro-next">
-        <a href="#whatwedo" class="text-center tm-down-arrow-link">
-            <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
-        </a>
-    </div>
-</section>
-
-
-<section id="whatwedo" class="tm-section-pad-top">
-    <div class="container">
-        <div class="row tm-content-box"><!-- first row -->
-            <div class="col-lg-12 col-xl-12">
-                <div class="tm-intro-text-container">
-                    <h2 class="tm-text-primary mb-4 tm-section-title">产品概述</h2>
-                    <p class="mb-4 tm-intro-text">
-                        教学教育的目的是以学生发展为本，以教师为主导，充分发挥学生的主动性，把促进学生成长成才作为学校一切工作的出发点和落脚点。对学校学生知识点学习状态分析是一切学校管理和教学实施的根本有利保障。</p>
-                </div>
-            </div>
-
-        </div><!-- first row -->
-
-        <div class="row tm-content-box"><!-- second row -->
-            <div class="col-lg-1">
-                <i class="far fa-3x fa-chart-bar text-center tm-icon"></i>
-            </div>
-            <div class="col-lg-5">
-                <div class="tm-intro-text-container">
-                    <h2 class="tm-text-primary mb-4">知识点识别</h2>
-                    <p class="mb-4 tm-intro-text">
-                        运用ocr文字识别技术.动态识别老师上课所讲知识点</p>
-                </div>
-            </div>
-
-            <div class="col-lg-1">
-                <i class="far fa-3x fa-comment-alt text-center tm-icon"></i>
-            </div>
-            <div class="col-lg-5">
-                <div class="tm-intro-text-container">
-                    <h2 class="tm-text-primary mb-4">知识点分析</h2>
-                    <p class="mb-4 tm-intro-text">
-                        根据识别到的知识点采用时长动态分析难易程度</p>
-                </div>
-            </div>
-
-        </div><!-- second row -->
-
-        <div class="row tm-content-box"><!-- third row -->
-            <div class="col-lg-1">
-                <i class="fas fa-3x fa-fingerprint text-center tm-icon"></i>
-            </div>
-            <div class="col-lg-5">
-                <div class="tm-intro-text-container">
-                    <h2 class="tm-text-primary mb-4">知识点学情反馈</h2>
-                    <p class="mb-4 tm-intro-text">
-                        老师根据 <strong>报告和数据图</strong>查看学生知识点,了解<strong>学生</strong>对于指定知识点的掌握情况 </p>
-
-                    <div class="tm-continue">
-                        <a  href="/genesis/user/sign-in" class="tm-intro-text tm-btn-primary">登陆</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-1">
-                <i class="fas fa-3x fa-users text-center tm-icon"></i>
-            </div>
-            <div class="col-lg-5">
-                <div class="tm-intro-text-container">
-                    <h2 class="tm-text-primary mb-4">一般教务</h2>
-                    <p class="mb-4 tm-intro-text">
-                        实现了<b><em>教室申请,历史学生数据报告,课表查询</em></b>等基本教务功能 <br>
-                    </p>
-
-                    <div class="tm-continue">
-                        <a href="#testimonials" class="tm-intro-text tm-btn-primary">Details</a>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- third row -->
-
-    </div>
-
-</section>
-
-<!--<section id="testimonials" class="tm-section-pad-top tm-parallax-2">-->
-<!--    <div class="container tm-testimonials-content">-->
-<!--        <div class="row">-->
-<!--            <div class="col-lg-12 tm-content-box">-->
-<!--                <h2 class="text-white text-center mb-4 tm-section-title">作者</h2>-->
-<!--                <p class="mx-auto tm-section-desc text-center">-->
-<!--                    本项目由众多作者共同完成,感谢他们的辛勤奉献.-->
-<!--                </p>-->
-<!--                <div class="mx-auto tm-gallery-container tm-gallery-container-2">-->
-<!--                    <div class="tm-testimonials-carousel">-->
-<!--                        <figure class="tm-testimonial-item">-->
-<!--                            <img th:src="@{/img/testimonial-img-01.jpg}" alt="Image" class="img-fluid mx-auto">-->
-<!--                            <blockquote>This background image includes a semi-transparent overlay layer. This section also has a parallax image effect.</blockquote>-->
-<!--                            <figcaption>陈小明(Designer)</figcaption>-->
-<!--                        </figure>-->
-
-<!--                        <figure class="tm-testimonial-item">-->
-<!--                            <img th:src="@{/img/testimonial-img-02.jpg}" alt="Image" class="img-fluid mx-auto">-->
-<!--                            <blockquote>Testimonial section comes with carousel items. You can use Infinite Loop HTML CSS template for your websites.</blockquote>-->
-<!--                            <figcaption>黄晓东 (CEO)</figcaption>-->
-<!--                        </figure>-->
-
-<!--                        <figure class="tm-testimonial-item">-->
-<!--                            <img th:src="@{/img/testimonial-img-03.jpg}" alt="Image" class="img-fluid mx-auto">-->
-<!--                            <blockquote>Nulla finibus ligula nec tortor convallis tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus.</blockquote>-->
-<!--                            <figcaption>乔明强 (Marketing)</figcaption>-->
-<!--                        </figure>-->
-
-<!--                        <figure class="tm-testimonial-item">-->
-<!--                            <img th:src="@{/img/testimonial-img-04.jpg}" alt="Image" class="img-fluid mx-auto">-->
-<!--                            <blockquote>Curabitur rutrum pharetra lobortis. Pellentesque vehicula, velit quis eleifend fermentum, erat arcu aliquet neque.</blockquote>-->
-<!--                            <figcaption>陈小红(Designer)</figcaption>-->
-<!--                        </figure>-->
-
-<!--                        <figure class="tm-testimonial-item">-->
-<!--                            <img th:src="@{/img/testimonial-img-02.jpg}" alt="Image" class="img-fluid mx-auto">-->
-<!--                            <blockquote>Integer sit amet risus et erat imperdiet finibus. Nam lacus nunc, vulputate id ex eget, euismod auctor augue.</blockquote>-->
-<!--                            <figcaption>Jacob Joker (CTO)</figcaption>-->
-<!--                        </figure>-->
-<!--                      -->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="tm-bg-overlay"></div>-->
-<!--</section>-->
-
-<!-- Contact -->
-<section id="contact" class="tm-section-pad-top tm-parallax-2">
-
-    <div class="container tm-container-contact">
-
-        <div class="row">
-
-            <div class="text-center col-12">
-                <h2 class="tm-section-title mb-4">联系我们</h2>
-                <p class="mb-5">
-                    欢迎咨询相关系统使用,及提供相应建议,本项目以在GitHub开源,欢迎使用
-                </p><br>
-            </div>
-
-            <div class="col-sm-12 col-md-6">
-                <form action="" method="get">
-                    <input id="name" name="name" type="text" placeholder="Iszychen" class="tm-input" required />
-                    <input id="email" name="email" type="email" placeholder="Iszychen@gmail.com" class="tm-input" required />
-                    <textarea id="message" name="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
-                    <button type="submit" class="btn tm-btn-submit">Submit</button>
-                </form>
-            </div>
-
-            <div class="col-sm-12 col-md-6">
-
-                <div class="contact-item">
-                    <a rel="nofollow" href="#" class="item-link">
-                        <i class="far fa-2x fa-comment mr-4"></i>
-                        <span class="mb-0">Chat Online</span>
-                    </a>
-                </div>
-
-                <div class="contact-item">
-                    <a rel="nofollow" href="mailto:mail@company.com" class="item-link">
-                        <i class="far fa-2x fa-envelope mr-4"></i>
-                        <span class="mb-0">mail@company.com</span>
-                    </a>
-                </div>
-
-                <div class="contact-item">
-                    <a rel="nofollow" href="#" class="item-link">
-                        <i class="fas fa-2x fa-map-marker-alt mr-4"></i>
-                        <span class="mb-0">Our Location</span>
-                    </a>
-                </div>
-
-                <div class="contact-item">
-                    <a rel="nofollow" href="tel:0100200340" class="item-link">
-                        <i class="fas fa-2x fa-phone-square mr-4"></i>
-                        <span class="mb-0">255-662-5566</span>
-                    </a>
-                </div>
-
-                <div class="contact-item">&nbsp;</div>
-
-            </div>
-
-
-        </div><!-- row ending -->
-
-    </div>
-
-    <footer class="text-center small tm-footer">
-        <p class="mb-0">Copyright &copy; 2019.Company 知识点智能识别系统.</a></p>
-    </footer>
-
-</section>
-
-<script th:src="@{/js/jquery-1.9.1.min.js}"></script>
-<script th:src="@{/slick/slick.min.js}"></script>
-<script th:src="@{/magnific-popup/jquery.magnific-popup.min.js}"></script>
-<script th:src="@{/js/easing.min.js}"></script>
-<script th:src="@{/js/jquery.singlePageNav.min.js}"></script>
+</div>
+<!-- 全局js -->
+<script th:src="@{/js/jquery.min.js}"></script>
 <script th:src="@{/js/bootstrap.min.js}"></script>
-<script>
+<script th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>
+<script th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
+<script th:src="@{/js/jquery.contextMenu.min.js}"></script>
+<script th:src="@{/ajax/libs/blockUI/jquery.blockUI.js}"></script>
+<script th:src="@{/ajax/libs/layer/layer.min.js}"></script>
+<script th:src="@{/yctc/js/yctc.js?v=4.2.0}"></script>
+<script th:src="@{/yctc/js/common.js?v=4.2.0}"></script>
+<script th:src="@{/yctc/index.js}"></script>
+<script th:src="@{/ajax/libs/fullscreen/jquery.fullscreen.js}"></script>
+<script th:inline="javascript">
+    var ctx = [[@{/}]];
+    // 皮肤缓存
+    var skin = storage.get("skin");
+    // history（表示去掉地址的#）否则地址以"#"形式展示
+    var mode = "history";
+    // 历史访问路径缓存
+    var historyPath = storage.get("historyPath");
 
-    function getOffSet(){
-        var _offset = 450;
-        var windowHeight = window.innerHeight;
-
-        if(windowHeight > 500) {
-            _offset = 400;
-        }
-        if(windowHeight > 680) {
-            _offset = 300
-        }
-        if(windowHeight > 830) {
-            _offset = 210;
-        }
-
-        return _offset;
+    // 本地主题优先，未设置取系统配置
+    if ($.common.isNotEmpty(skin)) {
+        $("body").addClass(skin.split('|')[0]);
+        $("body").addClass(skin.split('|')[1]);
+    } else {
+        $("body").addClass([[${sideTheme}]]);
+        $("body").addClass([[${skinName}]]);
     }
 
-    function setParallaxPosition($doc, multiplier, $object){
-        var offset = getOffSet();
-        var from_top = $doc.scrollTop(),
-            bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
-        $object.css({"background-position" : bg_css });
+    /* 用户管理-重置密码 */
+    function resetPwd() {
+        var url = ctx + 'system/user/profile/resetPwd';
+        $.modal.open("重置密码", url, '770', '380');
     }
 
-    // Parallax function
-    var background_image_parallax = function($object, multiplier, forceSet){
-        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
-        multiplier = 1 - multiplier;
-        var $doc = $(document);
-        // $object.css({"background-attatchment" : "fixed"});
-
-        if(forceSet) {
-            setParallaxPosition($doc, multiplier, $object);
-        } else {
-            $(window).scroll(function(){
-                setParallaxPosition($doc, multiplier, $object);
-            });
-        }
-    };
-
-    var background_image_parallax_2 = function($object, multiplier){
-        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
-        multiplier = 1 - multiplier;
-        var $doc = $(document);
-        $object.css({"background-attachment" : "fixed"});
-
-        $(window).scroll(function(){
-            if($(window).width() > 768) {
-                var firstTop = $object.offset().top,
-                    pos = $(window).scrollTop(),
-                    yPos = Math.round((multiplier * (firstTop - pos)) - 186);
-
-                var bg_css = 'center ' + yPos + 'px';
-
-                $object.css({"background-position" : bg_css });
-            } else {
-                $object.css({"background-position" : "center" });
-            }
-        });
-    };
-
-    $(function(){
-        // Hero Section - Background Parallax
-        background_image_parallax($(".tm-parallax"), 0.30, false);
-        background_image_parallax_2($("#contact"), 0.80);
-        background_image_parallax_2($("#testimonials"), 0.80);
-
-        // Handle window resize
-        window.addEventListener('resize', function(){
-            background_image_parallax($(".tm-parallax"), 0.30, true);
-        }, true);
-
-        // Detect window scroll and update navbar
-        $(window).scroll(function(e){
-            if($(document).scrollTop() > 120) {
-                $('.tm-navbar').addClass("scroll");
-            } else {
-                $('.tm-navbar').removeClass("scroll");
-            }
-        });
-
-        // Close mobile menu after click
-        $('#tmNav a').on('click', function(){
-            $('.navbar-collapse').removeClass('show');
+    /* 切换主题 */
+    function switchSkin() {
+        layer.open({
+            type: 2,
+            shadeClose: true,
+            title: "切换主题",
+            area: ["530px", "386px"],
+            content: [ctx + "system/switchSkin", 'no']
         })
+    }
 
-        // Scroll to corresponding section with animation
-        $('#tmNav').singlePageNav({
-            'easing': 'easeInOutExpo',
-            'speed': 600
-        });
+    /** 刷新时访问路径页签 */
+    function applyPath(url) {
+        $('a[href$="' + decodeURI(url) + '"]').click();
+        $('a[href$="' + url + '"]').parent("li").addClass("selected").parents("li :not(.user-panel)").addClass("active").end().parents("ul").addClass("in");
+    }
 
-        // Add smooth scrolling to all links
-        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
-        $("a").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 600, 'easeInOutExpo', function(){
-                    window.location.hash = hash;
-                });
-            } // End if
-        });
-
-        // Pop up
-        $('.tm-gallery').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            gallery: { enabled: true }
-        });
-
-        $('.tm-testimonials-carousel').slick({
-            dots: true,
-            prevArrow: false,
-            nextArrow: false,
-            infinite: false,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-
-        // Gallery
-        $('.tm-gallery').slick({
-            dots: true,
-            infinite: false,
-            slidesToShow: 5,
-            slidesToScroll: 2,
-            responsive: [
-                {
-                    breakpoint: 1199,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 991,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
+    $(function () {
+        if ($.common.equals("history", mode) && window.performance.navigation.type == 1) {
+            var url = storage.get('publicPath');
+            if ($.common.isNotEmpty(url)) {
+                applyPath(url);
+            }
+        } else {
+            var hash = location.hash;
+            if ($.common.isNotEmpty(hash)) {
+                var url = hash.substring(1, hash.length);
+                applyPath(url);
+            }
+        }
     });
 </script>
 </body>
