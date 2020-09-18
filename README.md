@@ -20,9 +20,9 @@ yctc-genesis
     <img src="https://i.loli.net/2020/07/28/5MzIVArBZyp8NgX.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">智慧教学系统</h3>
+  <h3 align="center">智慧教学</h3>
   <p align="center">
-  一个基于机器识别学习分析的智能学情知识点分析系统
+    致力于一体化校园管理,人脸打卡,智能知识点反馈,知识图谱等新兴产出
     <br />
     <a href="https://github.com/czy1024/yctc-genesis"><strong>探索本项目的文档 »</strong></a>
     <br />
