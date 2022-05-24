@@ -56,7 +56,7 @@ yctc-genesis
 ###### **安装步骤**
 
 ```sh
-git clone https://github.com/czy1024/yctc-genesis.git
+git clone https://github.com/lunasaw/yctc-wisdom.git
 ```
 
 ## 更新日志
@@ -138,7 +138,7 @@ zhujiaye
 
 ### 版权说明
 
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/czy1024/yctc-genesis/blob/master/LICENSE)
+该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/lunasaw/yctc-wisdom/blob/master/LICENSE)
 
 ### 鸣谢[]()
 
